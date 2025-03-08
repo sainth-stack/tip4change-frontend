@@ -1,0 +1,56 @@
+
+/* Title Styles */
+.section-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    padding:"10px";
+    margin:'20px';
+    color:black
+
+}
+
+/* Body Text Styles */
+.section-text {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    padding:"5px";
+    color:black
+}
+
+
+.section2-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; /* Use 600 for proper bold effect */
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.bg-img{
+    position: absolute; /* Ensures it doesn't move unexpectedly */
+    background-image: url('../../../../assets/images/section2b.png'); /* Path to background */
+    background-position: top right; /* Moves image to top-right */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: 200px auto; /* Adjusts size properly */
+    width: 100%; /* Ensures full width */
+    min-height: 100vh; /* Ensures background covers enough height */
+    margin-top:-120px; 
+    padding: 0;
+    overflow: hidden; /* Prevents unwanted scrolling */
+}
