@@ -1,16 +1,12 @@
-
 /* Title Styles */
 .section-title {
     font-family: Montserrat, sans-serif;
     font-weight: 800;
     font-size: 45px;
-    line-height: 100%;
-    letter-spacing: 0%;
     text-transform: uppercase;
-    padding:"10px";
-    margin:'20px';
-    color:black
-
+    padding: 10px;
+    margin: 20px;
+    color: black;
 }
 
 /* Body Text Styles */
@@ -18,39 +14,47 @@
     font-family: Montserrat, sans-serif;
     font-size: 15px;
     line-height: 25px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    padding:"5px";
-    color:black
-}
-
-
-.section2-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600; /* Use 600 for proper bold effect */
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    vertical-align: middle;
     color: black;
 }
-body,html{
-    margin: 0;
-    padding: 0;
+
+/* Section Title */
+.section2-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    color: black;
 }
 
-
-
-.bg-img{
-    position: absolute; /* Ensures it doesn't move unexpectedly */
-    background-image: url('../../../../assets/images/section2b.png'); /* Path to background */
-    background-position: top right; /* Moves image to top-right */
-    background-repeat: no-repeat; /* Prevents repeating */
-    background-size: 200px auto; /* Adjusts size properly */
-    width: 100%; /* Ensures full width */
-    min-height: 100vh; /* Ensures background covers enough height */
-    margin-top:-120px; 
+/* Background Image */
+.bg-img {
+    position: absolute;
+    background-image: url('../../../../assets/images/section2b.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: -120px;
     padding: 0;
-    overflow: hidden; /* Prevents unwanted scrolling */
+    overflow: hidden;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 30px; /* Smaller titles */
+        text-align: center;
+    }
+    .section2-title {
+        font-size: 32px;
+    }
+    .section-text {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+    .bg-img {
+        background-size: 120px auto; /* Smaller image */
+    }
 }
