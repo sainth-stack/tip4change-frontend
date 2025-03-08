@@ -3,6 +3,7 @@ import Section2 from "./sections/section2";
 
 const LandingPage=()=>{
  return(
+
 <>
     <Section1/>
          <Section2 />
