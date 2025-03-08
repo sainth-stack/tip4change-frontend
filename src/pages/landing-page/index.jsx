@@ -3,9 +3,12 @@ import Section2 from "./sections/section2";
 
 const LandingPage=()=>{
  return(
-    <div>
-    <Section2 />
-</div>
+
+<>
+    <Section1/>
+         <Section2 />
+         </>
+
  )
 }
 
