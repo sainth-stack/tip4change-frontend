@@ -1,6 +1,6 @@
 // src/pages/Section1.jsx
 import React from "react";
-import { Box, Grid, Button, Container, useMediaQuery } from "@mui/material";
+import { Box, Grid, Button, Container, useMediaQuery, Grid2 } from "@mui/material";
 import Layout from "../../../../layout";
 import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
 import CustomIconCard from './../../../../components/Card/CustomIconCard';
@@ -28,14 +28,14 @@ const Section1 = () => {
         }}
       >
         <Container>
-          <Grid
+          <Grid2
             container
             spacing={{ xs: 4, md: 6 }}
             justifyContent="space-around"
             alignItems="center"
           >
             {/* Left Side */}
-            <Grid item xs={12} md={6} marginTop={{ xs: 3, md: 4 }}>
+            <Grid2 item xs={12} md={6} marginTop={{ xs: 3, md: 4 }}>
               <CustomTypography
                 variant={isMobile ? "h5" : "h4"}
                 sx={{
@@ -60,10 +60,10 @@ const Section1 = () => {
               >
                 {section1StaticData.leftSideText2}
               </CustomTypography>
-            </Grid>
+            </Grid2>
 
             {/* Right Side (Image and Button) */}
-            <Grid
+            <Grid2
               item
               xs={12}
               md={6}
@@ -92,11 +92,11 @@ const Section1 = () => {
                   marginTop: { xs: -3, md: -3 },
                 }}
               />
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
 
           {/* Icons Section */}
-          <Grid
+          <Grid2
             container
             spacing={2}
             justifyContent="center"
@@ -109,7 +109,7 @@ const Section1 = () => {
                 maxWidth: "90%",
               }}
             />
-          </Grid>
+          </Grid2>
         </Container>
       </Box>
     </>
