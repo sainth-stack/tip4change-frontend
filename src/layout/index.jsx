@@ -1,12 +1,12 @@
-import React from 'react'
-import CustomTopBar from './CustomTopBar'
+import React from "react";
+import CustomTopBar from "./CustomTopBar";
 
 const Layout = () => {
   return (
-      <>
-          <CustomTopBar />
-  </>
-  )
-}
+    <>
+      <CustomTopBar />
+    </>
+  );
+};
 
-export default Layout
+export default Layout;
