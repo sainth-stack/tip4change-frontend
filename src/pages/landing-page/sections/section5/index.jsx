@@ -13,7 +13,7 @@ const SocialImpactCard = () => {
         flexDirection: { xs: "column", md: "row" }, // Column for mobile, row for larger screens
         alignItems: "center",
         justifyContent: "space-evenly",
-        p: { xs: 2, md: 4 },
+        // p: { xs: 2, md: 4 },
         backgroundColor: "#F8F6F2",
         position: "relative",
         textAlign: "center",
