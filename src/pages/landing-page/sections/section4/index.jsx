@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Section4 = () => {
   return (
-    <Box sx={{ width: "100%", textAlign: "center", padding: "20px" }}>
+    <Box sx={{ width: "100%", textAlign: "center", }}>
       {/* Top Section with Title and Description */}
       <Box sx={{ marginLeft: "20px" }}> 
         <Typography 
