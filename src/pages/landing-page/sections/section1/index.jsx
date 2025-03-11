@@ -4,15 +4,13 @@ import { Box,Grid,  Container, useMediaQuery } from "@mui/material";
 // import Grid2 from "@mui/material/Grid2"; 
 import Layout from "../../../../layout";
 import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
-import CustomIconCard from './../../../../components/Card/CustomIconCard';
-// import Grid from "@mui/material/Unstable_Grid2";
-import pathImage from "../../../../assets/images/pathImage.png"
-import LadyImageRight from "../../../../assets/images/LadyImageRight.png"
+import CustomIconCard from "./../../../../components/Card/CustomIconCard";
+import pathImage from "../../../../assets/images/pathImage.png";
+import LadyImageRight from "../../../../assets/images/LadyImageRight.png";
 import CustomButton from "../../../../components/Button/CustomButton";
 import CustomImage from "../../../../components/CustomImage/CustomImage";
 import { section1StaticData } from "./data/Section1Data";
 // Icons (replace these paths with your icons)
-
 
 const Section1 = () => {
   //media queries----------------------------------------------------------------

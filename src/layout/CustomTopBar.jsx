@@ -1,6 +1,6 @@
 // src/components/CustomTopBar.jsx
 import React from "react";
-import { AppBar, Toolbar, Box } from "@mui/material";
+import { AppBar, Toolbar, Box,Typography } from "@mui/material";
 import logo from "../assets/images/logo.png";
 import CustomImage from "../components/CustomImage/CustomImage";
 
