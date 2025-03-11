@@ -1,9 +1,11 @@
 // src/pages/Section1.jsx
 import React from "react";
-import { Box, Grid, Button, Container, useMediaQuery, Grid2 } from "@mui/material";
+import { Box,Grid,  Container, useMediaQuery } from "@mui/material";
+// import Grid2 from "@mui/material/Grid2"; 
 import Layout from "../../../../layout";
 import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
 import CustomIconCard from './../../../../components/Card/CustomIconCard';
+// import Grid from "@mui/material/Unstable_Grid2";
 import pathImage from "../../../../assets/images/pathImage.png"
 import LadyImageRight from "../../../../assets/images/LadyImageRight.png"
 import CustomButton from "../../../../components/Button/CustomButton";
@@ -28,14 +30,14 @@ const Section1 = () => {
         }}
       >
         <Container>
-          <Grid2
+          <Grid
             container
             spacing={{ xs: 4, md: 6 }}
             justifyContent="space-around"
             alignItems="center"
           >
             {/* Left Side */}
-            <Grid2 item xs={12} md={6} marginTop={{ xs: 3, md: 4 }}>
+            <Grid item xs={12} md={6} marginTop={{ xs: 3, md: 4 }}>
               <CustomTypography
                 variant={isMobile ? "h5" : "h4"}
                 sx={{
@@ -60,10 +62,10 @@ const Section1 = () => {
               >
                 {section1StaticData.leftSideText2}
               </CustomTypography>
-            </Grid2>
+            </Grid>
 
             {/* Right Side (Image and Button) */}
-            <Grid2
+            <Grid
               item
               xs={12}
               md={6}
@@ -92,11 +94,11 @@ const Section1 = () => {
                   marginTop: { xs: -3, md: -3 },
                 }}
               />
-            </Grid2>
-          </Grid2>
+            </Grid>
+          </Grid>
 
           {/* Icons Section */}
-          <Grid2
+          <Grid
             container
             spacing={2}
             justifyContent="center"
@@ -109,7 +111,7 @@ const Section1 = () => {
                 maxWidth: "90%",
               }}
             />
-          </Grid2>
+          </Grid>
         </Container>
       </Box>
     </>
