@@ -96,7 +96,7 @@ const CustomInput = ({
               borderRadius: "1rem",
                "& .MuiOutlinedInput-notchedOutline": {
        
-               borderColor: "#847f3b",
+               borderColor: "#85803c",
       },
             },
             

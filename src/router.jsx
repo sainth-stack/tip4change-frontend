@@ -5,9 +5,11 @@ import LandingPage from './pages/landing-page/index';
 import Section1 from './pages/landing-page/sections/section1/index';
 import Section2 from './pages/landing-page/sections/section2/index';
 import NewISidebarLayout from "./layout/NewISidebarLayout";
-import StoryPage from "./pages/StoryPage/ProjectPage";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
+import StoryPage from "./pages/StoryPage/StoryPage";
 
 const router = createBrowserRouter([
+  
   {
     path: "/",
     element: <Layout />,
@@ -16,11 +18,14 @@ const router = createBrowserRouter([
 
     ],
   },
+
   {
-    path: "projects",
+    path: "",
     element: <NewISidebarLayout />,
     children: [
-      { path: "", element: <StoryPage /> },
+      { path: "/project", element: <ProjectPage /> },
+      { path: "/story", element: <StoryPage /> },
+
     ],
   },
   // {

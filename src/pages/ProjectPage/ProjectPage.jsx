@@ -1,15 +1,15 @@
 import { Box, Breadcrumbs, Typography } from '@mui/material';
-import React from 'react';
 import { useLocation } from 'react-router-dom';
-import CustomTypography from '../../components/TypoGraphy/CustomTypography';
-import { StoryPageButtonData, StoryPageUiFileds } from './data';
 import { useState } from 'react';
+import { Grid } from '@mui/material';
+import React from 'react';
+import CustomTypography from '../../components/TypoGraphy/CustomTypography';
 import CustomInput from '../../components/CustomInput/CustomInput';
 import DragAndDropFileInput from '../../components/DragAndDropFileInput/DragAndDropFileInput';
-import { Grid } from '@mui/material';
 import CustomButton from '../../components/Button/CustomButton';
+import { ProjectPageUiFileds,ProjectPageButtonData } from './data';
 
-const StoryPage = () => {
+const ProjectPage = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
 
@@ -23,7 +23,9 @@ const StoryPage = () => {
   });
 
 
-   const handleChange = (id, value) => {
+  const handleChange = (id, value) => {
+    //  console.log("on chane", id, value);
+    // on change wokeing
     setFormData((prevData) => ({
       ...prevData,
       [id]: value,
@@ -70,7 +72,7 @@ const StoryPage = () => {
       >
 
         <Grid maxWidth="800px" spacing={2} container>
-          {StoryPageUiFileds.map((field, index) => (
+          {ProjectPageUiFileds.map((field, index) => (
             <Grid
               item
               xs={12}
@@ -107,7 +109,7 @@ const StoryPage = () => {
         <Grid container justifyContent="flex-end" marginLeft={-30}
         padding={0}>
   <Grid item xs="auto" sx={{ display: "flex", gap: "1rem" }}>
-    {StoryPageButtonData.filter((field) => field.type === "button").map((button) => (
+    {ProjectPageButtonData.filter((field) => field.type === "button").map((button) => (
       <CustomButton
         key={button.id}
         color={button.color}
@@ -129,4 +131,4 @@ const StoryPage = () => {
   );
 };
 
-export default StoryPage;
+export default ProjectPage;

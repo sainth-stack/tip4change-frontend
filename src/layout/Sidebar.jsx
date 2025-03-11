@@ -22,7 +22,7 @@ const sidebarConfig = {
   default: [
     { name: "Dashboard", icon:  dashboardSvg, path: "/dashboard" },
     { name: "Story", icon: StorySvg, path: "/story" },
-    { name: "Projects", icon: ProjectsSvg, path: "/projects" },
+    { name: "Projects", icon: ProjectsSvg, path: "/project" },
     { name: "Progress Tracking", icon: ProgressSvg, path: "/progress-tracking" },
     { name: "Payments", icon: PaymentSvg, path: "/payments" },
     { name: "Settings", icon: PaymentSvg, path: "/settings" },

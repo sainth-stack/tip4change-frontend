@@ -1,6 +1,6 @@
 // src/data/formFields.js
 
-export const StoryPageUiFileds = [
+export const ProjectPageUiFileds = [
   {
     id: "fileInput",
     type: "file",
@@ -13,7 +13,7 @@ export const StoryPageUiFileds = [
     placeholder: "Drag & Drop Your File",
   },
   {
-    id: "ProductTitle",
+    id: "title",
     type: "text",
     label: "Title",
     value: "",
@@ -22,17 +22,25 @@ export const StoryPageUiFileds = [
     placeholder: "Enter project title",
   },
   {
-    id: "productCode",
+    id: "projectGoal",
     type: "text",
-    label: "Product Code",
+    label: "Project Goal",
     value: "",
          // Placeholder for onChange handler
     required: true,
     placeholder: "Describe the project goal",
   },
- 
   {
-    id: "StoryDescription",
+    id: "paymentBudget",
+    type: "text",
+    label: "Payment Budget",
+    value: "",
+         // Placeholder for onChange handler
+    required: true,
+    placeholder: "Enter budget",
+  },
+  {
+    id: "Projectdescription",
     type: "textarea",
     label: "Description",
     value: "",
@@ -44,9 +52,9 @@ export const StoryPageUiFileds = [
 ];
 
 
-export const StoryPageButtonData = [
+export const ProjectPageButtonData = [
    {
-    id: "StoragecancelButton",
+    id: "ProjectcancelButton",
     type: "button",
     text: "Cancel",
     color:"#85803c",
@@ -55,7 +63,7 @@ export const StoryPageButtonData = [
   },
 
    {
-    id: "StoragesubmitButton",
+    id: "ProjectsubmitButton",
     type: "button",
     text: "Submit",
     backgroundColor: "#85803c", // Green color
