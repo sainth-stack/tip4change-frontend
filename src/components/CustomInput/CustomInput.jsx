@@ -25,7 +25,10 @@ const CustomInput = ({
       {type === "select" ? (
 
         <>
-         <InputLabel id={"id"}>{label}</InputLabel>
+          <InputLabel id={"id"} sx={{
+                color: "#847f3b",
+           
+         }}>{label}</InputLabel>
         <TextField
           id={id}
           select
@@ -77,7 +80,11 @@ const CustomInput = ({
                           
                            type === "textarea" ? (
 
-                            <> <InputLabel id={"id"} sx={{"margin":".5rem",...sx}}>{label}</InputLabel>
+              <> <InputLabel id={"id"} sx={{
+                "margin": ".5rem",
+                color: "#847f3b",
+                ...sx
+              }}>{label}</InputLabel>
         <TextField
           id={id}
          
@@ -96,7 +103,7 @@ const CustomInput = ({
               borderRadius: "1rem",
                "& .MuiOutlinedInput-notchedOutline": {
        
-               borderColor: "#847f3b",
+               borderColor: "#85803c",
       },
             },
             
@@ -105,7 +112,11 @@ const CustomInput = ({
         />
         </>
       ) :(
-                            <> <InputLabel id={"id"} sx={{"margin":".5rem",...sx}}>{label}</InputLabel>
+                <> <InputLabel id={"id"} sx={{
+                  "margin": ".5rem",
+                   color: "#847f3b",
+                  ...sx
+                }}>{label}</InputLabel>
 
         <TextField
           id={id}
