@@ -1,6 +1,7 @@
 // src/pages/Section1.jsx
 import React from "react";
-import { Box, Grid, Button, Container, useMediaQuery } from "@mui/material";
+import { Box,Grid,  Container, useMediaQuery } from "@mui/material";
+// import Grid2 from "@mui/material/Grid2"; 
 import Layout from "../../../../layout";
 import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
 import CustomIconCard from "./../../../../components/Card/CustomIconCard";
