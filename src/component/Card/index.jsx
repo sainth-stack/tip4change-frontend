@@ -152,8 +152,6 @@ const ProfileIconCard = () => {
             sx={{
               bgcolor: "#E0E0E0",
               height: "210px",
-              mt: "-10px",
-              ml: "30px",
               border: "2px solid rgba(235, 234, 237, 1)",
             }}
           />
@@ -162,6 +160,7 @@ const ProfileIconCard = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              // justifyContent:
               flex: 2,
               padding: "10px",
             }}
@@ -175,7 +174,7 @@ const ProfileIconCard = () => {
             />
             <Typography
               variant="body2"
-              sx={{ color: "#6D6D6D", fontWeight: 500 }}
+              sx={{ color: "#6D6D6D", fontWeight: 500,textAlign: "center !important" }}
             >
               grameenavikas@gmail.com
             </Typography>

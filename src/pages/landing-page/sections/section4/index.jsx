@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Section4 = () => {
   return (
-    <Box sx={{ width: "100%", textAlign: "center", }}>
+    <Box sx={{ width: "100%", textAlign: "center", }} mt={3}>
       {/* Top Section with Title and Description */}
       <Box sx={{ marginLeft: "20px" }}> 
         <Typography 
@@ -39,11 +39,12 @@ const Section4 = () => {
       </Box>
 
       {/* Donation Cards */}
-      <Grid container spacing={3} sx={{ padding: 3, justifyContent: "center" }}>
+      <Grid container spacing={1} sx={{ padding: 4, justifyContent: "center" }} >
         {cards.map((card, index) => (
-          <Grid item xs={12} sm={12} md={3} key={index}>
+          <Grid item xs={12} sm={12} md={3} key={index} >
             <StyledCard>
-              <CardMedia 
+              <CardMedia  
+                // boxShadow={6}
                 component="img" 
                 height="140" 
                 image={card.image} 
@@ -58,8 +59,8 @@ const Section4 = () => {
               />
               <CardContent sx={{ marginTop: "30px" }}>
                 <GoalRiseContainer style={{ marginBottom: "30px" }}>
-                  <div><strong>Goal</strong><p>₹ 40Cr</p></div>
-                  <div><strong>Rise</strong><p>₹ 30Cr</p></div>
+                  <div><strong>Goal</strong><p style={{color:"#8b7e3f",fontWeight:"600"}}>₹ 40Cr</p></div>
+                  <div><strong>Rise</strong><p style={{color:"#8b7e3f",fontWeight:"600"}}>₹ 30Cr</p></div>
                 </GoalRiseContainer>
 
                <Box sx={{textAlign:"start" }}>
