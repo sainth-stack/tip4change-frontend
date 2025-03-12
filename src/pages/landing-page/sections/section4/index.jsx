@@ -105,6 +105,7 @@ const Section4 = () => {
                       <span style={{ fontWeight: "bold", color: "black" }}>10Cr</span>
                     </Typography>
                   </Box>
+            </Box>
                
 
                 {/* Donate Button (Always at the Bottom) */}
@@ -126,7 +127,8 @@ const Section4 = () => {
                   >
                     Donate Now
                   </Button>
-                </Box>
+                  </Box>
+                  
               </CardContent>
             </StyledCard>
           </Grid>
