@@ -8,17 +8,22 @@ const CustomButton = ({
   hoverColor = "#5f6340", // Default hover color
   marginTop = -6.5, // Default margin top
   onClick, // Click handler
+  border,
   ...sx // Spread other props
 }) => {
+
+  console.log("border", border)
   return (
     <Button
       variant="contained"
       onClick={onClick}
       sx={{
-        color:color,
+        color: color,
+        border: border,
         marginTop: marginTop,
         backgroundColor: backgroundColor,
         outline: "none",
+        padding:".2rem 2rem",
         borderRadius: "1rem",
         textTransform: "none",
         ":hover": {

@@ -104,12 +104,13 @@ const StoryPage = () => {
         
         <Grid container justifyContent="flex-end" marginLeft={-30}
         padding={0}>
-  <Grid item xs="auto" sx={{ display: "flex", gap: "1rem" }}>
+  <Grid item xs="auto" sx={{ display: "flex", gap: "1rem" }} mt={4}>
     {StoryPageButtonData.filter((field) => field.type === "button").map((button) => (
       <CustomButton
         key={button.id}
         color={button.color}
         text={button.text}
+        border={button.border}
         backgroundColor={button.backgroundColor}
         hoverColor={button.hoverColor}
         marginTop={button.marginTop}

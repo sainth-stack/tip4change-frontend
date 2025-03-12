@@ -43,7 +43,7 @@ function Sidebar() {
     <Box
       sx={{
         width: sidebarWidth,
-        height: "100vh",
+        height: "100%",
         transition: "width 0.3s ease",
         display: "flex",
         zIndex: 1000,
@@ -52,7 +52,8 @@ function Sidebar() {
     >
       
 
-       <Box sx={{ display: "flex", alignItems: "center" }}>
+      {!isMobile &&
+      <Box sx={{ display: "flex", alignItems: "center" }}>
           <CustomImage
             
           
@@ -65,7 +66,8 @@ function Sidebar() {
               marginLeft: "1.5rem",
             }}
           />
-      </Box>
+      </Box>}
+       
       
       {/* Sidebar Menu */}
       <List>

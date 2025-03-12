@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Section4 = () => {
   return (
-    <Box sx={{ width: "100%", textAlign: "center", }}>
+    <Box sx={{ width: "100%", textAlign: "center", }} mt={3}>
       {/* Top Section with Title and Description */}
       <Box sx={{ marginLeft: "20px" }}>
         <Typography 
@@ -105,7 +105,7 @@ const Section4 = () => {
                       <span style={{ fontWeight: "bold", color: "black" }}>10Cr</span>
                     </Typography>
                   </Box>
-                </Box>
+               
 
                 {/* Donate Button (Always at the Bottom) */}
                 <Box sx={{ display: "flex", justifyContent: "center", }}>

@@ -131,7 +131,6 @@ const CustomInput = ({
                      InputLabelProps={{ shrink: true }}
 
                     sx={{
-            marginBottom: ".5rem",
             "& .MuiOutlinedInput-root": {
               borderRadius: "2rem",
               "& .MuiOutlinedInput-notchedOutline": {
@@ -139,7 +138,7 @@ const CustomInput = ({
                borderColor: "#847f3b",
       },
       "& .MuiInputBase-input": {
-        padding: "10px",
+        padding: ".3rem",
         // Adjust padding here
       },
             },
