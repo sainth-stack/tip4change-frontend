@@ -10,7 +10,7 @@ const SocialImpactCard = () => {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" }, // Column for mobile, row for larger screens
+        flexDirection: { xs: "column",  }, // Column for mobile, row for larger screens
         alignItems: "center",
         justifyContent: "space-evenly",
         // p: { xs: 2, md: 4 },
@@ -53,7 +53,9 @@ const SocialImpactCard = () => {
       </Paper>
 
       {/* Envelope Image */}
-      <img
+          <Box sx={{display:"flex", flexDirection:{xs:"column",md:"row",},justifyContent:{xs:"center",md:"space-evenly"},marginTop:{md:"60px"} ,alignItems:{xs:"center"},width:"100%",}} >
+          <Box>
+          <img
         src="src/assets/images/section5.png" // Replace with actual image path
         alt="Envelope"
         style={{
@@ -63,8 +65,10 @@ const SocialImpactCard = () => {
           backgroundColor: "#7B783E",
         }}
       />
+          </Box>
 
       {/* Description */}
+      <Box>
       <Typography
         variant="body2"
         color="textSecondary"
@@ -75,6 +79,8 @@ const SocialImpactCard = () => {
           px: { xs: 2, md: 4 },
           fontSize: { xs: "14px", md: "16px" },
           textAlign: { xs: "center", md: "left" },
+          fontFamily:"Montserrat",
+          backgroundColor:"white"
         }}
       >
         Inspire others to join the movement and make a difference in their
@@ -83,8 +89,10 @@ const SocialImpactCard = () => {
         <br /> and other social media platforms.
       </Typography>
 
+      </Box>
       {/* Social Media Icons */}
-      <Box
+     <Box>
+     <Box
         sx={{
           display: "flex",
 
@@ -102,8 +110,8 @@ const SocialImpactCard = () => {
           <Box
             key={index}
             sx={{
-              width: { xs: 45, md: 55 },
-              height: { xs: 45, md: 55 },
+              width: { xs: 50, md: 50 },
+              height: { xs: 50, md: 50 },
               backgroundColor: item.color,
               display: "flex",
               alignItems: "center",
@@ -117,11 +125,13 @@ const SocialImpactCard = () => {
             }}
           >
             {React.cloneElement(item.icon, {
-              sx: { fontSize: { xs: 24, md: 32 }, color: "white" },
+              sx: { fontSize: { xs: 20, md: 24 }, color: "white" },
             })}
           </Box>
         ))}
       </Box>
+     </Box>
+          </Box>
 
       {/* Join Community Button */}
       <Button
@@ -137,8 +147,10 @@ const SocialImpactCard = () => {
           py: { xs: 1, md: 1.2 },
           fontSize: { xs: "14px", md: "16px" },
           "&:hover": { backgroundColor: "#5D5A2F" },
-          margin: "auto", // Center button on mobile
+          margin: " auto 0 ", // Center button on mobile
           display: "flex",
+          justifyContent:"center",
+          alignItems:"center"
         }}
       >
         Join Community
