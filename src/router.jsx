@@ -7,6 +7,7 @@ import Section2 from './pages/landing-page/sections/section2/index';
 import NewISidebarLayout from "./layout/NewISidebarLayout";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import StoryPage from "./pages/StoryPage/StoryPage";
+import PaymentForm from "./pages/paymentSection";
 
 const router = createBrowserRouter([
   
@@ -18,7 +19,14 @@ const router = createBrowserRouter([
 
     ],
   },
+  {
+    path: "/payment",
+    element: <Layout />,
+    children: [
+      { path: "", element: <PaymentForm /> },
 
+    ],
+  },
   {
     path: "",
     element: <NewISidebarLayout />,
