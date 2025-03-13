@@ -57,6 +57,8 @@ export const ProjectPageButtonData = [
     id: "ProjectcancelButton",
     type: "button",
     text: "Cancel",
+    border: "2px solid #85803c",
+
     color:"#85803c",
     backgroundColor: "white", // Red color
     marginTop: 0,

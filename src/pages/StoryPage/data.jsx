@@ -28,7 +28,7 @@ export const StoryPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Describe the project goal",
+    placeholder: "Describe the project Code",
   },
  
   {
@@ -38,7 +38,7 @@ export const StoryPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Enter detailed description",
+    placeholder: "Enter detailed Description",
   },
   
 ];
@@ -48,6 +48,7 @@ export const StoryPageButtonData = [
    {
     id: "StoragecancelButton",
     type: "button",
+    border: "2px solid #85803c",
     text: "Cancel",
     color:"#85803c",
     backgroundColor: "white", // Red color

@@ -83,7 +83,7 @@ const DragAndDropFileInput = ({onFileSelect }) => {
       >
         {selectedFile ? selectedFile.name : "Upload Image/Video"}
       </Typography>
-      <Typography variant="body2" sx={{ color: "#a38e5d" }}>
+      <Typography variant="body2" sx={{ color: "#000",fontWeight:"500" }}>
         Or
       </Typography>
       <Button

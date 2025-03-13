@@ -113,6 +113,7 @@ const ProjectPage = () => {
       <CustomButton
         key={button.id}
         color={button.color}
+        border={button.border}
         text={button.text}
         backgroundColor={button.backgroundColor}
         hoverColor={button.hoverColor}

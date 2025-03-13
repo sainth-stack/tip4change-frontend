@@ -2,10 +2,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, useMediaQuery } from "@mui/material";
 import CustomTopBar from "./CustomTopBar";
 
 const NewISidebarLayout = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");   // Mobile
+
   const isSidebarVisible = true;  // Control overlap based on this flag
 
   return (
@@ -14,11 +16,11 @@ const NewISidebarLayout = () => {
       <Box
         sx={{
            boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
-          width: "10rem",
+          width: isMobile ? "4rem" : "10rem",
           flexShrink: 0,
         bgcolor: "background.paper",  
           borderRight: "1px solid #ddd",
-          height: "100vh",
+          height: "100%",
           position: "fixed",
           top: 0,
           left: 0,
@@ -31,7 +33,7 @@ const NewISidebarLayout = () => {
       {/* Main Content Area */}
       <Box
         sx={{
-          marginLeft: isSidebarVisible ? "10rem" : "0",
+          marginLeft: isMobile ? "4rem" : "10rem",
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
