@@ -8,9 +8,14 @@ import NewISidebarLayout from "./layout/NewISidebarLayout";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import StoryPage from "./pages/StoryPage/StoryPage";
 import PaymentForm from "./pages/paymentSection";
+import NotFound from "./components/Page-404/NotFoundPage";
+import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
 
 const router = createBrowserRouter([
-  
+   {
+    path: "*",
+    element: <NotFound />,
+  },
   {
     path: "/",
     element: <Layout />,
@@ -33,6 +38,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/project", element: <ProjectPage /> },
       { path: "/story", element: <StoryPage /> },
+      { path: "/payment-section", element: <PaymentTablePage /> },
+
 
     ],
   },
