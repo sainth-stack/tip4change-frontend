@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form } from "formik";
-import { Button, Grid ,Typography} from "@mui/material";
+import { Button, Grid ,Typography,Breadcrumbs,Box} from "@mui/material";
 import {CheckboxComponent} from '../../components/inputComponents/checkbox'
 import {SelectComponent} from '../../components/inputComponents/select'
 import {InputTextComponent} from '../../components/inputComponents/text'
@@ -13,52 +13,30 @@ import img3 from '../../assets/svg/fc3icon.png'
 import FormFieldGroup from "../../components/formsField/fromsField";
 import DonationSelection from "../../components/inputComponents/radio";
 import CustomButton from "../../components/Button/CustomButton";
-const formFields = {
-  personalDetails: [
-    { id: "title", type: "text", label: "Title" },
-    { id: "firstName", type: "text", label: "First Name", sm: 4 },
-    { id: "lastName", type: "text", label: "Last Name", sm: 4 },
-    { id: "phoneNumber", type: "number", label: "Phone Number", sm: 4 },
-  ],
-  contactDetails: [
-    { id: "email", type: "email", label: "E-mail", sm: 4 },
-    { id: "theirEmail", type: "email", label: "Their E-mail", sm: 4 },
-    { id: "inHonorOf", type: "text", label: "In Honor of", sm: 4 },
-  ],
-  addressDetails: [
-    {
-      id: "nationality",
-      type: "select",
-      label: "Nationality",
-      placeholder:"select",
-      options: [
-        { label: "Select", value: "" },
-        { label: "USA", value: "usa" },
-        { label: "UK", value: "uk" },
-      ],
-      sm: 4,
-    },
-    {
-      id: "country",
-      type: "select",
-      label: "Country",
-      placeholder:"select",
-      options: [
-        { label: "Select", value: "" },
-        { label: "India", value: "india" },
-        { label: "Germany", value: "germany" },
-      ],
-      sm: 4,
-    },
-    { id: "city", type: "text", label: "City", sm: 4 },
-  ],
-};
+import { useLocation } from 'react-router-dom';
+import CustomTypography from '../../components/TypoGraphy/CustomTypography';
+import {formFields} from './data'
 
 const PaymentForm = () => {
+    const location = useLocation();
+    const pathnames = location.pathname.split('/').filter((x) => x);
+  
   return (
     <Grid>
+            <Box sx={{ }}>
+               <CustomTypography color="text.primary">Payment Section</CustomTypography>
+            <Breadcrumbs separator="››" aria-label="breadcrumb">
+              <CustomTypography color="text.primary">Home</CustomTypography>
+              {pathnames.map((value, index) => (
+                <CustomTypography key={index} color="text.primary">
+                  {value.charAt(0).toUpperCase() + value.slice(1)}
+                </CustomTypography>
+              ))}
+            </Breadcrumbs>
+          </Box>
+      
       <div>
-        <h3 style={{height:"40px",paddingLeft:"40px",fontFamily:"Montserrat",fontWeight:800,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"80px"}}>payment section</h3>
+        <h3 style={{height:"40px",paddingLeft:"40px",fontFamily:"Montserrat",fontWeight:800,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"40px"}}>payment section</h3>
       </div>
     <Formik
       initialValues={{
