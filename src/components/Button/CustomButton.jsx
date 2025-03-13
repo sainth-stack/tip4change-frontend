@@ -1,18 +1,20 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Icon, IconButton } from "@mui/material";
+          import TuneIcon from "@mui/icons-material/Tune";
 
 const CustomButton = ({
   text = "Click Me", // Default text
-  backgroundColor = "#847f3b",
+  backgroundColor = "",
   color,// Default background color
-  hoverColor = "#5f6340", // Default hover color
+  hoverColor, // Default hover color
   marginTop = -6.5, // Default margin top
   onClick, // Click handler
   border,
-  ...sx // Spread other props
+  sx = {},
+  iconExists// Spread other props
 }) => {
 
-  console.log("border", border)
+  console.log("iconExists", iconExists);
   return (
     <Button
       variant="contained"
@@ -23,7 +25,7 @@ const CustomButton = ({
         marginTop: marginTop,
         backgroundColor: backgroundColor,
         outline: "none",
-        padding:".2rem 2rem",
+        padding: ".2rem 2rem",
         borderRadius: "1rem",
         textTransform: "none",
         ":hover": {
@@ -37,9 +39,15 @@ const CustomButton = ({
           outline: "none",
           boxShadow: "none",
         },
+
+        ...sx,
       }}
-      {...sx} // Pass any additional props
     >
+      {iconExists && (
+        <IconButton sx={{ color: "#fff", transform: "rotate(90deg)" }}>
+          <TuneIcon />
+        </IconButton>
+      )}
       {text}
     </Button>
   );
