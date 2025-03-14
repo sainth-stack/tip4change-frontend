@@ -11,7 +11,7 @@ import PaymentForm from "./pages/paymentSection";
 import DoughnutChart from "./pages/progressTracker/index";
 import NotFound from "./components/Page-404/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
-// import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
+import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       { path: "/story", element: <StoryPage /> },
       { path:"/progress-tracking",element:<DoughnutChart />},
       {path:"/payments",element: <PaymentForm />},
-      // { path: "/payment-section", element: <PaymentTablePage /> },
+      { path: "/payment-section", element: <PaymentTablePage /> },
 
 
     ],

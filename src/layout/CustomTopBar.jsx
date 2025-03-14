@@ -16,7 +16,7 @@ const CustomTopBar = ({ isOverlapping }) => {
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         color: "#000",
         maxHeight: "3rem",
-        width: isOverlapping ?isMobile?"calc(100% - 4rem)": "calc(100% - 10.1rem)" : "100%",  
+        width: isOverlapping ?isMobile?"calc(100% - 5rem)": "calc(100% - 12rem)" : "100%",  
         transition: "all 0.3s ease", 
       }}
     >

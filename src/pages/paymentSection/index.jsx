@@ -65,9 +65,9 @@ const PaymentForm = () => {
           <Grid container spacing={2} sx={{padding:"20px"}}>
             <Grid item xs={12}>
               <InputTextComponent
-                id="amount"
-                type="text"
-                label="Enter Your Donation Amount Euros"
+                id={field?.id}
+                type={field?.type}
+                label={field?.label}
                 value={values.amount}
                 onChange={handleChange}
                 required

@@ -12,8 +12,7 @@ const CustomInput = ({
   placeholder = "",
   disabled = false,
   options = [],
-  fullWidth = true,
-  multiple = false,
+  
   accept = "",
   sx = {},
 }) => {
@@ -37,7 +36,7 @@ const CustomInput = ({
           onChange={onChange}
           required={required}
           disabled={disabled}
-          fullWidth={fullWidth}
+          
           variant="outlined"
           sx={{ marginBottom: "1rem", ...sx }}
         >
@@ -93,11 +92,12 @@ const CustomInput = ({
           required={required}
           placeholder={placeholder}
           disabled={disabled}
-          fullWidth={fullWidth}
           variant="outlined"
           multiline
            rows={rows}
-          sx={{
+                  sx={{
+                    width: "100%",
+                    margin:" 0 auto",
             marginBottom: ".5rem",
             "& .MuiOutlinedInput-root": {
               borderRadius: "1rem",
@@ -126,7 +126,7 @@ const CustomInput = ({
           required={required}
           placeholder={placeholder}
           disabled={disabled}
-          fullWidth={fullWidth}
+          
                     variant="outlined"
                      InputLabelProps={{ shrink: true }}
 

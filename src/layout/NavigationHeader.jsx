@@ -7,17 +7,16 @@ import { NavigationHeaderButtonData } from './data';
 import { Padding } from '@mui/icons-material';
 
 const NavigationHeader = ({path,PageText}) => {
-    
   return (
       <>
           
-           <Box sx={{ display:"flex",justifyContent:"space-between"}}>
+           <Box sx={{ display:"flex",justifyContent:"space-between",maxWidth:"calc(100% - 2vw)"}}>
        
         <Box>
            <CustomTypography color="text.primary" sx={{"fontWeight":"600"}}>{PageText}</CustomTypography>
 
       <Breadcrumbs separator="››" aria-label="breadcrumb">
-        <CustomTypography color="text.primary">Home</CustomTypography>
+        <CustomTypography color="text.primary">Dashboard</CustomTypography>
         {path.map((value, index) => (
           <CustomTypography key={index} color="text.primary">
             
@@ -29,7 +28,7 @@ const NavigationHeader = ({path,PageText}) => {
         </Box>
         
         { path&&path == "payment-section" ? (
-           <Box sx={{}} mt={1}>
+           <Box mt={1} >
           {NavigationHeaderButtonData.filter((field) => field.type === "button").map((button) => (
 
             
