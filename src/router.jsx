@@ -26,14 +26,14 @@ const router = createBrowserRouter([
     ],
   },
 
-  // {
-  //   path: "/payment",
-  //   element: <Layout />,
-  //   children: [
-  //     { path: "/payments", element: <PaymentForm /> },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "/payments", element: <PaymentForm /> },
 
-  //   ],
-  // },
+    ],
+  },
   {
     path: "",
     element: <NewISidebarLayout />,
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       { path: "/project", element: <ProjectPage /> },
       { path: "/story", element: <StoryPage /> },
       { path:"/progress-tracking",element:<DoughnutChart />},
-      {path:"/payments",element: <PaymentForm />},
+      // {path:"/payments",element: <PaymentForm />},
       // { path: "/payment-section", element: <PaymentTablePage /> },
 
 
