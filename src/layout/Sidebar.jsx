@@ -24,7 +24,7 @@ const sidebarConfig = {
       icon: ProgressSvg,
       path: "/progress-tracking",
     },
-    { name: "Payments", icon: PaymentSvg, path: "/payments" },
+    // { name: "Payments", icon: PaymentSvg, path: "/payments" },
     { name: "Settings", icon: PaymentSvg, path: "/settings" },
     { name: "Lagout", icon: PaymentSvg, path: "/logout" },
   ],
