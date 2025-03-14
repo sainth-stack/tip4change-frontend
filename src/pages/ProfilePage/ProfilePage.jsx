@@ -1,14 +1,13 @@
 import React from "react";
-
 import {
   Typography,
   Grid,
   Avatar,
-  Chip,
   Button,
   Box,
   Breadcrumbs,
   Stack,
+  useMediaQuery,
 } from "@mui/material";
 import CustomTypography from "../../components/TypoGraphy/CustomTypography";
 
@@ -33,12 +32,14 @@ const profileData = {
     "Hari Prasath",
     "Surya Prakash",
   ],
-
-  profileImage: "src/assets/images/profileImage.png", // Replace with your actual image URL
+  profileImage: "src/assets/images/profileImage.png",
 };
+
 const pathnames = location.pathname.split("/").filter((x) => x);
 
 const ProfileView = () => {
+  const isTablet = useMediaQuery("(min-width:768px) and (max-width:1024px)");
+  const isLaptop = useMediaQuery("(min-width:1025px)");
   return (
     <Box sx={{ width: "100%", mx: "auto", my: 4, p: 3, pl: 0 }}>
       {/* Header Section */}
@@ -50,7 +51,11 @@ const ProfileView = () => {
         mt={-9}
       >
         <Grid item xs={12} sm={8} sx={{ padding: { xs: 2, sm: 2, md: 0 } }}>
-          <Typography variant="h5" fontWeight="bold">
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            sx={{ fontFamily: "Montserrat" }}
+          >
             View Profile
           </Typography>
           <Breadcrumbs separator="››" aria-label="breadcrumb">
@@ -67,27 +72,17 @@ const ProfileView = () => {
           sx={{
             bgcolor: "#858040",
             "&:hover": { bgcolor: "#6E6B3D" },
+            fontFamily: "Montserrat",
+            marginRight: isTablet ? "0px" : isLaptop ? "-43px" : "0px",
+            borderRadius: "20px",
           }}
         >
           Edit Profile
         </Button>
       </Box>
-      {/* <Box sx={{}}>
-        <CustomTypography color="text.primary">
-          Project Creation
-        </CustomTypography>
-        <Breadcrumbs separator="››" aria-label="breadcrumb">
-          <CustomTypography color="text.primary">Dashboard</CustomTypography>
-          {pathnames.map((value, index) => (
-            <CustomTypography key={index} color="text.primary">
-              {value.charAt(0).toUpperCase() + value.slice(1)}
-            </CustomTypography>
-          ))}
-        </Breadcrumbs>
-      </Box> */}
 
-      <Grid container spacing={3} alignItems="flex-start">
-        {/* Profile Image - Full Width Row */}
+      <Grid container spacing={0} alignItems="flex-start">
+        {/* Profile Image */}
         <Grid
           item
           xs={12}
@@ -107,7 +102,7 @@ const ProfileView = () => {
             alt={profileData.name}
             variant="square"
             sx={{
-              width: { xs: "100px", sm: "150px", md: "180px" }, // Adjust image size for different screens
+              width: { xs: "100px", sm: "150px", md: "180px" },
               height: { xs: "100px", sm: "150px", md: "180px" },
               objectFit: "cover",
               borderRadius: 0,
@@ -115,78 +110,138 @@ const ProfileView = () => {
           />
         </Grid>
 
-        {/* Full-width Details Section */}
+        {/* Profile Details */}
         <Grid item xs={12} sm={8} md={9}>
           <Grid
             container
-            spacing={3}
-            sx={{ paddingLeft: { xs: "10px", sm: "30px", md: "50px" } }}
+            spacing={2.5}
+            sx={{ paddingLeft: { xs: "10px", sm: "30px", md: "0px" } }}
           >
             {/* Basic Details */}
             <Grid item xs={12}>
-              <Typography variant="h6" fontWeight="bold">
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Basic Details
               </Typography>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <Typography variant="subtitle2" color="#858040">
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Cluster Name
               </Typography>
-              <Typography>{profileData.name}</Typography>
+              <Typography sx={{ fontFamily: "Montserrat" }}>
+                {profileData.name}
+              </Typography>
 
-              <Typography variant="subtitle2" color="#858040" mt={2}>
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                mt={2}
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Email ID
               </Typography>
-              <Typography>{profileData.email}</Typography>
+              <Typography sx={{ fontFamily: "Montserrat" }}>
+                {profileData.email}
+              </Typography>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <Typography variant="subtitle2" color="#858040">
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Mobile No
               </Typography>
-              <Typography>{profileData.mobile}</Typography>
+              <Typography sx={{ fontFamily: "Montserrat" }}>
+                {profileData.mobile}
+              </Typography>
 
-              <Typography variant="subtitle2" color="#858040" mt={1}>
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                mt={1}
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Village Name
               </Typography>
-              <Typography>{profileData.village}</Typography>
+              <Typography sx={{ fontFamily: "Montserrat" }}>
+                {profileData.village}
+              </Typography>
             </Grid>
 
             {/* Address Section */}
             <Grid item xs={12}>
-              <Typography variant="subtitle2" color="#858040">
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Address
               </Typography>
-              <Typography sx={{ maxWidth: { xs: "100%", sm: "250px" } }}>
+              <Typography
+                sx={{
+                  fontFamily: "Montserrat",
+                  maxWidth: { xs: "100%", sm: "250px" },
+                }}
+              >
                 {profileData.address}
               </Typography>
             </Grid>
 
             {/* Account Details */}
             <Grid item xs={12}>
-              <Typography variant="h6" fontWeight="bold">
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Account Details
               </Typography>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <Typography variant="subtitle2" color="#858040">
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Account No
               </Typography>
-              <Typography>{profileData.accountNo}</Typography>
+              <Typography sx={{ fontFamily: "Montserrat" }}>
+                {profileData.accountNo}
+              </Typography>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <Typography variant="subtitle2" color="#858040">
+              <Typography
+                variant="subtitle2"
+                color="#858040"
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 IFSC Code
               </Typography>
-              <Typography>{profileData.ifsc}</Typography>
+              <Typography sx={{ fontFamily: "Montserrat" }}>
+                {profileData.ifsc}
+              </Typography>
             </Grid>
 
             {/* Members List */}
             <Grid item xs={12}>
-              <Typography variant="h6" fontWeight="bold" mb={2}>
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                mb={2}
+                sx={{ fontFamily: "Montserrat" }}
+              >
                 Members List
               </Typography>
               <Box
@@ -230,6 +285,7 @@ const ProfileView = () => {
                             fontWeight: "bold",
                             color: "#5D5A36",
                             lineHeight: 1.2,
+                            fontFamily: "Montserrat",
                           }}
                         >
                           {nameParts[0]}
@@ -241,6 +297,7 @@ const ProfileView = () => {
                               fontWeight: "bold",
                               color: "#5D5A36",
                               lineHeight: 1.2,
+                              fontFamily: "Montserrat",
                             }}
                           >
                             {nameParts[1]}
