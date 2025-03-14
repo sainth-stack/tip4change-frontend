@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import { Card, CardContent, CardMedia, Typography, Button, Grid, Box } from "@mui/material";
 import { cards, StyledCard, GoalRiseContainer } from '../section4/data.js';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useNavigate } from "react-router-dom";
 
 const Section4 = () => {
+  const Navigate = useNavigate();
   return (
     <Box sx={{ width: "100%", textAlign: "center", }} mt={3}>
       {/* Top Section with Title and Description */}
@@ -39,10 +41,10 @@ const Section4 = () => {
       </Box>
 
       {/* Donation Cards */}
-      <Grid container spacing={3} sx={{ padding: 3,justifyContent: "center" }}>
+      <Grid container spacing={3} sx={{ padding: 3,justifyContent: "center", }}>
         {cards.map((card, index) => (
           <Grid item xs={12} sm={12} md={3} key={index}  sx={{ marginBottom: "30px" }}> 
-            <StyledCard sx={{ height: "100%", display: "flex", flexDirection: "column", }}>
+            <StyledCard sx={{ height: "503px", width:"280px",display: "flex", flexDirection: "column",}}>
               <CardMedia 
                 component="img"
                 image={card.image}
@@ -53,6 +55,7 @@ const Section4 = () => {
                   objectFit: "cover",
                   borderTopLeftRadius: "10px",
                   borderTopRightRadius: "10px",
+                  marginBottom:"0px"
                 }}
               />
 
@@ -62,21 +65,29 @@ const Section4 = () => {
                 display: "flex", 
                 flexDirection: "column",
                 justifyContent: "space-between",
-                paddingBottom: "20px"
+                // paddingBottom: "20px"
               }}>
                 
                 <Box sx={{ flexGrow: 1 }}>
                   {/* Goal & Rise Section */}
-                  <GoalRiseContainer sx={{ marginBottom: "20px" }}>
-                    <div><strong>Goal</strong><p>₹ 40Cr</p></div>
-                    <div><strong>Rise</strong><p>₹ 30Cr</p></div>
+                  <GoalRiseContainer sx={{ marginBottom: "10px",}}>
+                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px",fontFamily:"Montserrat" }}>
+                       <strong>Goal</strong>
+                       <p style={{ margin: 0, padding: 0,color:"#847F3B",fontWeight:"500" }}>₹ 40Cr</p>
+                   </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0px" }}>
+                       <strong>Rise</strong>
+                       <p style={{ margin: 0, padding: 0,color:"#847F3B",fontWeight:"500" }}>₹ 30Cr</p>
+                   </div>
+
                   </GoalRiseContainer>
 
                   {/* Title & Description */}
-                  <Typography variant="h6" sx={{ fontWeight: 600, fontSize: "20px", textAlign: "start", marginBottom:"20px" }}>
+                  <Typography variant="h6" sx={{ fontWeight: 600, fontSize: "20px", textAlign: "start", marginBottom:"20px",fontFamily:"Montserrat" }}>
                     {card.title}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
+                  <Typography variant="body2" sx={{fontFamily:"Montserrat",textAlign:"start",margin:0,padding:0}}>
                     {card.description}
                   </Typography>
 
@@ -101,8 +112,8 @@ const Section4 = () => {
                       variant="body2"
                       sx={{ display: "flex", justifyContent: "space-between", width: "100%", color: "#9E9E9E", marginTop: "5px" }}
                     >
-                      <span>To Go</span>
-                      <span style={{ fontWeight: "bold", color: "black" }}>10Cr</span>
+                      <span style={{fontFamily:"Montserrat"}}> To Go</span>
+                      <span style={{ fontWeight: "bold", color: "black",fontFamily:"Montserrat" }}>10Cr</span>
                     </Typography>
                   </Box>
             </Box>
@@ -112,6 +123,7 @@ const Section4 = () => {
                 <Box sx={{ display: "flex", justifyContent: "center", }}>
                   <Button
                     variant="contained"
+                    onClick={()=>Navigate("/payments")}
                     endIcon={<ArrowForwardIosIcon sx={{ width: "12px", height: "12px" }} />}
                     sx={{
                       backgroundColor: "#8b7e3f",
@@ -122,7 +134,11 @@ const Section4 = () => {
                       textTransform: "none",
                       fontWeight: 500,
                       fontSize: "12px",
+                      fontFamily:"Montserrat",
+                      lineHeight:"14",
+                      letterSpacing:"0.12px",
                       "&:hover": { backgroundColor: "#7a6e38" },
+                     
                     }}
                   >
                     Donate Now
