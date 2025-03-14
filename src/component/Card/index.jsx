@@ -7,14 +7,13 @@ import logo2 from "../../assets/images/logo.png";
 const ProfileIconCard = () => {
   return (
     <Card
-      style={{
-        width: "370px",
-        height: "270px",
-        borderradius: "10px",
-        borderwidth: "2px",
-        background: " rgba(249, 249, 241, 0.1)",
-        paddingLeft: "-10px",
-        margin: "20px",
+      sx={{
+        width: { xs: "100%", sm: "350px", md: "370px" }, // Full width on mobile, 420px on iPad, 370px on larger screens
+        height: { xs: "300px", sm: "280px", md: "270px" }, // Auto height on mobile, slight increase for iPad
+        borderRadius: "10px",
+        background: "rgba(249, 249, 241, 0.1)",
+        paddingLeft: { xs: "0px", sm: "-10px" }, // Adjust padding for different sizes
+        margin: "20px auto", // Centering card
         border: "2px solid rgba(235, 234, 237, 1)",
       }}
     >
@@ -168,13 +167,23 @@ const ProfileIconCard = () => {
             <EmailIcon
               sx={{
                 color: "#6D6D6D",
-                mb: "10px",
-                mt: "-0px",
+                mb: { xs: "8px", sm: "10px", md: "8px" }, // Adjust bottom margin for spacing
+                mt: { xs: "7px", sm: "5px", md: "-3px" }, // Adjust top margin
+                fontSize: { xs: "20px", sm: "24px", md: "28px" }, // Smaller on mobile, larger on desktop
+                marginLeft: { xs: "-55px", md: "-35px", sm: "-35px" },
               }}
             />
+
             <Typography
               variant="body2"
-              sx={{ color: "#6D6D6D", fontWeight: 500,textAlign: "center !important" }}
+              sx={{
+                color: "#6D6D6D",
+                fontWeight: 500,
+                textAlign: "center",
+                fontSize: { xs: "12px", sm: "14px", md: "16px" }, // Smaller on mobile, medium on iPad, larger on desktop
+                width: { xs: "100%", sm: "80%", md: "auto" }, // Full width on mobile, 80% on iPad, auto on desktop
+                paddingRight: { xs: "50px", sm: "8px", md: "10px" }, // Adjust padding for spacing
+              }}
             >
               grameenavikas@gmail.com
             </Typography>
