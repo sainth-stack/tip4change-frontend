@@ -13,13 +13,13 @@ const Section2 = () => {
         <Typography
           className="section2-title"
           variant="h4"
-          fontWeight="bold"
+          fontWeight="600"
           sx={{ marginTop: "20px" }}
         >
           Comparison with Conventional T-Shirt
         </Typography>
         <p
-          className="section-text"
+          className="section2-text"
           style={{
             fontWeight: 400,
             maxWidth: "800px",
