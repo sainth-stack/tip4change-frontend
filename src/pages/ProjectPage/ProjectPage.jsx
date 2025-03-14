@@ -7,7 +7,9 @@ import CustomTypography from '../../components/TypoGraphy/CustomTypography';
 import CustomInput from '../../components/CustomInput/CustomInput';
 import DragAndDropFileInput from '../../components/DragAndDropFileInput/DragAndDropFileInput';
 import CustomButton from '../../components/Button/CustomButton';
-import { ProjectPageUiFileds,ProjectPageButtonData } from './data';
+import { ProjectPageUiFileds, ProjectPageButtonData } from './data';
+import NavigationHeader from '../../layout/NavigationHeader';
+
 
 const ProjectPage = () => {
   const location = useLocation();
@@ -47,18 +49,10 @@ const ProjectPage = () => {
   return (
 
     <>
-      <Box sx={{ }}>
-         <CustomTypography color="text.primary">Project Creation</CustomTypography>
-      <Breadcrumbs separator="››" aria-label="breadcrumb">
-        <CustomTypography color="text.primary">Home</CustomTypography>
-        {pathnames.map((value, index) => (
-          <CustomTypography key={index} color="text.primary">
-            {value.charAt(0).toUpperCase() + value.slice(1)}
-          </CustomTypography>
-        ))}
-      </Breadcrumbs>
-    </Box>
-
+      <Box >
+        <NavigationHeader path={pathnames}  PageText="Project Creation"/>
+        </Box>
+              
       
   <Box
         sx={{

@@ -8,10 +8,12 @@ import { StoryPageButtonData, StoryPageUiFileds } from './data';
 import DragAndDropFileInput from '../../components/DragAndDropFileInput/DragAndDropFileInput';
 import CustomInput from '../../components/CustomInput/CustomInput';
 import CustomButton from '../../components/Button/CustomButton';
+import NavigationHeader from '../../layout/NavigationHeader';
 
 const StoryPage = () => {
      const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
+  console.log("pathnames: " + pathnames)
 
 
   const [formData, setFormData] = useState({
@@ -42,19 +44,10 @@ const StoryPage = () => {
     
   return (
       <>
-           <Box sx={{ }}>
-         <CustomTypography color="text.primary">Story Upload</CustomTypography>
-      <Breadcrumbs separator="››" aria-label="breadcrumb">
-        <CustomTypography color="text.primary">Home</CustomTypography>
-        {pathnames.map((value, index) => (
-          <CustomTypography key={index} color="text.primary">
-            {value.charAt(0).toUpperCase() + value.slice(1)}
-          </CustomTypography>
-        ))}
-      </Breadcrumbs>
-    </Box>
-
           
+<Box >
+        <NavigationHeader path={pathnames}  PageText="Story Upload"/>
+        </Box>
               
   <Box
         sx={{
@@ -115,6 +108,7 @@ const StoryPage = () => {
         hoverColor={button.hoverColor}
         marginTop={button.marginTop}
         onClick={button.onClick}
+        sx={{marginLeft:".3rem"}}
       />
     ))}
   </Grid>
