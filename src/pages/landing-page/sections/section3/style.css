@@ -129,18 +129,30 @@
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns for desktop */
   gap: 0px; /* Adds spacing between items */
   justify-content: center;
+
   margin-top: 40px;
   padding: 10px 100px; /* Default padding for desktop */
   height: auto; /* Adjusts dynamically */
 }
 
 /* Tablet (iPad) - 2 columns */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .SectionProfile {
-    grid-template-columns: repeat(2, 0fr); /* 2 columns for iPad */
     display: grid;
-    justify-content: "space-around";
-    align-items: center;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  }
+
+  /* First and second child take 1 column each */
+  .SectionProfile > :nth-child(1),
+  .SectionProfile > :nth-child(2) {
+    grid-column: span 1;
+  }
+
+  /* Third child spans both columns and is centered */
+  .SectionProfile > :nth-child(3) {
+    grid-column: 1 / span 2;
+    justify-self: center;
   }
 }
 
@@ -151,13 +163,3 @@
     padding: 10px 20px; /* Further reduce padding */
   }
 }
-/*  .SectionProfile > :nth-child(1),
-  .SectionProfile > :nth-child(2) {
-    grid-column: span 1; 
-  }
-
-  .SectionProfile > :nth-child(3) {
-    grid-column: 1 / span 2; 
-    justify-self: center; 
-  }
-} */

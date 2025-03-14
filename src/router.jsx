@@ -23,10 +23,19 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [{ path: "", element: <LandingPage /> }],
   },
+  // {
+  //   path: "/payment",
+  //   element: <Layout />,
+  //   children: [{ path: "", element: <PaymentForm /> }],
+  // },
+
   {
-    path: "/payment",
+    path: "/",
     element: <Layout />,
-    children: [{ path: "", element: <PaymentForm /> }],
+    children: [
+      { path: "/payments", element: <PaymentForm /> },
+
+    ],
   },
   {
     path: "",
