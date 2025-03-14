@@ -8,6 +8,7 @@ import NewISidebarLayout from "./layout/NewISidebarLayout";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import StoryPage from "./pages/StoryPage/StoryPage";
 import PaymentForm from "./pages/paymentSection";
+import DoughnutChart from "./pages/progressTracker/index";
 import NotFound from "./components/Page-404/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 // import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
@@ -34,7 +35,11 @@ const router = createBrowserRouter([
       { path: "/project", element: <ProjectPage /> },
       { path: "/profile", element: <ProfilePage /> },
       { path: "/story", element: <StoryPage /> },
+      { path:"/progress-tracking",element:<DoughnutChart />},
+      {path:"/payments",element: <PaymentForm />},
       // { path: "/payment-section", element: <PaymentTablePage /> },
+
+
     ],
   },
   // {
