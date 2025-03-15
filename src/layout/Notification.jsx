@@ -13,7 +13,9 @@ import {
   Badge,
 } from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import PersonIcon from "@mui/icons-material/Person";
+// import PersonIcon from "@mui/icons-material/Person";
+
+import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 
 const notifications = [
   {
@@ -71,9 +73,8 @@ const NotificationPopup = () => {
     <Box
       sx={{
         display: "flex",
-        alignItems: "center",
         gap: "1rem",
-        marginLeft: "auto",
+        marginTop: 2,
       }}
     >
       {/* Notification Icon (Triggers Popover) */}
@@ -106,6 +107,7 @@ const NotificationPopup = () => {
         transformOrigin={{ vertical: "top", horizontal: "right" }}
         sx={{
           mt: 1,
+          marginLeft: 4,
           "& .MuiPaper-root": {
             borderRadius: "30px",
             // Ensures the popover box has rounded corners
@@ -137,7 +139,9 @@ const NotificationPopup = () => {
               sx={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Notification{" "}
-              <span style={{ color: "#847f3b" }}>
+             
+
+              <span style={{ color: "#87f3b" }}>
                 ({notifs.filter((n) => n.unread).length})
               </span>
             </Typography>
@@ -157,26 +161,35 @@ const NotificationPopup = () => {
           </Box>
 
           {/* Notifications List */}
-          <List sx={{ height: "450px", overflowY: "auto" }}>
+          <List
+            sx={{
+              maxHeight: "20rem",
+              overflowY: "auto",
+            }}
+          >
             {notifs.map((notif) => (
               <ListItem
                 key={notif.id}
                 sx={{
-                  // borderBottom: "1px solid #eee",
+                  borderBottom: ".1rem solid #eee",
+                  padding: ".3rem",
 
                   fontFamily: "Montserrat, sans-serif",
                 }}
               >
                 <ListItemAvatar>
-                  <Avatar sx={{ bgcolor: "#EAE8D3", color: "#5D5A36" }}>
-                    <PersonIcon />
+                  <Avatar sx={{ bgcolor: "#dbd9c5", color: "#a38e5d" }}>
+                    <Person2OutlinedIcon />
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
                   primary={
                     <Typography
-                      fontWeight="bold"
-                      sx={{ fontFamily: "Montserrat, sans-serif" }}
+                      fontWeight="500"
+                      sx={{
+                        fontFamily: "Montserrat, sans-serif",
+                        maxWidth: "calc(100% - .5rem)",
+                      }}
                     >
                       {notif.text}
                     </Typography>
@@ -194,8 +207,11 @@ const NotificationPopup = () => {
                 {notif.unread && (
                   <Box
                     sx={{
-                      width: 8,
-                      height: 8,
+                      position: "absolute",
+                      top: 23,
+                      right: 3,
+                      width: 10,
+                      height: 10,
                       bgcolor: "#847f3b",
                       borderRadius: "50%",
                       fontFamily: "Montserrat, sans-serif",
