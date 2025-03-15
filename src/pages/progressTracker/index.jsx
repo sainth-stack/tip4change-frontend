@@ -7,6 +7,7 @@ import TaskList from "../../components/TaskList/taskItem"
 import CustomTypography from '../../components/TypoGraphy/CustomTypography';
 import { useLocation } from 'react-router-dom';
 import { chartData,options } from "./data";
+import NavigationHeader from '../../layout/NavigationHeader'
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -18,7 +19,11 @@ const DoughnutChart = () => {
   return (
     <Grid>
 
-         <Box sx={{ }}>
+                     
+                  <Box sx={{fontFamily:"Montserrat",paddingLeft:"10px"}} >
+                  <NavigationHeader path={pathnames}  PageText="Payment Section"  />
+                  </Box>
+         {/* <Box sx={{ }}>
             <CustomTypography color="text.primary">Progress Tracking</CustomTypography>
             <Breadcrumbs separator="››" aria-label="breadcrumb">
               <CustomTypography color="text.primary">Home</CustomTypography>
@@ -28,7 +33,7 @@ const DoughnutChart = () => {
                   </CustomTypography>
                 ))}
             </Breadcrumbs>
-            </Box>
+            </Box> */}
         
     <Typography
       variant="h6"

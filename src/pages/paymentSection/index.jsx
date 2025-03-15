@@ -16,6 +16,8 @@ import CustomButton from "../../components/Button/CustomButton";
 import { useLocation } from 'react-router-dom';
 import CustomTypography from '../../components/TypoGraphy/CustomTypography';
 import {formFields} from './data'
+import NavigationHeader from '../../layout/NavigationHeader'
+
 
 const PaymentForm = () => {
     const location = useLocation();
@@ -23,17 +25,11 @@ const PaymentForm = () => {
   
   return (
     <Grid>
-            <Box sx={{ }}>
-               <CustomTypography color="text.primary">Payment Section</CustomTypography>
-            <Breadcrumbs separator="››" aria-label="breadcrumb">
-              <CustomTypography color="text.primary">Home</CustomTypography>
-              {pathnames.map((value, index) => (
-                <CustomTypography key={index} color="text.primary">
-                  {value.charAt(0).toUpperCase() + value.slice(1)}
-                </CustomTypography>
-              ))}
-            </Breadcrumbs>
-          </Box>
+           
+        <Box sx={{paddingTop:"80px",paddingLeft:"40px",fontFamily:"Montserrat"}} >
+        <NavigationHeader path={pathnames}  PageText="Payment Section"  />
+        </Box>
+
       
       <div>
         <h3 style={{height:"40px",paddingLeft:"40px",fontFamily:"Montserrat",fontWeight:800,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"40px"}}>payment section</h3>
