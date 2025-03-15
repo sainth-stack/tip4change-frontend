@@ -1,9 +1,9 @@
 // layout/NewISidebarLayout.jsx
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
 import { Box, Container, Grid, useMediaQuery } from "@mui/material";
 import CustomTopBar from "./CustomTopBar";
+import Sidebar from "./Sidebar";
 
 const NewISidebarLayout = () => {
   const isMobile = useMediaQuery("(max-width:600px)"); // Mobile
@@ -15,10 +15,10 @@ const NewISidebarLayout = () => {
       {/* Sidebar */}
       <Box
         sx={{
-          boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
-          width: isMobile ? "4rem" : "12rem",
+          // boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
+          // width: isMobile ? "4rem" : "15rem",
           flexShrink: 0,
-          bgcolor: "background.paper",
+          // bgcolor: "background.paper",
           borderRight: "1px solid #ddd",
           height: "100%",
           position: "fixed",
@@ -41,7 +41,7 @@ const NewISidebarLayout = () => {
         {/* Pass isOverlapping prop */}
         <CustomTopBar isOverlapping={isSidebarVisible} />
 
-        <Container sx={{ flexGrow: 1, p: 1, mt: 8 }}>
+        <Container sx={{ flexGrow: 1, p: 1, mt: 8,ml:4 ,minWidth:"calc(100% - 5%)"}}>
           <Outlet />
         </Container>
       </Box>

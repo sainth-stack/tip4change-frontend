@@ -10,7 +10,7 @@ export const StoryPageUiFileds = [
     accept: ".pdf,.docx,.png,.jpg",
     multiple: false,
     required: false,
-    placeholder: "Drag & Drop Your File",
+    // placeholder: "Drag & Drop Your File",
   },
   {
     id: "ProductTitle",
@@ -19,7 +19,7 @@ export const StoryPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Enter project title",
+    // placeholder: "Enter project title",
   },
   {
     id: "productCode",
@@ -28,17 +28,18 @@ export const StoryPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Describe the project Code",
+    // placeholder: "Describe the project Code",
   },
  
   {
     id: "StoryDescription",
     type: "textarea",
+    rows:4,
     label: "Description",
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Enter detailed Description",
+    // placeholder: "Enter detailed Description",
   },
   
 ];

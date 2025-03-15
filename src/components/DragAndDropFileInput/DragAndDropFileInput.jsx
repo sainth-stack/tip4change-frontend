@@ -4,6 +4,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import CustomImage from "../CustomImage/CustomImage";
 import dragIcon from "../../assets/images/drag_image.png"
 import CustomInput from "../CustomInput/CustomInput";
+
 const DragAndDropFileInput = ({onFileSelect }) => {
   const [dragActive, setDragActive] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -32,6 +33,7 @@ const DragAndDropFileInput = ({onFileSelect }) => {
   // console.log("file",file) e
     }
   };
+  
 
   return (
     <Box
@@ -39,43 +41,47 @@ const DragAndDropFileInput = ({onFileSelect }) => {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       sx={{
-        border: dragActive ? "3px dashed #a38e5d" : "2px dashed #a38e5d",
+        border: dragActive ? "3px dotted #a38e5d" : "2px dotted #a38e5d",
         borderRadius: "12px",
-        width: "25rem",
+        maxWidth: {
+          xs: "100%",
+          sm: "80%",
+          md: "300px",
+          lg: "500px",
+          xl: "800px",
+        },
         height: "15rem",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: dragActive ? "#f9f9f7" : "transparent",
+        backgroundColor: dragActive ? "#f5f1e6" : "transparent",
         transition: "background-color 0.3s ease",
         cursor: "pointer",
         margin: "auto",
       }}
-      >
-          
-          <CustomInput  
-               type="file"
+    >
+      <CustomInput
+        type="file"
         id="fileInput"
-              sx={{
-                  display: "none",
-              }}
+        sx={{
+          display: "none",
+        }}
         onChange={handleFileChange}
-          />
-     
-       <IconButton color="inherit" component="label" htmlFor="fileInput">
- <CustomImage
-  src={dragIcon}
-  alt="Upload"
-  styles={{
-    width: 40,
-    height: 40,
-    objectFit: "contain",
-    filter: "grayscale(80%) opacity(70%)",
-  }}
-/>
+      />
 
-</IconButton>
+      <IconButton color="inherit" component="label" htmlFor="fileInput">
+        <CustomImage
+          src={dragIcon}
+          alt="Upload"
+          styles={{
+            width: 40,
+            height: 40,
+            objectFit: "contain",
+            filter: "grayscale(80%) opacity(70%)",
+          }}
+        />
+      </IconButton>
 
       <Typography
         variant="body1"
@@ -83,7 +89,7 @@ const DragAndDropFileInput = ({onFileSelect }) => {
       >
         {selectedFile ? selectedFile.name : "Upload Image/Video"}
       </Typography>
-      <Typography variant="body2" sx={{ color: "#000",fontWeight:"500" }}>
+      <Typography variant="body2" sx={{ color: "#000", fontWeight: "500" }}>
         Or
       </Typography>
       <Button

@@ -7,6 +7,7 @@ import TaskList from "../../components/TaskList/taskItem"
 import CustomTypography from '../../components/TypoGraphy/CustomTypography';
 import { useLocation } from 'react-router-dom';
 import { chartData,options } from "./data";
+import NavigationHeader from '../../layout/NavigationHeader'
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -18,7 +19,11 @@ const DoughnutChart = () => {
   return (
     <Grid>
 
-         <Box sx={{ }}>
+                     
+                  <Box sx={{fontFamily:"Montserrat",paddingLeft:"10px"}} >
+                  <NavigationHeader path={pathnames}  PageText="Payment Section"  />
+                  </Box>
+         {/* <Box sx={{ }}>
             <CustomTypography color="text.primary">Progress Tracking</CustomTypography>
             <Breadcrumbs separator="››" aria-label="breadcrumb">
               <CustomTypography color="text.primary">Home</CustomTypography>
@@ -28,16 +33,19 @@ const DoughnutChart = () => {
                   </CustomTypography>
                 ))}
             </Breadcrumbs>
-            </Box>
+            </Box> */}
         
     <Typography
       variant="h6"
       sx={{
-        fontFamily: "Montserrat, sans-serif",
+        fontFamily: "Montserrat",
+        fontSize:"20px",
+        fontWeight:"500",
+        lineHeight:"150%",
         color: "black",
         paddingTop:{xs:"20px",md:"40px"},
         paddingBottom:{xs:"20px"},
-        paddingLeft:{xs:"10px",md:"40px"}
+        paddingLeft:{xs:"10px",md:"10px"}
       }}
     >
       Drinking Water - Saidapet Girls Higher Secondary School
@@ -52,6 +60,7 @@ const DoughnutChart = () => {
         flexDirection: { xs: "column", md: "row" }, // Column in xs, row in md+
         justifyContent: { xs: "center", md: "space-between" }, // Center in xs, space-between in md+
         alignItems: "center",
+        
       }}
     >
       {/* Doughnut Chart and Legend */}
@@ -66,28 +75,34 @@ const DoughnutChart = () => {
           justifyContent: "center",
           flexDirection: {xs:"column",md:"row"},
           flex: 1, // Ensures equal spacing
-        
         }}
       >
-        <div style={{ position: "relative", width: "100%", maxWidth: "400px", height: "300px"}}>
+        <div style={{ position: "relative", width: "100%", maxWidth: "300px", height: "300px"}}>
           <Doughnut data={chartData} options={options} />
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "20px" ,alignItems:"center" }}>
+        </div >
+        <Box
+  sx={{
+    marginLeft: { xs: 0, md: "25px" } // No margin on xs, applies -100px on md & lg
+  }}
+>
+  <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "20px", alignItems: "center" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+      <div style={{ width: "15px", height: "15px", backgroundColor: "#7A713B" }}></div>
+      <span style={{ fontSize: "14px", color: "#333" }}>Completed</span>
+    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: "5px", paddingLeft: "12px" }}>
+      <div style={{ width: "15px", height: "15px", backgroundColor: "#E0DEC9" }}></div>
+      <span style={{ fontSize: "14px", color: "#333" }}>InCompleted</span>
+    </div>
+  </div>
+</Box>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-            <div style={{ width: "15px", height: "15px", backgroundColor: "#7A713B" }}></div>
-            <span style={{ fontSize: "14px", color: "#333" }}>Completed</span>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "5px",padding:"3px" }}>
-            <div style={{ width: "15px", height: "15px", backgroundColor: "#E0DEC9" }}></div>
-            <span style={{ fontSize: "14px", color: "#333" }}>Incompleted</span>
-          </div>
-        </div>
     
       </Grid>
 
       {/* Task List */}
-      <Grid
+
+    <Grid
         item
         xs={12}
         md={6}
@@ -97,19 +112,25 @@ const DoughnutChart = () => {
           flexDirection: "column",
           alignItems: "center",
           flex: 1, // Ensures equal space in row layout
+          gap:"0px"
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" ,marginTop:"50px",height:"60px" }}>
-          <Typography sx={{fontWeight:800,fontFamily:"Montserrat",marginLeft:{md:"20px"}}}>Task list</Typography>
-         <Box sx={{marginRight:{md:"20px"}}}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" ,marginTop:"30px",height:"60px" }}>
+          <Typography sx={{fontWeight:600,fontFamily:"Montserrat",marginLeft:{md:"30px"},fontSize:"20px",lineHeight:"150%"}}>Task list</Typography>
+         <Box sx={{marginRight:{md:"55px"}}}>
          <Button
             sx={{
-              height: "40px",
-              width: "100px",
+              height: "50px",
+              width: "146px",
               backgroundColor: "#847f3b",
               color: "#fff",
-              borderRadius: "1rem",
+              borderRadius: "20px",
               textTransform: "capitalize",
+              fontWeight:"500",
+              fontSize:"18px",
+              align:"center",
+              fontFamily:"Montserrat",
+              lineHeight:"18px",
               
               "&:hover": { backgroundColor: "#5f6340" },
             }}
@@ -120,6 +141,7 @@ const DoughnutChart = () => {
         </div>
         <TaskList />
       </Grid>
+
     </Grid>
     </Grid>
   );

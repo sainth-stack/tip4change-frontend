@@ -15,9 +15,19 @@ export const InputTextComponent = ({
   sx = {},
 }) => {
   return (
-    <div style={{ marginBottom: "1rem", width: "100%" }}> {/* Ensures the div takes full width */}
+    <div style={{ marginBottom: "1rem", width: "100%" }}>
+      {" "}
+      {/* Ensures the div takes full width */}
       {label && (
-        <Typography variant="body1" sx={{ marginBottom: "0.2rem", fontWeight: 500 ,fontFamily:"Montserrat"}}>
+        <Typography
+          variant="body1"
+          sx={{
+            marginBottom: "0.2rem",
+            fontWeight: 500,
+            fontFamily: "Montserrat",
+            color: "#a38e5d",
+          }}
+        >
           {label}
         </Typography>
       )}
@@ -30,19 +40,20 @@ export const InputTextComponent = ({
         placeholder={placeholder}
         disabled={disabled}
         fullWidth // Ensures the TextField expands
-        variant="outlined"
         sx={{
           borderRadius: "30px",
           height: "44px",
           "& .MuiOutlinedInput-root": {
             borderRadius: "40px",
             height: "44px",
-            borderColor: "#847F3B",
+            "& fieldset": {
+              borderColor: "#a38e5d",
+            },
             "&:hover fieldset": {
-              borderColor: "#847F3B",
+              borderColor: "#a38e5d",
             },
             "&.Mui-focused fieldset": {
-              borderColor: "#847F3B",
+              borderColor: "#a38e5d",
             },
           },
           ...sx,
