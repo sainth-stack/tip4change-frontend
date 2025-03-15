@@ -43,7 +43,7 @@ const Section1 = () => {
                   fontWeight: "bold",
                   margin: { xs: 2, md: 4 },
                   marginTop: { xs: 6, md: 8 },
-                  maxWidth: { xs: "100%", md: "20rem" },
+                  maxWidth: { xs: "100%", md: "22rem" },
                   textAlign: { xs: "center", md: "left" },
                 }}
               >
