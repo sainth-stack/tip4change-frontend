@@ -24,9 +24,11 @@ const CustomTopBar = ({ isOverlapping }) => {
         backgroundColor: "#fff",
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         color: "#000",
-        maxHeight: "3rem",
+        height: "75px",
         width: isOverlapping ?isMobile?"calc(100% - 5rem)": "calc(100% - 12rem)" : "100%",  
         transition: "all 0.3s ease", 
+        display:'flex',
+        justifyContent:'center'
       }}
     >
       <Toolbar

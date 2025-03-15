@@ -36,7 +36,7 @@ export const cards = [
 ];
 
 export const StyledCard = styled(Card)({
-  width: "280.35px",  // Width from Figma
+  width: "100%",  // Width from Figma
   height: "503.86px", // Fixed height from Figma
   borderRadius: "10px",
   paddingBottom: "30.89px", // Padding bottom from Figma

@@ -46,7 +46,7 @@ const SocialImpactCard = () => {
             fontWeight="600"
             fontFamily="Montserrat"
             fontStyle="Montserrat"
-            mt={"10px"}
+            // mt={"10px"}
             sx={{
               fontSize: { xs: "17px", md: "34px" },
               width: { xs: "90%", md: "1000px" }, // Full width on small screens
@@ -163,7 +163,7 @@ const SocialImpactCard = () => {
           // Centering Button Properly
           display: "block",
           mx: "auto", // Auto margin for centering
-          mt: { xs: "00px", md: "80px" },
+          mt: { xs: "00px"},
         }}
       >
         Join Community

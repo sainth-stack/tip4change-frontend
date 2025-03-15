@@ -22,7 +22,6 @@
 
 .believe {
   font-weight: 400;
-
   text-align: center !important;
   color: black;
   width: 40%;
@@ -58,7 +57,7 @@
   .believe {
     font-size: 20px;
     line-height: 27px;
-    max-width: 87%;
+    height: 87%;
     margin-left: 30px;
   }
 
@@ -84,7 +83,7 @@
   .believe {
     font-size: 16px;
     line-height: 26px;
-    max-width: 90%;
+    width: 90%;
   }
 
   .bg-img2 {
@@ -108,7 +107,7 @@
   .believe {
     font-size: 14px;
     line-height: 24px;
-    max-width: 95%;
+    width: 95%;
   }
 
   .bg-img2 {
