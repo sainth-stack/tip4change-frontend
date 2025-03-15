@@ -10,24 +10,38 @@
 }
 
 /* Body Text Styles */
-.section-text {
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    line-height: 25px;
+.section2-text , .section-text{
+    font-family: "Montserrat";
+    font-weight: 400;
+    /* font-size: 17px;
+    line-height: 28px; */
     color: black;
     padding-left: 20px;
     padding-right: 20px;
     
 }
 
+.section2-text {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.section-text {
+    font-size: 15px;
+    line-height: 25px;
+}
+
 /* Section Title */
 .section2-title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     font-weight: 600;
     font-size: 40px;
     text-align: center;
     color: black;
+    line-height: 100%;
 }
+
+
 
 /* Background Image */
 .bg-img {

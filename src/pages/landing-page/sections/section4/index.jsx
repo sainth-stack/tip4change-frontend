@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useNavigate } from "react-router-dom";
 
 const Section4 = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <Box sx={{ width: "100%", textAlign: "center", }} mt={3}>
       {/* Top Section with Title and Description */}
@@ -43,8 +43,8 @@ const Section4 = () => {
       {/* Donation Cards */}
       <Grid container spacing={3} sx={{ padding: 3,justifyContent: "center", }}>
         {cards.map((card, index) => (
-          <Grid item xs={12} sm={12} md={3} key={index}  sx={{ marginBottom: "30px" }}> 
-            <StyledCard sx={{ height: "503px", width:"280px",display: "flex", flexDirection: "column",}}>
+          <Grid item xs={12} sm={12} md={4} lg={3}key={index}  sx={{ marginBottom: "30px" }}> 
+            <StyledCard sx={{ height: "503px", maxWidth:"280px",display: "flex", flexDirection: "column",}}>
               <CardMedia 
                 component="img"
                 image={card.image}
@@ -123,7 +123,7 @@ const Section4 = () => {
                 <Box sx={{ display: "flex", justifyContent: "center", }}>
                   <Button
                     variant="contained"
-                    onClick={()=>Navigate("/payments")}
+                    onClick={()=>navigate("/payments")}
                     endIcon={<ArrowForwardIosIcon sx={{ width: "12px", height: "12px" }} />}
                     sx={{
                       backgroundColor: "#8b7e3f",
