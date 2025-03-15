@@ -84,7 +84,7 @@ const NotificationPopup = () => {
           width: "35px",
           height: "35px",
           transition: "all 0.3s ease",
-          borderRadius: open ? "30px" : "50%", // Change border-radius dynamically
+          borderRadius: open ? "30px" : "50%",
         }}
         onClick={handleClick}
       >
@@ -104,16 +104,24 @@ const NotificationPopup = () => {
         onClose={handleClose}
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
-        sx={{ mt: 1 }}
+        sx={{
+          mt: 1,
+          "& .MuiPaper-root": {
+            borderRadius: "30px",
+            // Ensures the popover box has rounded corners
+          },
+        }}
       >
         <Box
           sx={{
             p: 2,
-            width: 450,
-            height: "400px",
-            borderRadius: "30px",
-            boxShadow: 0,
+            width: 490,
+            height: "420px",
+
             backgroundColor: "#fff",
+            display: "flex",
+            flexDirection: "column",
+            fontFamily: "Montserrat, sans-serif", // Corrected font usage
           }}
         >
           {/* Header Section */}
@@ -123,7 +131,11 @@ const NotificationPopup = () => {
             alignItems="center"
             mb={1}
           >
-            <Typography variant="h6" fontWeight="bold">
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              sx={{ fontFamily: "Montserrat, sans-serif" }}
+            >
               Notification{" "}
               <span style={{ color: "#847f3b" }}>
                 ({notifs.filter((n) => n.unread).length})
@@ -136,6 +148,7 @@ const NotificationPopup = () => {
                 color: "#847f3b",
                 borderColor: "#847f3b",
                 borderRadius: "30px",
+                fontFamily: "Montserrat, sans-serif",
               }}
               onClick={markAllAsRead}
             >
@@ -144,11 +157,15 @@ const NotificationPopup = () => {
           </Box>
 
           {/* Notifications List */}
-          <List sx={{ maxHeight: 400, overflowY: "auto" }}>
+          <List sx={{ height: "450px", overflowY: "auto" }}>
             {notifs.map((notif) => (
               <ListItem
                 key={notif.id}
-                sx={{ borderBottom: "1px solid #eee", pb: 0 }}
+                sx={{
+                  // borderBottom: "1px solid #eee",
+
+                  fontFamily: "Montserrat, sans-serif",
+                }}
               >
                 <ListItemAvatar>
                   <Avatar sx={{ bgcolor: "#EAE8D3", color: "#5D5A36" }}>
@@ -157,10 +174,19 @@ const NotificationPopup = () => {
                 </ListItemAvatar>
                 <ListItemText
                   primary={
-                    <Typography fontWeight="bold">{notif.text}</Typography>
+                    <Typography
+                      fontWeight="bold"
+                      sx={{ fontFamily: "Montserrat, sans-serif" }}
+                    >
+                      {notif.text}
+                    </Typography>
                   }
                   secondary={
-                    <Typography color="textSecondary" variant="body2">
+                    <Typography
+                      color="textSecondary"
+                      variant="body2"
+                      sx={{ fontFamily: "Montserrat, sans-serif" }}
+                    >
                       {notif.date}
                     </Typography>
                   }
@@ -172,6 +198,7 @@ const NotificationPopup = () => {
                       height: 8,
                       bgcolor: "#847f3b",
                       borderRadius: "50%",
+                      fontFamily: "Montserrat, sans-serif",
                     }}
                   />
                 )}

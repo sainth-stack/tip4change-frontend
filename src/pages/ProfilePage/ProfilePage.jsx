@@ -58,10 +58,18 @@ const ProfileView = () => {
           >
             View Profile
           </Typography>
-          <Breadcrumbs separator="››" aria-label="breadcrumb">
+          {/* <Breadcrumbs separator="››" aria-label="breadcrumb">
             <CustomTypography color="#858040">Dashboard</CustomTypography>
             {pathnames.map((value, index) => (
               <CustomTypography key={index} color="#858040">
+                {value.charAt(0).toUpperCase() + value.slice(1)}
+              </CustomTypography>
+            ))}
+          </Breadcrumbs> */}
+          <Breadcrumbs separator="››" aria-label="breadcrumb">
+            <CustomTypography color="text.primary">Home</CustomTypography>
+            {pathnames.map((value, index) => (
+              <CustomTypography key={index} color="text.primary">
                 {value.charAt(0).toUpperCase() + value.slice(1)}
               </CustomTypography>
             ))}

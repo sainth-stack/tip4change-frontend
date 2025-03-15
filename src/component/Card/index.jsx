@@ -19,7 +19,8 @@ const ProfileIconCard = () => {
     >
       <Box
         sx={{
-          width: "409px",
+          width: "100%", // Default width
+          maxWidth: "409px", // Maximum width constraint
           height: "70px",
           background: " rgba(249, 249, 241, 0.1)",
           borderRadius: 2,

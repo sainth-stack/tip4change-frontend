@@ -66,10 +66,16 @@ const CustomTopBar = ({ isOverlapping }) => {
               outline: "none",
             }}
           >
-            <IconButton sx={{ bgcolor: "#f5f5f5", color: "#847f3b" }}>
+            <IconButton
+              sx={{ bgcolor: "#f5f5f5", color: "#847f3b", mt: "-14px" }}
+            >
               <NotificationPopup />
             </IconButton>
-            <Avatar alt="Profile" src={profile} sx={{ boxShadow: 3 }} />
+            <Avatar
+              alt="Profile"
+              src={profile}
+              sx={{ boxShadow: 3, mt: "-12px", width: "45px", height: "45px" }}
+            />
           </Box>
         )}
       </Toolbar>
