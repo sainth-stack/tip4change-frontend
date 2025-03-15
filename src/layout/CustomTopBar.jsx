@@ -25,7 +25,7 @@ const CustomTopBar = ({ isOverlapping }) => {
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         color: "#000",
         height: "75px",
-        width: isOverlapping ?isMobile?"calc(100% - 5rem)": "calc(100% - 12rem)" : "100%",  
+        width: isOverlapping ?isMobile?"calc(100% - 5rem)": "calc(100% - 13.5rem)" : "100%",  
         transition: "all 0.3s ease", 
         display:'flex',
         justifyContent:'center'
@@ -62,10 +62,11 @@ const CustomTopBar = ({ isOverlapping }) => {
               gap: "1rem",
               marginLeft: "auto",
               outline: "none",
+              marginTop:'0px'
             }}
           >
             <IconButton
-              sx={{ bgcolor: "#f5f5f5", color: "#847f3b", mt: "-14px" }}
+              sx={{ bgcolor: "#f5f5f5", color: "#847f3b", height: "40px",borderRadius:'50%' ,width:'40px',marginTop:'0px'}}
             >
               <NotificationPopup />
             </IconButton>

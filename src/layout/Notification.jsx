@@ -74,7 +74,7 @@ const NotificationPopup = () => {
       sx={{
         display: "flex",
         gap: "1rem",
-        marginTop: 2,
+        // marginTop: 2,
       }}
     >
       {/* Notification Icon (Triggers Popover) */}
@@ -86,6 +86,7 @@ const NotificationPopup = () => {
           height: "35px",
           transition: "all 0.3s ease",
           borderRadius: open ? "30px" : "50%",
+          marginTop:'0px'
         }}
         onClick={handleClick}
       >
