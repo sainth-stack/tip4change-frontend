@@ -23,7 +23,7 @@ const CustomListItem = ({ name, icon, path, isMobile }) => {
             bgcolor: isActive ? "#6f692e" : "#a69f4e",
             boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
           },
-          maxWidth: isSmallScreen ? "7rem" : isMediumScreen ? "9rem" : "10rem",
+          maxWidth: isSmallScreen ? "7rem" : isMediumScreen ? "9rem" : "11rem",
           display: "flex",
           justifyContent: isMobile ? "center" : "flex-start",
           padding: isMobile ? "0.3rem" : ".2rem",

@@ -6,21 +6,17 @@ import Sidebar from "./Sidebar";
 
 const NewISidebarLayout = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
-  const sidebarWidth = isMobile ? "4rem" : "10rem"; // Adjust sidebar width
+  const sidebarWidth = isMobile ? "4rem" : "11rem"; 
 
   return (
     <Box display="flex" height="100vh">
-      {/* Sidebar */}
       <aside
         style={{
           flexShrink: 0,
-          width: sidebarWidth,
-          borderRight: "1px solid #ddd",
           height: "100%",
           position: "fixed",
           top: 0,
           left: 0,
-          backgroundColor: "background.paper",
         }}
       >
         <Sidebar />
@@ -29,11 +25,12 @@ const NewISidebarLayout = () => {
       {/* Main Content Area */}
       <Box
         sx={{
-          ml: sidebarWidth, // Adjust margin-left based on sidebar width
+          ml: sidebarWidth, 
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
-          overflow: "hidden", // Prevent unwanted scrollbars
+          // overflowY: "", 
+          overflowX: "hidden",
         }}
       >
         {/* Top Bar */}
@@ -44,9 +41,20 @@ const NewISidebarLayout = () => {
             flexGrow: 1,
             p: 2,
             mt: 8,
-            ml: 4, // Ensures content starts 4 units from sidebar
-            minWidth: "calc(100% - .5rem)", // Adjusts width dynamically
-            overflowX: "hidden", // Prevents horizontal scrollbar
+            ml: {
+              xs: 4,
+              sm: ".1rem",
+              md: "1.5rem",
+              lg: "1.5rem",
+              xl: "2rem",
+            },
+            maxWidth: {
+              xs: "calc(100% - 1em)", 
+              sm: "calc(100% - 1em)", 
+              md: "calc(100% - 1em)", 
+              lg: "calc(100% -2rem)",
+              xl: "calc(100% - 2rem)", 
+            },
           }}
         >
           <Outlet />
