@@ -80,7 +80,7 @@ const CustomTable = ({
   };
 
   return (
-    <Paper sx={{ width: "100%" }}>
+    <Paper sx={{ maxWidth: "calc(100% - 2%)" }}>
       <TableContainer>
         <Table>
           {/* Table Head with Sorting */}
@@ -89,7 +89,10 @@ const CustomTable = ({
               {columns.map((col) => (
                 <TableCell
                   key={col.id}
-                  sx={{ borderRight: "1px solid #ddd", ...columnSx }}
+                  sx={{
+                    borderRight: "1px solid #ddd",
+                    ...columnSx,
+                  }}
                 >
                   {col.id !== "action" ? (
                     <TableSortLabel
@@ -97,8 +100,12 @@ const CustomTable = ({
                       direction={orderBy === col.id ? order : "asc"}
                       onClick={() => handleSort(col.id)}
                       IconComponent={SortIcon}
+                      sx={{
+                        display: "inline-block", 
+                        width: "135%", 
+                      }}
                     >
-                      {col.label}
+                      <span style={{ float: "left" }}>{col.label}</span>
                     </TableSortLabel>
                   ) : (
                     "Action"
@@ -133,14 +140,14 @@ const CustomTable = ({
                             sx={{
                               width: 26,
                               height: 26,
-                              boxShadow: "1px 1px 1px gray",
+                              boxShadow: "1px 0px 0px gray",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
                               backgroundColor: "#d5d3b3",
                               color: "#000",
                               padding: ".2rem",
-                              marginLeft:".3rem",
+                              marginLeft: ".3rem",
                               fontSize: 12,
                               borderRadius: "4px",
                             }}
@@ -155,9 +162,21 @@ const CustomTable = ({
                           <span>{row[col.id]}</span>
                         </Box>
                       ) : col.id === "action" ? (
-                        <IconButton sx={{ color: "#847f3b" }}>
-                          <DriveFileRenameOutlineOutlinedIcon />
-                        </IconButton>
+                        <Box sx={{ display: "flex", justifyContent: "center" }}>
+                          <IconButton
+                            sx={{
+                              fontSize: ".2rem",
+                              color: "#847f3b",
+                              textAlign: "center",
+                            }}
+                          >
+                            <DriveFileRenameOutlineOutlinedIcon
+                              sx={{
+                                fontSize: "1rem",
+                              }}
+                            />
+                          </IconButton>
+                        </Box>
                       ) : (
                         row[col.id]
                       )}

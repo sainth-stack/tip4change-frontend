@@ -10,7 +10,7 @@ export const ProjectPageUiFileds = [
     accept: ".pdf,.docx,.png,.jpg",
     multiple: false,
     required: false,
-    placeholder: "Drag & Drop Your File",
+    // placeholder: "Drag & Drop Your File",
   },
   {
     id: "title",
@@ -19,7 +19,7 @@ export const ProjectPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Enter project title",
+    // placeholder: "Enter project title",
   },
   {
     id: "projectGoal",
@@ -28,7 +28,7 @@ export const ProjectPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Describe the project goal",
+    // placeholder: "Describe the project goal",
   },
   {
     id: "paymentBudget",
@@ -37,7 +37,7 @@ export const ProjectPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Enter budget",
+    // placeholder: "Enter budget",
   },
   {
     id: "Projectdescription",
@@ -46,7 +46,7 @@ export const ProjectPageUiFileds = [
     value: "",
          // Placeholder for onChange handler
     required: true,
-    placeholder: "Enter detailed description",
+    // placeholder: "Enter detailed description",
   },
   
 ];

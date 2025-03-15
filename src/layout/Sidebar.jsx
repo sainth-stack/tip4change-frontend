@@ -10,9 +10,13 @@ import CustomImage from "../components/CustomImage/CustomImage";
 
 import dashboardSvg from "../assets/svg/dashboardIcon.svg";
 import StorySvg from "../assets/svg/storyIcon.svg";
-import ProjectsSvg from "../assets/svg/projectIcon.svg";
+import ProjectsSvg from "../assets/svg/ProjectSvg.svg";
 import ProgressSvg from "../assets/svg/chart-line-dataIcon.svg";
 import PaymentSvg from "../assets/svg/cashIcon.svg";
+import SettingsSvg from "../assets/svg/settingSVg.svg";
+import LogoutSvg from "../assets/svg/logoutSvg.svg";
+
+
 
 const sidebarConfig = {
   default: [
@@ -24,9 +28,14 @@ const sidebarConfig = {
       icon: ProgressSvg,
       path: "/progress-tracking",
     },
+    {
+      name: "Payment Section",
+      icon: PaymentSvg,
+      path: "/payment-section",
+    },
     // { name: "Payments", icon: PaymentSvg, path: "/payments" },
-    { name: "Settings", icon: PaymentSvg, path: "/settings" },
-    { name: "Lagout", icon: PaymentSvg, path: "/logout" },
+    { name: "Settings", icon: SettingsSvg, path: "/settings" },
+    { name: "Lagout", icon: LogoutSvg, path: "/logout" },
   ],
 };
 
@@ -36,13 +45,17 @@ function Sidebar() {
   const isTablet = useMediaQuery("(max-width: 960px) and (min-width: 601px)");
 
   // Adjust sidebar width based on screen size
-  const sidebarWidth = isMobile ? 60 : isTablet ? 150 : 175;
+  const sidebarWidth = isMobile ? 60 : isTablet ? 150 : 215;
 
   return (
     <Box
       sx={{
         width: sidebarWidth,
         height: "100%",
+        boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
+
+        flexShrink: 0,
+        bgcolor: "background.paper",
         transition: "width 0.3s ease",
         display: "flex",
         zIndex: 1000,
@@ -66,17 +79,32 @@ function Sidebar() {
       )}
 
       {/* Sidebar Menu */}
-      <List>
-        {sidebarConfig.default.map((item, index) => (
-          <CustomListItem
-            key={index}
-            name={item.name}
-            icon={item.icon}
-            path={item.path}
-            isMobile={isMobile}
-          />
-        ))}
-      </List>
+
+      <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+        <List sx={{ flexGrow: 1 }}>
+          {sidebarConfig.default.slice(0, -2).map((item, index) => (
+            <CustomListItem
+              key={index}
+              name={item.name}
+              icon={item.icon}
+              path={item.path}
+              isMobile={isMobile}
+            />
+          ))}
+        </List>
+        
+        <List>
+          {sidebarConfig.default.slice(-2).map((item, index) => (
+            <CustomListItem
+              key={index}
+              name={item.name}
+              icon={item.icon}
+              path={item.path}
+              isMobile={isMobile}
+            />
+          ))}
+        </List>
+      </Box>
     </Box>
   );
 }
