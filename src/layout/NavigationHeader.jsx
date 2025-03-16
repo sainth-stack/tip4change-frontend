@@ -1,4 +1,4 @@
-import { Box, Breadcrumbs } from "@mui/material";
+import { Box, Breadcrumbs, responsiveFontSizes } from "@mui/material";
 import React from "react";
 import CustomTypography from "../components/TypoGraphy/CustomTypography";
 import { StoryPageButtonData } from "../pages/StoryPage/data";
@@ -14,11 +14,17 @@ const NavigationHeader = ({ path, PageText }) => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          maxWidth: "calc(100% - 2vw)",
+          maxWidth: "calc(100% - 0vw)",
         }}
       >
         <Box>
-          <CustomTypography sx={{ color: "#0e0e0e", fontWeight: "500" }}>
+          <CustomTypography
+            sx={{
+              color: "#0e0e0e",
+              fontWeight: "500",
+              fontSize: "24px",
+            }}
+          >
             {PageText}
           </CustomTypography>
 
@@ -29,7 +35,10 @@ const NavigationHeader = ({ path, PageText }) => {
             {path.map((value, index) => (
               <CustomTypography
                 key={index}
-                sx={{ color: "#847F3B", fontWeight: "400" }}
+                sx={{
+                  color: "#847F3B",
+                  fontWeight: "400",
+                }}
               >
                 {value.includes("-")
                   ? value
@@ -63,7 +72,7 @@ const NavigationHeader = ({ path, PageText }) => {
                   margin: "0 0 .3rem .5rem",
                   maxHeight: "2rem",
                   padding: " .5rem",
-                  fontWeight:500,
+                  fontWeight: 500,
                   borderRadius: "5rem",
                 }}
               />

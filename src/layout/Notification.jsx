@@ -86,7 +86,7 @@ const NotificationPopup = () => {
           height: "35px",
           transition: "all 0.3s ease",
           borderRadius: open ? "30px" : "50%",
-          marginTop:'0px'
+          marginTop: "0px",
         }}
         onClick={handleClick}
       >
@@ -140,8 +140,6 @@ const NotificationPopup = () => {
               sx={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Notification{" "}
-             
-
               <span style={{ color: "#87f3b" }}>
                 ({notifs.filter((n) => n.unread).length})
               </span>
@@ -164,7 +162,7 @@ const NotificationPopup = () => {
           {/* Notifications List */}
           <List
             sx={{
-              maxHeight: "20rem",
+              maxHeight: "410px",
               overflowY: "auto",
             }}
           >
@@ -187,6 +185,8 @@ const NotificationPopup = () => {
                   primary={
                     <Typography
                       fontWeight="500"
+                      size="14px"
+                      letterSpacing="0.15px"
                       sx={{
                         fontFamily: "Montserrat, sans-serif",
                         maxWidth: "calc(100% - .5rem)",
