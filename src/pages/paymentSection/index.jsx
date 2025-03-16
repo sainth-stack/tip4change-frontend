@@ -1,8 +1,7 @@
 import React from "react";
 import { Formik, Form } from "formik";
-import { Button, Grid ,Typography,Breadcrumbs,Box} from "@mui/material";
+import { Button, Grid ,Typography,Box} from "@mui/material";
 import {CheckboxComponent} from '../../components/inputComponents/checkbox'
-import {SelectComponent} from '../../components/inputComponents/select'
 import {InputTextComponent} from '../../components/inputComponents/text'
 import {TextareaComponent} from '../../components/inputComponents/textarea'
 import PaymentCard from '../../components/paymentCardComponent/card'
@@ -14,10 +13,7 @@ import FormFieldGroup from "../../components/formsField/fromsField";
 import DonationSelection from "../../components/inputComponents/radio";
 import CustomButton from "../../components/Button/CustomButton";
 import { useLocation } from 'react-router-dom';
-import CustomTypography from '../../components/TypoGraphy/CustomTypography';
 import {formFields} from './data'
-import NavigationHeader from '../../layout/NavigationHeader'
-
 
 const PaymentForm = () => {
     const location = useLocation();
@@ -25,14 +21,8 @@ const PaymentForm = () => {
   
   return (
     <Grid>
-           
-        <Box sx={{paddingTop:"80px",paddingLeft:"40px",fontFamily:"Montserrat"}} >
-        <NavigationHeader path={pathnames}  PageText="Payment Section"  />
-        </Box>
-
-      
       <div>
-        <h3 style={{height:"40px",paddingLeft:"40px",fontFamily:"Montserrat",fontWeight:800,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"40px"}}>payment section</h3>
+        <h3 style={{height:"40px",paddingLeft:"40px",fontFamily:"Montserrat !important",fontWeight:500,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"40px",paddingTop:"30px"}}>payment section</h3>
       </div>
     <Formik
       initialValues={{
@@ -61,12 +51,14 @@ const PaymentForm = () => {
           <Grid container spacing={2} sx={{padding:"20px"}}>
             <Grid item xs={12}>
               <InputTextComponent
-                id={field?.id}
-                type={field?.type}
-                label={field?.label}
+                id="amount"
+                type="text"
+                // label="Enter Your Donation Amount Euros"
                 value={values.amount}
+                placeholder="Enter your Donation amount Euros"
                 onChange={handleChange}
                 required
+                
               />
             </Grid>
             <Grid container spacing={2} sx={{ width: "100%", maxWidth: "800px", display: "flex", justifyContent: "center",   }}>
@@ -145,7 +137,7 @@ const PaymentForm = () => {
 
           </Grid>
           <Grid>
-            <CustomButton text="submit" sx={{backgroundColor:"#847F3B", width:"154px" , height:"40px" ,margin:"20px" , borderRadius:"20px",textTransform: "capitalize" }} />
+            <CustomButton text="Donate Now" sx={{backgroundColor:"#847F3B", width:"157px" , height:"40px" ,margin:"20px" , borderRadius:"20px",textTransform: "capitalize" }} />
           </Grid>
         </Form>
       )}

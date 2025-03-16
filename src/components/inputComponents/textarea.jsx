@@ -22,7 +22,7 @@ export const TextareaComponent = ({
             marginBottom: "0.2rem",
             fontWeight: 500,
             fontFamily: "Montserrat",
-            color: "#a38e5d",
+            color: "#0E0E0E",
           }}
         >
           {label}
@@ -43,6 +43,8 @@ export const TextareaComponent = ({
           // borderRadius: "rem",
           minHeight: "100px",
           width: "100%",
+          fontFamily:"Montserrat",
+          
           "& .MuiOutlinedInput-root": {
             borderRadius: "15px",
             "& fieldset": {

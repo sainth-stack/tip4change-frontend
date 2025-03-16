@@ -1,24 +1,22 @@
 /* Title Styles */
 .section-title {
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    font-size: 45px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
     text-transform: uppercase;
     padding: 10px;
     margin: 20px;
-    color: black;
+    color: #0E0E0E;
 }
 
 /* Body Text Styles */
 .section2-text , .section-text{
     font-family: "Montserrat";
-    font-weight: 400;
     /* font-size: 17px;
     line-height: 28px; */
-    color: black;
     padding-left: 20px;
     padding-right: 20px;
-    
+    color:#0E0E0E80;
 }
 
 .section2-text {
@@ -29,6 +27,7 @@
 .section-text {
     font-size: 15px;
     line-height: 25px;
+    color:#0E0E0E80
 }
 
 /* Section Title */
@@ -56,11 +55,11 @@
     padding: 0;
     overflow: hidden;
 }
-
+ 
 /* Responsive Styling */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .section-title {
-        font-size: 30px; /* Smaller titles */
+        font-size: 30px; 
         text-align: center;
     }
     .section2-title {
@@ -70,8 +69,9 @@
         font-size: 14px;
         line-height: 22px;
         text-align: center;
+        color:"#0E0E0E80"
     }
     .bg-img {
-        background-size: 120px auto; /* Smaller image */
+        background-size: 120px auto; 
     }
-}
+}  */

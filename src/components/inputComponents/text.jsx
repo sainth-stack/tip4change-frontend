@@ -25,7 +25,8 @@ export const InputTextComponent = ({
             marginBottom: "0.2rem",
             fontWeight: 500,
             fontFamily: "Montserrat",
-            color: "#a38e5d",
+            color: "#0E0E0E",
+          
           }}
         >
           {label}
@@ -41,10 +42,12 @@ export const InputTextComponent = ({
         disabled={disabled}
         fullWidth // Ensures the TextField expands
         sx={{
-          borderRadius: "30px",
+          borderRadius: "20px",
           height: "44px",
+          border:"1px",
+          padding:"10px,14px",
           "& .MuiOutlinedInput-root": {
-            borderRadius: "40px",
+            borderRadius: "20px",
             height: "44px",
             "& fieldset": {
               borderColor: "#a38e5d",
