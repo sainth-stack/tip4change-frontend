@@ -5,6 +5,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import mailImage from "../../../../assets/svg/MailIcon.svg"
+//
 const SocialImpactCard = () => {
   return (
     <div>
