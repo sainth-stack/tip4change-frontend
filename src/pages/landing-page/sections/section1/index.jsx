@@ -90,7 +90,13 @@ const Section1 = () => {
                 {...{
                   text: section1StaticData.rightSideButtonText,
                   marginTop: { xs: -3, md: -3 },
-                  sx: { background: "#847f3b" },
+                  sx: {
+                    background: "#847f3b",
+                    padding: ".3rem 1rem .3rem 1rem",
+                    fontWeight: "600",
+                    fontSize: "1rem",
+                    borderRadius: "2rem",
+                  },
                 }}
               />
             </Grid>

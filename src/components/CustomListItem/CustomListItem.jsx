@@ -71,9 +71,9 @@ const CustomListItem = ({ name, icon, path, isMobile }) => {
             primary={name}
             sx={{
               fontSize: isSmallScreen ? "0.6rem" : isMediumScreen ? "0.75rem" : "0.9rem",
-              fontWeight: "normal",
+              fontWeight: "500",
               transition: "color 0.3s ease",
-              color: isActive ? "white" : "#4a4a4a",
+              color: isActive ? "white" : "#0E0E0E",
               whiteSpace: "nowrap",  // Prevent text wrapping
               overflow: "hidden",
               textOverflow: "ellipsis",

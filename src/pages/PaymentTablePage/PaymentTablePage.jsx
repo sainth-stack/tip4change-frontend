@@ -11,22 +11,21 @@ const PaymentTablePage = () => {
     
   return (
     <>
-      <Box
-       
-      >
+      <Box>
         <NavigationHeader path={pathnames} PageText="Payment Section" />
-              <Box mt={2} sx={{
-                  
-              }}>
+        <Box mt={2} sx={{}}>
           <CustomTable
             columns={columns}
             data={data}
             sx={{
-              headerSx: { backgroundColor: "#f5f6fa" },
+              // tableSx: { height: "35rem" },
+              headerSx: { backgroundColor: "#F5F6FA" },
               columnSx: {
                 textAlign: "center",
                 padding: "10px",
-                color: "#847f3b",
+                color: "#847F3B",
+                fontFamily: "Monda",
+                fontWeight:"500"
               },
               rowSx: {},
             }}

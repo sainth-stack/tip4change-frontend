@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 
 const NewISidebarLayout = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
-  const sidebarWidth = isMobile ? "4rem" : "11rem"; 
+  const sidebarWidth = isMobile ? "4rem" : "12rem"; 
 
   return (
     <Box display="flex" height="100vh">
@@ -40,7 +40,7 @@ const NewISidebarLayout = () => {
           sx={{
             flexGrow: 1,
             p: 2,
-            mt: 8,
+            mt: 10,
             ml: {
               xs: 4,
               sm: ".1rem",
