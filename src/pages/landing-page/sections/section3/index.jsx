@@ -8,15 +8,14 @@ const index = () => {
   return (
     <>
       <div className="Section3">
-        {/* <div className="bg-img2"></div> */}
+        <div className="bg-img2"></div>
         <h1 className="chain">Supply Chain Transparency</h1>
-       
-          <Typography className="believe">
-            We believe in transparency and accountability throughout our supply
-            chain. Meet the farmers and suppliers who work with us to produce
-            our sustainable cotton T-shirts.
-          </Typography>
-       
+
+        <Typography className="believe">
+          We believe in transparency and accountability throughout our supply
+          chain. Meet the farmers and suppliers who work with us to produce
+          <br /> our sustainable cotton T-shirts.
+        </Typography>
 
         <div className="SectionProfile">
           <ProfileIconCard />
