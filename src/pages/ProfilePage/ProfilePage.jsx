@@ -160,7 +160,10 @@ const ProfileView = () => {
               <Typography
                 variant="subtitle2"
                 color="#858040"
-                sx={{ fontFamily: "Montserrat", ml: "50px" }}
+                sx={{
+                  fontFamily: "Montserrat",
+                  ml: { xs: "00px", sm: "50px" },
+                }}
               >
                 Mobile No
               </Typography>
