@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, Typography, Button, Paper } from "@mui/material";
-import image from "/src/assets/images/image5.png";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const SocialImpactCard = () => {
   return (
@@ -76,7 +79,7 @@ const SocialImpactCard = () => {
         >
           <Box>
             <img
-              src={""}
+              src="src/assets/images/section5.jpg" // Replace with actual image path
               alt="Envelope"
               style={{
                 width: "170px",
@@ -154,11 +157,8 @@ const SocialImpactCard = () => {
           fontSize: { xs: "14px", md: "16px" },
           "&:hover": { backgroundColor: "#5D5A2F" },
           display: "block",
-          mx: "auto",
-          "@media (min-width: 1024px) and (max-width: 1366px)": {
-            width: "400px",
-            fontSize: "15px",
-          },
+          mx: "auto", // Auto margin for centering
+          mt: { xs: "00px" },
         }}
       >
         Join Community
