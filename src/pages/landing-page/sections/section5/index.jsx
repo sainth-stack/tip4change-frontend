@@ -163,7 +163,6 @@ const SocialImpactCard = () => {
           // Centering Button Properly
           display: "block",
           mx: "auto", // Auto margin for centering
-          mt: { xs: "00px"},
         }}
       >
         Join Community
