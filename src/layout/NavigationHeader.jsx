@@ -35,7 +35,10 @@ const NavigationHeader = ({ path, PageText }) => {
             {path.map((value, index) => (
               <CustomTypography
                 key={index}
-                sx={{ color: "#847F3B", fontWeight: "400" }}
+                sx={{
+                  color: "#847F3B",
+                  fontWeight: "400",
+                }}
               >
                 {value.includes("-")
                   ? value

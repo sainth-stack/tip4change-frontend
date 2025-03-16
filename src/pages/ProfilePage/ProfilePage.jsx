@@ -45,25 +45,38 @@ const ProfileView = () => {
       {/* Header Section */}
       <Box
         display="flex"
+        flexDirection={{ xs: "column", sm: "row" }} // Column on mobile, row on larger screens
         justifyContent="space-between"
         alignItems="center"
         mb={4}
         mt={-7}
+        // marginRight={"51px"}
       >
-        <Box>
-          <NavigationHeader path={pathnames} PageText="Project Creation" />
+        {/* Navigation Header */}
+        <Box
+          sx={{
+            ml: { xs: "-250px", sm: "-70px", md: "-20px", lg: "-30px" },
+            textAlign: { xs: "center", sm: "left" }, // Center align on mobile
+            mb: { xs: 2, sm: 0 }, // Adds bottom margin on mobile for spacing
+          }}
+        >
+          <NavigationHeader path={pathnames} PageText="Profile Image" />
         </Box>
+
+        {/* Edit Profile Button */}
         <Button
           variant="contained"
           sx={{
             bgcolor: "#858040",
-            "&:hover": { bgcolor: "#6E6B3D" },
+            "&:hover": { bgcolor: "#6e6b3d" },
             fontFamily: "Montserrat",
-            marginRight: isTablet ? "0px" : isLaptop ? "80px" : "0px",
             borderRadius: "20px",
+            marginRight: { xs: "280px", sm: "50px", md: "80px" }, // Adjusts margin based on screen size
+            textTransform: "uppercase",
+            width: { xs: "150px", sm: "auto" }, // Full width on mobile, auto on larger screens
           }}
         >
-          Edit Profile
+          Edit profile
         </Button>
       </Box>
 
@@ -79,7 +92,7 @@ const ProfileView = () => {
             justifyContent: {
               xs: "flex-start",
               sm: "center",
-              md: "flex-start",
+              md: "center",
             },
           }}
         >
@@ -88,10 +101,11 @@ const ProfileView = () => {
             alt={profileData.name}
             variant="square"
             sx={{
-              width: { xs: "100px", sm: "150px", md: "170px" },
-              height: { xs: "100px", sm: "150px", md: "170px" },
+              width: { xs: "250px", sm: "150px", md: "190px" },
+              height: { xs: "200px", sm: "150px", md: "190px" },
               objectFit: "cover",
               borderRadius: 0,
+              marginLeft: { xs: "-180px" },
             }}
           />
         </Grid>
@@ -150,7 +164,12 @@ const ProfileView = () => {
               >
                 Mobile No
               </Typography>
-              <Typography sx={{ fontFamily: "Montserrat", ml: "50px" }}>
+              <Typography
+                sx={{
+                  fontFamily: "Montserrat",
+                  ml: { xs: "00px", sm: "50px" },
+                }}
+              >
                 {profileData.mobile}
               </Typography>
 
@@ -158,11 +177,19 @@ const ProfileView = () => {
                 variant="subtitle2"
                 color="#858040"
                 mt={1}
-                sx={{ fontFamily: "Montserrat", ml: "50px" }}
+                sx={{
+                  fontFamily: "Montserrat",
+                  ml: { xs: "00px", sm: "50px" },
+                }}
               >
                 Village Name
               </Typography>
-              <Typography sx={{ fontFamily: "Montserrat", ml: "50px" }}>
+              <Typography
+                sx={{
+                  fontFamily: "Montserrat",
+                  ml: { xs: "00px", sm: "50px" },
+                }}
+              >
                 {profileData.village}
               </Typography>
             </Grid>
@@ -216,11 +243,19 @@ const ProfileView = () => {
               <Typography
                 variant="subtitle2"
                 color="#858040"
-                sx={{ fontFamily: "Montserrat", ml: "50px" }}
+                sx={{
+                  fontFamily: "Montserrat",
+                  ml: { xs: "00px", sm: "50px" },
+                }}
               >
                 IFSC Code
               </Typography>
-              <Typography sx={{ fontFamily: "Montserrat", ml: "50px" }}>
+              <Typography
+                sx={{
+                  fontFamily: "Montserrat",
+                  ml: { xs: "00px", sm: "50px" },
+                }}
+              >
                 {profileData.ifsc}
               </Typography>
             </Grid>
