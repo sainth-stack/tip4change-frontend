@@ -4,7 +4,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
+import mailImage from "../../../../assets/svg/MailIcon.svg"
 const SocialImpactCard = () => {
   return (
     <div>
@@ -69,7 +69,7 @@ const SocialImpactCard = () => {
         >
           <Box>
             <img
-              src="src/assets/images/section5.jpg" // Replace with actual image path
+               src={mailImage} // Replace with actual image path
               alt="Envelope"
               style={{
                 width: "170px",
