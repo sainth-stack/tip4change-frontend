@@ -41,7 +41,7 @@ const DragAndDropFileInput = ({onFileSelect }) => {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       sx={{
-        border: dragActive ? "3px dotted #a38e5d" : "2px dotted #a38e5d",
+        border: dragActive ? "3px dotted #847F3B" : "1.5px dotted #847F3B",
         borderRadius: "12px",
         maxWidth: {
           xs: "100%",
@@ -78,18 +78,25 @@ const DragAndDropFileInput = ({onFileSelect }) => {
             width: 40,
             height: 40,
             objectFit: "contain",
-            filter: "grayscale(80%) opacity(70%)",
+            filter: "grayscale(90%) opacity(50%)",
           }}
         />
       </IconButton>
 
       <Typography
         variant="body1"
-        sx={{ color: "#a38e5d", fontWeight: 500, marginTop: "0.5rem" }}
+        sx={{
+          color: "#847F3B",
+          fontWeight: "500",
+          margin: "0.5rem 0  .5rem 0",
+        }}
       >
         {selectedFile ? selectedFile.name : "Upload Image/Video"}
       </Typography>
-      <Typography variant="body2" sx={{ color: "#000", fontWeight: "500" }}>
+      <Typography
+        variant="body2"
+        sx={{ color: "#000", fontWeight: "400", margin: "0.5rem 0  1rem 0" }}
+      >
         Or
       </Typography>
       <Button
@@ -97,7 +104,7 @@ const DragAndDropFileInput = ({onFileSelect }) => {
         component="label"
         htmlFor="fileInput"
         sx={{
-          backgroundColor: "#a38e5d",
+          backgroundColor: "#847F3B",
           color: "white",
           textTransform: "none",
           borderRadius: "20px",

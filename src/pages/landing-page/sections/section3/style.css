@@ -22,10 +22,11 @@
 
 .believe {
   font-weight: 400;
-
   text-align: center !important;
+  font-size: 17px;
+  line-height: 28px;
   color: black;
-  width: 40%;
+  width: 41%;
   margin: 0 auto !important;
 }
 
@@ -35,19 +36,22 @@
   background-image: url("src/assets/images/section3.png");
   background-position: top left;
   background-repeat: no-repeat;
-  background-size: 200px auto;
+  background-size: 320px auto;
   width: 100%;
+  max-width: 470px;
   min-height: 100vh;
-  margin-top: -120px;
+  margin-top: -150px;
   padding: 0;
+  margin-left: 17px;
   overflow: hidden;
+  opacity: 80%;
 }
 
 /*  iPads & Tablets (1024px and below) */
 @media screen and (max-width: 1024px) {
   .Section3 {
     height: auto;
-    padding: 50px 0; /* Slightly more padding for better spacing */
+    padding: 40px 0; /* Slightly more padding for better spacing */
   }
 
   .chain {
@@ -58,14 +62,16 @@
   .believe {
     font-size: 20px;
     line-height: 27px;
-    max-width: 87%;
+    height: 87%;
     margin-left: 30px;
+    width: 80%;
+    text-align: center !important;
   }
 
   .bg-img2 {
     background-size: 220px auto; /* Resize background image */
-    margin-top: -180px;
-    margin-left: -32px;
+    margin-top: -150px;
+    margin-left: -0px;
   }
 }
 /* 
@@ -84,7 +90,7 @@
   .believe {
     font-size: 16px;
     line-height: 26px;
-    max-width: 90%;
+    width: 90%;
   }
 
   .bg-img2 {
@@ -108,7 +114,7 @@
   .believe {
     font-size: 14px;
     line-height: 24px;
-    max-width: 95%;
+    width: 95%;
   }
 
   .bg-img2 {
@@ -127,10 +133,12 @@
 .SectionProfile {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns for desktop */
-  gap: 0px; /* Adds spacing between items */
+  gap: 35px; /* Adds spacing between items */
   justify-content: center;
-
-  margin-top: 40px;
+  max-width: 1242px;
+  width: 100%; /* Removed unnecessary quotes */
+  margin-left: 60px;
+  margin-top: 38px;
   padding: 10px 100px; /* Default padding for desktop */
   height: auto; /* Adjusts dynamically */
 }
@@ -138,9 +146,10 @@
 /* Tablet (iPad) - 2 columns */
 @media (min-width: 768px) and (max-width: 1024px) {
   .SectionProfile {
-    display: grid;
-    gap: 25px;
     grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 0px; /* Adjusted spacing for tablet */
+    padding: 0px 0px; /* Reduce padding for tablets */
+    margin-left: -1px;
   }
 
   /* First and second child take 1 column each */
@@ -157,9 +166,23 @@
 }
 
 /* Mobile (phones) - 1 column */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  /* Changed max-width to 767px for better responsiveness */
   .SectionProfile {
-    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
-    padding: 10px 20px; /* Further reduce padding */
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    padding: 10px 00px; /* Further reduce padding */
+    margin-left: 0px;
+    margin-right: 40px;
+  }
+}
+
+/* iPad Pro (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .SectionProfile {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for iPad Pro */
+    gap: 0px;
+    padding: 0px 0px;
+    margin-left: -0px;
+    width: 100%;
   }
 }

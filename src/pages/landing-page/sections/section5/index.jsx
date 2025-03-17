@@ -4,7 +4,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
+import mailImage from "../../../../assets/svg/MailIcon.svg"
+//
 const SocialImpactCard = () => {
   return (
     <div>
@@ -44,10 +45,11 @@ const SocialImpactCard = () => {
           <Typography
             variant="h6"
             fontWeight="600"
+            fontFamily="Montserrat"
             fontStyle="Montserrat"
-            mt={"10px"}
+            // mt={"10px"}
             sx={{
-              fontSize: { xs: "18px", md: "28px" },
+              fontSize: { xs: "17px", md: "34px" },
               width: { xs: "90%", md: "1000px" }, // Full width on small screens
             }}
           >
@@ -62,20 +64,20 @@ const SocialImpactCard = () => {
             flexDirection: { xs: "column", md: "row" },
             justifyContent: { xs: "center", md: "space-evenly" },
             marginTop: { md: "60px" },
-            alignItems: { xs: "center" },
+            alignItems: { xs: "center", md: "center" },
             width: "100%",
           }}
         >
           <Box>
             <img
-              src="src/assets/images/section5.png" // Replace with actual image path
+               src={mailImage} // Replace with actual image path
               alt="Envelope"
               style={{
                 width: "170px",
                 height: "200px",
                 marginTop: "70px",
                 marginBottom: "20px",
-                backgroundColor: "#7B783E",
+                backgroundColor: "#F8F6F2",
               }}
             />
           </Box>
@@ -91,7 +93,7 @@ const SocialImpactCard = () => {
                 mt: 2,
                 px: { xs: 2, md: 4 },
                 fontSize: { xs: "14px", md: "16px" },
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "center", md: "center" },
                 fontFamily: "Montserrat",
                 backgroundColor: "white",
               }}
@@ -162,7 +164,6 @@ const SocialImpactCard = () => {
           // Centering Button Properly
           display: "block",
           mx: "auto", // Auto margin for centering
-          mt: { xs: "00px", md: "80px" },
         }}
       >
         Join Community

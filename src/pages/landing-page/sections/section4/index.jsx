@@ -44,7 +44,7 @@ const Section4 = () => {
       <Grid container spacing={3} sx={{ padding: 3,justifyContent: "center", }}>
         {cards.map((card, index) => (
           <Grid item xs={12} sm={12} md={4} lg={3}key={index}  sx={{ marginBottom: "30px" }}> 
-            <StyledCard sx={{ height: "503px", maxWidth:"280px",display: "flex", flexDirection: "column",}}>
+            <StyledCard sx={{ height: "503px", maxWidth:"350px",display: "flex", flexDirection: "column",}}>
               <CardMedia 
                 component="img"
                 image={card.image}

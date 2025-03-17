@@ -15,39 +15,92 @@ export const columns = [
 
 export const data = [
   {
-    TransactionName: "Subscription Payment",
-    InvoiceId: "INV-1001",
-    dateTime: "2024-03-13 10:30 AM",
+    TransactionName: "Matt Dickerson",
+    InvoiceId: "25467869",
+    dateTime: "13/2/2025 ; 3:00PM",
     paymentMode: "Credit Card",
-    amount: "$50.00",
+    amount: "10000",
   },
   {
-    TransactionName: "Service Charge",
-    InvoiceId: "INV-1002",
-    dateTime: "2024-03-12 02:45 PM",
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
     paymentMode: "PayPal",
-    amount: "$30.00",
+    amount: "10000",
   },
   {
-    TransactionName: "Refund Processed",
-    InvoiceId: "INV-1003",
-    dateTime: "2024-03-11 09:15 AM",
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
     paymentMode: "Bank Transfer",
-    amount: "$20.00",
+    amount: "10000",
   },
   {
-    TransactionName: "Monthly Subscription",
-    InvoiceId: "INV-1004",
-    dateTime: "2024-03-10 05:20 PM",
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
     paymentMode: "UPI",
-    amount: "$60.00",
+    amount: "10000",
   },
   {
-    TransactionName: "One-time Fee",
-    InvoiceId: "INV-1005",
-    dateTime: "2024-03-09 11:00 AM",
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
     paymentMode: "Debit Card",
-    amount: "$40.00",
+    amount: "10000",
+  },
+  {
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
+    paymentMode: "Debit Card",
+    amount: "10000",
+  },
+  {
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
+    paymentMode: "Debit Card",
+    amount: "10000",
+  },
+  {
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
+    paymentMode: "Debit Card",
+    amount: "10000",
+  },
+  {
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
+    paymentMode: "Debit Card",
+    amount: "10000",
+  },
+  {
+    TransactionName: "Matt Dickerson",
+
+    InvoiceId: "25467869",
+
+    dateTime: "13/2/2025 ; 3:00PM",
+    paymentMode: "Debit Card",
+    amount: "10000",
   },
 ];
 

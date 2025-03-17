@@ -8,18 +8,19 @@ const ProfileIconCard = () => {
   return (
     <Card
       sx={{
-        width: { xs: "100%", sm: "350px", md: "370px" }, // Full width on mobile, 420px on iPad, 370px on larger screens
+        width: { xs: "340px", sm: "350px", md: "415px" }, // Full width on mobile, 420px on iPad, 370px on larger screens
         height: { xs: "300px", sm: "280px", md: "270px" }, // Auto height on mobile, slight increase for iPad
         borderRadius: "10px",
         background: "rgba(249, 249, 241, 0.1)",
         paddingLeft: { xs: "0px", sm: "-10px" }, // Adjust padding for different sizes
-        margin: "20px auto", // Centering card
+        margin: "15px auto", // Centering card
         border: "2px solid rgba(235, 234, 237, 1)",
       }}
     >
       <Box
         sx={{
-          width: "409px",
+          width: "100%", // Default width
+          maxWidth: "409px", // Maximum width constraint
           height: "70px",
           background: " rgba(249, 249, 241, 0.1)",
           borderRadius: 2,
@@ -30,45 +31,6 @@ const ProfileIconCard = () => {
           color: "black",
         }}
       >
-        {/* Logo and Title */}
-        {/* <div
-          // style={{
-          //   height: "40px",
-          //   margin: "-.5rem 0 0 0",
-          //   boxShadow: "1px 0px 0px gray",
-          //   marginLeft: "1.5rem",
-          // }}
-          sx={{ display: "flex", alignItems: "center" }}
-        >
-          <img
-            src="src/assets/images/section3Profile .png"
-            alt="Grameena Vikas Kendram"
-            style={{ width: 56, height: 56 }}
-          />
-          <Typography
-            style={{
-              fontFamily: "Montserrat",
-              fontWeight: 700,
-              fontSize: "17px",
-              lineHeight: "100%",
-              letterSpacing: "0.3em", // 30% converted to em
-              textTransform: "uppercase",
-            }}
-          >
-            GRAMEENA
-          </Typography>
-          <Typography
-            variant="body2"
-            letterSpacing="0.2em"
-            sx={{ color: "#6D6D6D" }}
-          >
-            VIKAS KENDRAM
-          </Typography>
-          <img
-            style={{ width: "70px", marginLeft: "70px" }}
-            src="src/assets/images/section3color.png"
-          />
-        </div> */}
         <Toolbar
           sx={{
             display: "flex",
@@ -87,7 +49,7 @@ const ProfileIconCard = () => {
               style={{
                 height: "40px",
                 margin: "-.5rem 0 0 0",
-                marginLeft: "82.41px",
+                marginLeft: "61.41px",
                 marginTop: "31.45px",
               }}
             />
@@ -182,7 +144,7 @@ const ProfileIconCard = () => {
                 textAlign: "center",
                 fontSize: { xs: "12px", sm: "14px", md: "16px" }, // Smaller on mobile, medium on iPad, larger on desktop
                 width: { xs: "100%", sm: "80%", md: "auto" }, // Full width on mobile, 80% on iPad, auto on desktop
-                paddingRight: { xs: "50px", sm: "8px", md: "10px" }, // Adjust padding for spacing
+                paddingRight: { xs: "0px", sm: "8px", md: "10px" }, // Adjust padding for spacing
               }}
             >
               grameenavikas@gmail.com
