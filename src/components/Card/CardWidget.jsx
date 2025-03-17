@@ -6,7 +6,7 @@ const CardWidget = ({ children, sx = {} }) => {
     <Box
       sx={{
         backgroundColor: "white",
-        borderRadius: "1.5rem",
+        borderRadius: "30px",
 
               boxShadow: "6px 6px 54px 0px rgba(0, 0, 0, 0.05)",
 
