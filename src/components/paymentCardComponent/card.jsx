@@ -7,7 +7,8 @@ const PaymentCard = ({ imageSrc, extraImageSrc, label, selected, onClick, defaul
       <Card
         onClick={onClick}
         sx={{
-          maxWidth: "150px",
+          maxWidth: "200px",
+          minWidth:'150px',
           width: "100%", 
           height: "100px",
           display: "flex",

@@ -133,13 +133,12 @@
 .SectionProfile {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns for desktop */
-  gap: 35px; /* Adds spacing between items */
+  gap: 20px; /* Adds spacing between items */
   justify-content: center;
-  max-width: 1242px;
+  max-width: 1500px;
   width: 100%; /* Removed unnecessary quotes */
-  margin-left: 60px;
+  /* margin-left: 60px; */
   margin-top: 38px;
-  padding: 10px 100px; /* Default padding for desktop */
   height: auto; /* Adjusts dynamically */
 }
 
@@ -172,7 +171,7 @@
     grid-template-columns: 1fr; /* 1 column for mobile */
     padding: 10px 00px; /* Further reduce padding */
     margin-left: 0px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
   }
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form } from "formik";
-import { Button, Grid ,Typography,Box} from "@mui/material";
+import { Button, Grid ,Typography,Box, Grid2} from "@mui/material";
 import {CheckboxComponent} from '../../components/inputComponents/checkbox'
 import {InputTextComponent} from '../../components/inputComponents/text'
 import {TextareaComponent} from '../../components/inputComponents/textarea'
@@ -20,9 +20,10 @@ const PaymentForm = () => {
     const pathnames = location.pathname.split('/').filter((x) => x);
   
   return (
-    <Grid>
+   <Grid2 sx={{width:'100%',display:"flex",justifyContent:'center',padding:'30px'}}>
+     <Grid sx={{maxWidth:'1300px'}}> 
       <div>
-        <h3 style={{height:"40px",paddingLeft:"40px",fontFamily:"Montserrat !important",fontWeight:500,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"40px",paddingTop:"30px"}}>payment section</h3>
+        <h3 style={{height:"40px",paddingLeft:"20px",fontFamily:"Montserrat !important",fontWeight:500,fontSize:"24px",lineHeight:"28px",letterSpacing:"opx" , marginTop:"40px",paddingTop:"30px"}}>Payment Section</h3>
       </div>
     <Formik
       initialValues={{
@@ -47,9 +48,9 @@ const PaymentForm = () => {
       }}
     >
       {({ values, handleChange, handleSubmit ,field}) => (
-        <Form onSubmit={handleSubmit}>
-          <Grid container spacing={2} sx={{paddingLeft:"10px",paddingRight:"10px",}}>
-            <Grid item xs={12} >
+        <Form onSubmit={handleSubmit} className="">
+          <Grid spacing={2} sx={{padding:"20px"}}>
+            <Grid item xs={12}>
               <InputTextComponent
 
                 id="amount"
@@ -80,36 +81,15 @@ const PaymentForm = () => {
 
               />
             </Grid>
-            <Grid container spacing={2} sx={{ width: "100%", maxWidth: "800px", display: "flex", justifyContent: "center" ,alignItems:{xs:"center",sm:"center"},marginLeft:"8px"}}>
-  <PaymentCard 
-    imageSrc={img1} 
-    label="Card" 
-    selected={true} 
-    onClick={() => {}} 
-    defaultWhite={true}  
-    imageSizes={{ width: 20, height: 16 }} 
-  />
-  <PaymentCard 
-    imageSrc={img2} 
-    extraImageSrc={img21} 
-    selected={true} 
-    onClick={() => {}} 
-    imageSizes={{ width: 18.71, height: 22.07 }} 
-    extraImageSizes={{ width: 40, height: 10.66 }} 
-  />
-  <PaymentCard 
-    imageSrc={img3} 
-    label="Card" 
-    selected={true} 
-    onClick={() => {}} 
-    defaultWhite={true} 
-    imageSizes={{ width: 43, height: 16.48 }} 
-  />
-</Grid>
+            <Grid sx={{ width: "100%", display: "flex", justifyContent: "start", alignItems:'start',gap:'24px' ,marginBottom:'20px' }}>
+               <PaymentCard imageSrc={img1} label="Card" selected={true} onClick={() => {}} defaultWhite={true}  />
+                <PaymentCard imageSrc={img2} extraImageSrc={img21} selected={true} onClick={() => {}} />
+                <PaymentCard imageSrc={img3} label="Card" selected={true} onClick={() => {}} defaultWhite={true} />
+            </Grid>
 
 
               {/* Donation Selection */}
-              <Grid item xs={12}>
+              <Grid item xs={12} mb={2}>
               <DonationSelection sx={{paddingTop:"10px",}}  />
             </Grid>
 
@@ -196,6 +176,7 @@ const PaymentForm = () => {
       )}
     </Formik>
     </Grid>
+   </Grid2>
   );
 };
 

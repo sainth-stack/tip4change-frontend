@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <NewISidebarLayout />,
     children: [
       { path: "/project", element: <ProjectPage /> },
-      { path: "/View-profile", element: <ProfilePage /> },
+      { path: "/profile", element: <ProfilePage /> },
       { path: "/story", element: <StoryPage /> },
       { path: "/progress-tracking", element: <DoughnutChart /> },
       { path: "/payments", element: <PaymentForm /> },

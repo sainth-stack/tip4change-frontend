@@ -95,7 +95,7 @@ const SocialImpactCard = () => {
                 fontSize: { xs: "14px", md: "16px" },
                 textAlign: { xs: "center", md: "center" },
                 fontFamily: "Montserrat",
-                backgroundColor: "white",
+                // backgroundColor: "white",
               }}
             >
               Inspire others to join the movement and make a difference in their

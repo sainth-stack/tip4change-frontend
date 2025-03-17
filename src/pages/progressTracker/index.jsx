@@ -20,7 +20,7 @@ const DoughnutChart = () => {
     <Grid>
 
                      
-                  <Box sx={{fontFamily:"Montserrat",paddingLeft:"10px"}} >
+                  <Box sx={{fontFamily:"Montserrat"}} >
                   <NavigationHeader path={pathnames}  PageText="Payment Section"  />
                   </Box>
          {/* <Box sx={{ }}>
