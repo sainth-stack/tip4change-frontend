@@ -34,7 +34,7 @@ const sidebarConfig = {
       path: "/payment-section",
     },
     // { name: "Payments", icon: PaymentSvg, path: "/payments" },
-    { name: "Settings", icon: SettingsSvg, path: "/profile" },
+    { name: "Settings", icon: SettingsSvg, path: "/View-profile" },
     // { name: "Logout", icon: LogoutSvg, path: "/logout" },
   ],
 };

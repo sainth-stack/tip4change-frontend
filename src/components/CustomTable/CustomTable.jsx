@@ -128,11 +128,12 @@ const CustomTable = ({
                       sx={{
                         padding: ".5rem",
                         borderRight: "1px solid #ddd",
-                        fontSize: ".5rem",
+                         fontSize: "12px",
+
                         textAlign: "left",
                         color: "#212121",
                         fontWeight: "400",
-                        fontFamily:"Montserrat"
+                        fontFamily: "Montserrat",
                       }}
                     >
                       {col.id === "TransactionName" ? (
@@ -150,7 +151,7 @@ const CustomTable = ({
                               backgroundColor: "#d5d3b3",
                               color: "#000",
                               padding: ".2rem",
-                              fontWeight:400,
+                              fontWeight: 400,
                               marginLeft: ".3rem",
                               fontSize: 12,
                               borderRadius: "10px",

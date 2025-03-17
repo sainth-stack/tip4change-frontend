@@ -27,7 +27,9 @@ const PaymentTablePage = () => {
                 fontFamily: "Monda",
                 fontWeight:"500"
               },
-              rowSx: {},
+              rowSx: {
+                fontWeight: "900"
+              },
             }}
           />
         </Box>
