@@ -4,12 +4,18 @@ export const formFields = {
       { id: "firstName", type: "text", label: "First Name", sm: 4 },
       { id: "lastName", type: "text", label: "Last Name", sm: 4 },
       { id: "phoneNumber", type: "number", label: "Phone Number", sm: 4 },
+      // { id:"Address",type:"text",label:"Address",sm:12},
     ],
     contactDetails: [
       { id: "email", type: "email", label: "E-mail", sm: 4 },
       { id: "theirEmail", type: "email", label: "Their E-mail", sm: 4 },
       { id: "inHonorOf", type: "text", label: "In Honor of", sm: 4 },
     ],
+
+    
+  Address:[
+    {id:"Address",type:"text",label:"Address",sm:4}
+  ],
     addressDetails: [
       {
         id: "nationality",
@@ -38,3 +44,4 @@ export const formFields = {
       { id: "city", type: "text", label: "City", sm: 4 },
     ],
   };
+

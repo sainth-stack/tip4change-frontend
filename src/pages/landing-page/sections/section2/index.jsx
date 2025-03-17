@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid2, Typography, Box } from "@mui/material";
 import heroimg from "../../../../assets/images/section2img.png";
-import "./index.css";
+import './index.css'
 
 const Section2 = () => {
   return (
@@ -14,7 +14,14 @@ const Section2 = () => {
           className="section2-title"
           variant="h4"
           fontWeight="600"
-          sx={{ marginTop: "20px" }}
+          sx={{ marginTop: "20px" ,
+                 fontFamily: 'Montserrat',
+            // fontWeight: 600,
+            fontSize: {xs:"25px",md:"40px"},
+            textTransform:" uppercase",
+            // padding: "10px",
+            margin: "20px",
+            color: "#0E0E0E" }}
         >
           Comparison with Conventional T-Shirt
         </Typography>
@@ -36,7 +43,7 @@ const Section2 = () => {
 
       {/* Section Subheading */}
       <Box sx={{ textAlign: "center", marginBottom: "20px" }}>
-        <Typography variant="h6" className="section-title" fontWeight="600">
+        <Typography variant="h6" className="section-title" fontWeight="600" sx={{fontSize:"25px"}}>
           CHEMICALS USED
         </Typography>
         <p

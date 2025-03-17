@@ -16,18 +16,20 @@
     line-height: 28px; */
     padding-left: 20px;
     padding-right: 20px;
-    color:#0E0E0E80;
+    
 }
 
 .section2-text {
-  font-size: 17px;
-  line-height: 28px;
+    font-size: 17px;
+    line-height: 28px;
+    color:#0E0E0E
 }
 
 .section-text {
     font-size: 15px;
     line-height: 25px;
-    color:#0E0E0E80
+    color:#0E0E0E80;
+    font-weight:400
 }
 
 /* Section Title */
