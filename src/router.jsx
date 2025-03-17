@@ -12,6 +12,8 @@ import DoughnutChart from "./pages/progressTracker/index";
 import NotFound from "./components/Page-404/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
+import ImpactClaims from "./pages/brandPages/ImpactSection/ImpactClaims";
+import SupplyChain from "./pages/brandPages/SupplyChainSection/SupplyChain";
 
 const router = createBrowserRouter([
   {
@@ -23,11 +25,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [{ path: "", element: <LandingPage /> }],
   },
-  // {
-  //   path: "/payment",
-  //   element: <Layout />,
-  //   children: [{ path: "", element: <PaymentForm /> }],
-  // },
+ 
 
   {
     path: "/",
@@ -35,8 +33,8 @@ const router = createBrowserRouter([
     children: [{ path: "/payments", element: <PaymentForm /> }],
   },
   {
-    path: "",
-    element: <NewISidebarLayout />,
+    path: "/",
+    element: <NewISidebarLayout basePath={"/"} />,
     children: [
       { path: "/project", element: <ProjectPage /> },
       { path: "/profile", element: <ProfilePage /> },
@@ -46,13 +44,14 @@ const router = createBrowserRouter([
       { path: "/payment-section", element: <PaymentTablePage /> },
     ],
   },
-  // {
-  //   path: "dashboard",
-  //   element: <NewISidebarLayout />,
-  //   children: [
-  //     { path: "", element: <StoryPage /> },
-  //   ],
-  // },
+  {
+    path: "/brand",
+    element: <NewISidebarLayout basePath={"/brand"} />,
+    children: [
+      { path: "impact-claim", element: <ImpactClaims /> },
+      { path: "supply-chain", element: <SupplyChain /> },
+    ],
+  },
 ]);
 
 export default router;
