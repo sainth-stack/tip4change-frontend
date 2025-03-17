@@ -1,25 +1,18 @@
-// layout/NewISidebarLayout.jsx
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Box, Container, Grid, useMediaQuery } from "@mui/material";
+import { Box, Container, useMediaQuery } from "@mui/material";
 import CustomTopBar from "./CustomTopBar";
 import Sidebar from "./Sidebar";
 
 const NewISidebarLayout = () => {
-  const isMobile = useMediaQuery("(max-width:600px)"); // Mobile
-
-  const isSidebarVisible = true; // Control overlap based on this flag
+  const isMobile = useMediaQuery("(max-width:600px)");
+  const sidebarWidth = isMobile ? "4rem" : "12rem"; 
 
   return (
     <Box display="flex" height="100vh">
-      {/* Sidebar */}
-      <Box
-        sx={{
-          // boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
-          // width: isMobile ? "4rem" : "15rem",
+      <aside
+        style={{
           flexShrink: 0,
-          // bgcolor: "background.paper",
-          borderRight: "1px solid #ddd",
           height: "100%",
           position: "fixed",
           top: 0,
@@ -27,21 +20,43 @@ const NewISidebarLayout = () => {
         }}
       >
         <Sidebar />
-      </Box>
+      </aside>
 
       {/* Main Content Area */}
       <Box
         sx={{
-          marginLeft: isMobile ? "4rem" : "10rem",
+          ml: sidebarWidth, 
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
+          // overflowY: "", 
+          overflowX: "hidden",
         }}
       >
-        {/* Pass isOverlapping prop */}
-        <CustomTopBar isOverlapping={isSidebarVisible} />
+        {/* Top Bar */}
+        <CustomTopBar isOverlapping={true} />
 
-        <Container sx={{ flexGrow: 1, p: 1, mt: 8,ml:4 ,minWidth:"calc(100% - 5%)"}}>
+        <Container
+          sx={{
+            flexGrow: 1,
+            p: 2,
+            mt: 10,
+            ml: {
+              xs: 4,
+              sm: ".1rem",
+              md: "1.5rem",
+              lg: "1.5rem",
+              xl: "2rem",
+            },
+            maxWidth: {
+              xs: "calc(100% - 1em)", 
+              sm: "calc(100% - 1em)", 
+              md: "calc(100% - 1em)", 
+              lg: "calc(100% -2rem)",
+              xl: "calc(100% - 2rem)", 
+            },
+          }}
+        >
           <Outlet />
         </Container>
       </Box>

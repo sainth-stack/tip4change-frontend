@@ -23,10 +23,9 @@ export const InputTextComponent = ({
           variant="body1"
           sx={{
             marginBottom: "0.2rem",
-            fontWeight: 500,
             fontFamily: "Montserrat",
-            color: "#0E0E0E",
-          
+            color: "#847F3B",
+            fontWeight: "500",
           }}
         >
           {label}

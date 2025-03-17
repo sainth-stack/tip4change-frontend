@@ -32,23 +32,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [
-      { path: "/payments", element: <PaymentForm /> },
-
-    ],
+    children: [{ path: "/payments", element: <PaymentForm /> }],
   },
   {
     path: "",
     element: <NewISidebarLayout />,
     children: [
       { path: "/project", element: <ProjectPage /> },
-      { path: "/profile", element: <ProfilePage /> },
+      { path: "/View-profile", element: <ProfilePage /> },
       { path: "/story", element: <StoryPage /> },
-      { path:"/progress-tracking",element:<DoughnutChart />},
-      {path:"/payments",element: <PaymentForm />},
+      { path: "/progress-tracking", element: <DoughnutChart /> },
+      { path: "/payments", element: <PaymentForm /> },
       { path: "/payment-section", element: <PaymentTablePage /> },
-
-
     ],
   },
   // {

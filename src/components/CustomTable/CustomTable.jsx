@@ -37,7 +37,7 @@ const CustomTable = ({
   columns,
   data,
   sx = {},
-  rowsPerPageOptions = [5, 10, 25],
+  rowsPerPageOptions = [9, 10, 25],
 }) => {
   const { tableSx, headerSx, columnSx, rowSx } = sx;
   const [page, setPage] = useState(0);
@@ -80,9 +80,9 @@ const CustomTable = ({
   };
 
   return (
-    <Paper sx={{ maxWidth: "calc(100% - 2%)" }}>
+    <>
       <TableContainer>
-        <Table>
+        <Table sx={{ ...tableSx }}>
           {/* Table Head with Sorting */}
           <TableHead sx={headerSx}>
             <TableRow sx={rowSx}>
@@ -101,8 +101,8 @@ const CustomTable = ({
                       onClick={() => handleSort(col.id)}
                       IconComponent={SortIcon}
                       sx={{
-                        display: "inline-block", 
-                        width: "135%", 
+                        display: "inline-block",
+                        width: "130%",
                       }}
                     >
                       <span style={{ float: "left" }}>{col.label}</span>
@@ -126,10 +126,13 @@ const CustomTable = ({
                       key={col.id}
                       // sx={{ borderRight: "1px solid #ddd" }}
                       sx={{
-                        padding: ".2rem",
+                        padding: ".5rem",
                         borderRight: "1px solid #ddd",
                         fontSize: ".5rem",
                         textAlign: "left",
+                        color: "#212121",
+                        fontWeight: "400",
+                        fontFamily:"Montserrat"
                       }}
                     >
                       {col.id === "TransactionName" ? (
@@ -138,18 +141,19 @@ const CustomTable = ({
                         >
                           <Box
                             sx={{
-                              width: 26,
-                              height: 26,
-                              boxShadow: "1px 0px 0px gray",
+                              width: 30,
+                              height: 30,
+                              // boxShadow: "1px 0px 0px gray",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
                               backgroundColor: "#d5d3b3",
                               color: "#000",
                               padding: ".2rem",
+                              fontWeight:400,
                               marginLeft: ".3rem",
                               fontSize: 12,
-                              borderRadius: "4px",
+                              borderRadius: "10px",
                             }}
                           >
                             {row[col?.id]
@@ -232,7 +236,7 @@ const CustomTable = ({
           <KeyboardDoubleArrowRightIcon />
         </IconButton>
       </Box>
-    </Paper>
+    </>
   );
 };
 

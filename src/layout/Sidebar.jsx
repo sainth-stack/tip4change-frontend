@@ -20,7 +20,7 @@ import LogoutSvg from "../assets/svg/logoutSvg.svg";
 
 const sidebarConfig = {
   default: [
-    { name: "Dashboard", icon: dashboardSvg, path: "/dashboard" },
+    // { name: "Dashboard", icon: dashboardSvg, path: "/dashboard" },
     { name: "Story", icon: StorySvg, path: "/story" },
     { name: "Projects", icon: ProjectsSvg, path: "/project" },
     {
@@ -34,8 +34,8 @@ const sidebarConfig = {
       path: "/payment-section",
     },
     // { name: "Payments", icon: PaymentSvg, path: "/payments" },
-    { name: "Settings", icon: SettingsSvg, path: "/settings" },
-    { name: "Lagout", icon: LogoutSvg, path: "/logout" },
+    { name: "Settings", icon: SettingsSvg, path: "/profile" },
+    // { name: "Logout", icon: LogoutSvg, path: "/logout" },
   ],
 };
 
@@ -45,7 +45,7 @@ function Sidebar() {
   const isTablet = useMediaQuery("(max-width: 960px) and (min-width: 601px)");
 
   // Adjust sidebar width based on screen size
-  const sidebarWidth = isMobile ? 60 : isTablet ? 150 : 215;
+  const sidebarWidth = isMobile ? 60 : isTablet ? 150 : 242;
 
   return (
     <Box
@@ -67,12 +67,14 @@ function Sidebar() {
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <CustomImage
             src={logo}
+            
             alt="Logo"
             styles={{
               height: "40px",
               margin: ".8rem 0 0 .5rem",
               boxShadow: "1px 0px 0px gray",
               marginLeft: "1.5rem",
+              marginBottom: "1.5rem"
             }}
           />
         </Box>
@@ -82,7 +84,7 @@ function Sidebar() {
 
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
         <List sx={{ flexGrow: 1 }}>
-          {sidebarConfig.default.slice(0, -2).map((item, index) => (
+          {sidebarConfig.default.slice(0, -1).map((item, index) => (
             <CustomListItem
               key={index}
               name={item.name}
@@ -94,7 +96,7 @@ function Sidebar() {
         </List>
         
         <List>
-          {sidebarConfig.default.slice(-2).map((item, index) => (
+          {sidebarConfig.default.slice(-1).map((item, index) => (
             <CustomListItem
               key={index}
               name={item.name}

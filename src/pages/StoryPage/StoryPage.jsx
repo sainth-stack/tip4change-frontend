@@ -78,7 +78,7 @@ const StoryPage = () => {
                   value={formData[field.id] || ""}
                   onChange={(e) => handleChange(field.id, e.target.value)}
                   required={field.required}
-                  sx={{ width: "100%" }}
+                  sx={{ width: "100%",  }}
                 />
               ) : field.type === "textarea" ? (
                 <TextareaComponent
