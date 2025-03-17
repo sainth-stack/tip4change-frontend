@@ -3,12 +3,12 @@ import { Card, CardContent, Box, Grid } from "@mui/material";
 
 const PaymentCard = ({ imageSrc, extraImageSrc, label, selected, onClick, defaultWhite, imageSizes = {}, extraImageSizes = {} }) => {
   return (
-    <Grid item xs={4} sm={4} md={4} lg={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+    <Grid item xs={4} sm={4} md={4} lg={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center",maxWidth:'150px',width:'100%' }}>
       <Card
         onClick={onClick}
         sx={{
           maxWidth: "200px",
-          minWidth:'150px',
+          // minWidth:'150px',
           width: "100%", 
           height: "100px",
           display: "flex",
