@@ -4,9 +4,10 @@ import { Box, Container, Grid2, useMediaQuery } from "@mui/material";
 import CustomTopBar from "./CustomTopBar";
 import Sidebar from "./Sidebar";
 
-const NewISidebarLayout = () => {
+const NewISidebarLayout = ({ basePath }) => {
+  
   const isMobile = useMediaQuery("(max-width:600px)");
-  const sidebarWidth = isMobile ? "4rem" : "12rem"; 
+  const sidebarWidth = isMobile ? "4rem" : "12rem";
 
   return (
     <Box display="flex" height="100vh">
@@ -19,17 +20,17 @@ const NewISidebarLayout = () => {
           left: 0,
         }}
       >
-        <Sidebar />
+        <Sidebar basePath={basePath} />
       </aside>
 
       {/* Main Content Area */}
       <Box
         sx={{
-          ml: sidebarWidth, 
+          ml: sidebarWidth,
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
-          // overflowY: "", 
+          // overflowY: "",
           overflowX: "hidden",
         }}
       >
@@ -37,9 +38,8 @@ const NewISidebarLayout = () => {
         <CustomTopBar isOverlapping={true} />
 
         <Grid2
-        padding={"40px"}
+          padding={"40px"}
           sx={{
-        
             mt: 10,
             ml: {
               xs: 4,
@@ -49,11 +49,11 @@ const NewISidebarLayout = () => {
               xl: "2rem",
             },
             maxWidth: {
-              xs: "calc(100% - 1em)", 
-              sm: "calc(100% - 1em)", 
-              md: "calc(100% - 1em)", 
+              xs: "calc(100% - 1em)",
+              sm: "calc(100% - 1em)",
+              md: "calc(100% - 1em)",
               lg: "calc(100% -2rem)",
-              xl: "calc(100% - 2rem)", 
+              xl: "calc(100% - 2rem)",
             },
           }}
         >
