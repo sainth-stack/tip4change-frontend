@@ -67,16 +67,16 @@ const ProfileView = () => {
         <Button
           variant="contained"
           sx={{
-            bgcolor: "#858040",
-            "&:hover": { bgcolor: "#6e6b3d" },
+            backgroundColor: "#858040",
+            "&:hover": { backgroundColor: "#6e6b3d" },
             fontFamily: "Montserrat",
             borderRadius: "20px",
             marginRight: { xs: "280px", sm: "50px", md: "80px" }, // Adjusts margin based on screen size
-            textTransform: "uppercase",
+            textTransform: "uppercase", // Corrected to camelCase
             width: { xs: "150px", sm: "auto" }, // Full width on mobile, auto on larger screens
           }}
         >
-          Edit profile
+          Edit Profile
         </Button>
       </Box>
 

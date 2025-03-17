@@ -4,8 +4,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import mailImage from "../../../../assets/svg/MailIcon.svg"
-//
+import mailImage from "../../../../assets/svg/MailIcon.svg";
+import section5 from "/src/assets/images/image5.png";
 const SocialImpactCard = () => {
   return (
     <div>
@@ -50,7 +50,7 @@ const SocialImpactCard = () => {
             // mt={"10px"}
             sx={{
               fontSize: { xs: "17px", md: "34px" },
-              width: { xs: "90%", md: "1000px" }, // Full width on small screens
+              width: { xs: "90%", sm: "600px", md: "900px" }, // Full width on small screens
             }}
           >
             Share Your Impact On Social Media
@@ -70,7 +70,7 @@ const SocialImpactCard = () => {
         >
           <Box>
             <img
-               src={mailImage} // Replace with actual image path
+              src={mailImage} // Replace with actual image path
               alt="Envelope"
               style={{
                 width: "170px",
@@ -109,40 +109,16 @@ const SocialImpactCard = () => {
             <Box
               sx={{
                 display: "flex",
-
                 gap: { xs: 2, md: 3 },
                 mt: 4,
                 mb: "15px",
               }}
             >
-              {[
-                { icon: <FacebookIcon />, color: "#1877F2" },
-                { icon: <WhatsAppIcon />, color: "#25D366" },
-                { icon: <InstagramIcon />, color: "#E1306C" },
-                { icon: <TwitterIcon />, color: "#1DA1F2" },
-              ].map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    width: { xs: 50, md: 50 },
-                    height: { xs: 50, md: 50 },
-                    backgroundColor: item.color,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: "50%", // Circular shape
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.1)", // Slight hover effect
-                    },
-                  }}
-                >
-                  {React.cloneElement(item.icon, {
-                    sx: { fontSize: { xs: 20, md: 24 }, color: "white" },
-                  })}
-                </Box>
-              ))}
+              <img
+                src={section5}
+                alt="Section 5"
+                style={{ width: "290px", height: "50px" }}
+              />
             </Box>
           </Box>
         </Box>
