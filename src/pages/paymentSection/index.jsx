@@ -48,9 +48,10 @@ const PaymentForm = () => {
     >
       {({ values, handleChange, handleSubmit }) => (
         <Form onSubmit={handleSubmit}>
-          <Grid container spacing={2} sx={{padding:"20px"}}>
-            <Grid item xs={12}>
+          <Grid container spacing={2} sx={{paddingLeft:"10px",paddingRight:"10px",}}>
+            <Grid item xs={12} >
               <InputTextComponent
+
                 id="amount"
                 type="text"
                 // label="Enter Your Donation Amount Euros"
@@ -58,14 +59,53 @@ const PaymentForm = () => {
                 placeholder="Enter your Donation amount Euros"
                 onChange={handleChange}
                 required
-                
+                sx={{
+                  borderRadius: "20px",
+                  height: "44px",
+                  padding: "10px,14px",
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "20px",
+                    height: "44px",
+                    "& fieldset": {
+                      borderColor: "#847F3B", // Default border color (black)
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#847F3B", // Hover border color
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#847F3B", // Focus border color
+                    },
+                  }
+                }}
+
               />
             </Grid>
-            <Grid container spacing={2} sx={{ width: "100%", maxWidth: "800px", display: "flex", justifyContent: "center",   }}>
-               <PaymentCard imageSrc={img1} label="Card" selected={true} onClick={() => {}} defaultWhite={true}  />
-                <PaymentCard imageSrc={img2} extraImageSrc={img21} selected={true} onClick={() => {}} />
-                <PaymentCard imageSrc={img3} label="Card" selected={true} onClick={() => {}} defaultWhite={true} />
-            </Grid>
+            <Grid container spacing={2} sx={{ width: "100%", maxWidth: "800px", display: "flex", justifyContent: "center" ,alignItems:{xs:"center",sm:"center"},marginLeft:"8px"}}>
+  <PaymentCard 
+    imageSrc={img1} 
+    label="Card" 
+    selected={true} 
+    onClick={() => {}} 
+    defaultWhite={true}  
+    imageSizes={{ width: 20, height: 16 }} 
+  />
+  <PaymentCard 
+    imageSrc={img2} 
+    extraImageSrc={img21} 
+    selected={true} 
+    onClick={() => {}} 
+    imageSizes={{ width: 18.71, height: 22.07 }} 
+    extraImageSizes={{ width: 40, height: 10.66 }} 
+  />
+  <PaymentCard 
+    imageSrc={img3} 
+    label="Card" 
+    selected={true} 
+    onClick={() => {}} 
+    defaultWhite={true} 
+    imageSizes={{ width: 43, height: 16.48 }} 
+  />
+</Grid>
 
 
               {/* Donation Selection */}
@@ -88,18 +128,31 @@ const PaymentForm = () => {
           <FormFieldGroup fields={formFields.addressDetails} values={values} handleChange={handleChange}/>
         </Grid>
 
+        <Grid item xs={12}>
+              <InputTextComponent
+                id="Address"
+                type="text"
+                label="Address"
+                // label="Enter Your Donation Amount Euros"
+                value={values.amount}
+                onChange={handleChange}
+                required
+                
+              />
+            </Grid>
+
         {/* Message */}
         <Grid item xs={12}>
-          <TextareaComponent
-            rows={3}
-            id="message"
-            type="textarea"
-            label="Your message"
-            value={values.message}
-            onChange={handleChange}
-            sx={{ width: "100%" }}
-          />
-        </Grid>
+  <TextareaComponent
+    rows={3}
+    id="message"
+    label="Your message"
+    value={values.message}
+    onChange={handleChange}
+    sx={{ height: "153px", width: "100%" }} // Custom height for this usage
+  />
+</Grid>
+
 
         {/* Agreements */}
 <Grid item xs={12}>
@@ -137,7 +190,7 @@ const PaymentForm = () => {
 
           </Grid>
           <Grid>
-            <CustomButton text="Donate Now" sx={{backgroundColor:"#847F3B", width:"157px" , height:"40px" ,margin:"20px" , borderRadius:"20px",textTransform: "capitalize" }} />
+            <CustomButton text="Donate Now" sx={{backgroundColor:"#847F3B", width:"157px" , height:"40px" ,margin:"10px" , borderRadius:"20px",textTransform: "capitalize", }} />
           </Grid>
         </Form>
       )}
