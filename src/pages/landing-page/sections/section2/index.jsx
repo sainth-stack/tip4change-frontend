@@ -21,7 +21,7 @@ const Section2 = () => {
         <p
           className="section2-text"
           style={{
-            fontWeight: 400,
+            fontWeight: "400",
             maxWidth: "800px",
             textAlign: "center",
             margin: "0 auto",
@@ -36,7 +36,7 @@ const Section2 = () => {
 
       {/* Section Subheading */}
       <Box sx={{ textAlign: "center", marginBottom: "20px" }}>
-        <Typography variant="h6" className="section-title" fontWeight="bold">
+        <Typography variant="h6" className="section-title" fontWeight="600">
           CHEMICALS USED
         </Typography>
         <p
@@ -73,7 +73,7 @@ const Section2 = () => {
     }}
   >
     <Box sx={{ maxWidth: "400px" }}>
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         GMOs
       </Typography>
       <p className="section-text">
@@ -81,7 +81,7 @@ const Section2 = () => {
         environment and safer working conditions for farmers."
       </p>
       <Box height={10} />
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         WATER CONSUMED
       </Typography>
       <p className="section-text">
@@ -128,7 +128,7 @@ const Section2 = () => {
     }}
   >
     <Box sx={{ maxWidth: "400px" }}>
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         CO2 EMISSIONS
       </Typography>
       <p className="section-text">
@@ -136,7 +136,7 @@ const Section2 = () => {
         conventional cotton, reducing the carbon footprint of our supply chain."
       </p>
       <Box height={10} />
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         BIODIVERSITY
       </Typography>
       <p className="section-text">
