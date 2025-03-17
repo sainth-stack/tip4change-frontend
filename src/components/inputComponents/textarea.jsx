@@ -10,7 +10,7 @@ export const TextareaComponent = ({
   placeholder = "",
   disabled = false,
   fullWidth = true,
-  rows = 2,
+  rows = 3,
   sx = {},
 }) => {
   return (
@@ -44,15 +44,19 @@ export const TextareaComponent = ({
           "& .MuiOutlinedInput-root": {
             borderRadius: "15px",
             borderColor: "#a38e5d",
-            padding: "12px", // Ensures text is inside the border
-            minHeight: "100px", // Default height
-            ...sx, // Custom styles
+            alignItems: "flex-start", // Aligns the text to the top
+            padding: 0, // Removes extra padding inside the input root
+            ...sx, // Custom styles from props
             "& textarea": {
-              minHeight: "100px", // Ensures text input is correctly spaced
-              padding: "10px", // Adjust text padding inside textarea
+              margin: 0,
+              paddingLeft: "10px",
+              paddingTop:"10px", // Ensures text starts from top-left
+              textAlign: "left",
+              height: "100% !important", // Ensures the textarea fills the input
+              boxSizing: "border-box", // Prevents overflow issues
             },
             "& fieldset": {
-              borderColor: "#0E0E0E1",
+              borderColor: "#a38e5d",
             },
             "&:hover fieldset": {
               borderColor: "#847F3B",
