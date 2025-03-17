@@ -70,7 +70,7 @@ const Section4 = () => {
                 
                 <Box sx={{ flexGrow: 1 }}>
                   {/* Goal & Rise Section */}
-                  <GoalRiseContainer sx={{ marginBottom: "23.17px",}}>
+                  <GoalRiseContainer sx={{ marginBottom: "10px",}}>
                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6.18px",fontFamily:"Montserrat", }}>
                        <strong style={{fontWeight:"700",fontSize:"14.62px",color:"#2A2A2A",width:"33px",height:'22px'}}>Goal</strong>
                        <p style={{ margin: 0, padding: 0,color:"#847F3B",fontWeight:"500" }}>₹ 40Cr</p>
@@ -84,7 +84,7 @@ const Section4 = () => {
                   </GoalRiseContainer>
 
                   {/* Title & Description */}
-                  <Typography variant="h6" sx={{ fontWeight: 600, fontSize: "20px", textAlign: "start", marginBottom:"7px",fontFamily:"Montserrat",lineHeight:"24.71px" }}>
+                  <Typography variant="h6" sx={{ fontWeight: 600, fontSize: "20px", textAlign: "start", marginBottom:"20px",fontFamily:"Montserrat",lineHeight:"24.71px" }}>
                     {card.title}
                   </Typography>
                   <Typography variant="body2" sx={{fontFamily:"Montserrat",textAlign:"start",margin:0,padding:0,fontWeight:"500",fontSize:"14px",lineHeight:"20.85px"}}>

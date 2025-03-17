@@ -17,11 +17,13 @@ const index = () => {
           <br /> our sustainable cotton T-shirts.
         </Typography>
 
-        <div className="SectionProfile">
+<div style={{maxWidth:'100%',justifyContent:'center',display:'flex'}}>
+<div className="SectionProfile">
           <ProfileIconCard />
           <ProfileIconCard />
           <ProfileIconCard />
         </div>
+</div>
       </div>
     </>
   );

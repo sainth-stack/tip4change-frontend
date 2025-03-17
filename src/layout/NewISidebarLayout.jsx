@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Box, Container, useMediaQuery } from "@mui/material";
+import { Box, Container, Grid2, useMediaQuery } from "@mui/material";
 import CustomTopBar from "./CustomTopBar";
 import Sidebar from "./Sidebar";
 
@@ -36,10 +36,10 @@ const NewISidebarLayout = () => {
         {/* Top Bar */}
         <CustomTopBar isOverlapping={true} />
 
-        <Container
+        <Grid2
+        padding={"40px"}
           sx={{
-            flexGrow: 1,
-            p: 2,
+        
             mt: 10,
             ml: {
               xs: 4,
@@ -58,7 +58,7 @@ const NewISidebarLayout = () => {
           }}
         >
           <Outlet />
-        </Container>
+        </Grid2>
       </Box>
     </Box>
   );

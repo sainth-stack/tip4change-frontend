@@ -40,23 +40,27 @@ export const TextareaComponent = ({
         multiline
         rows={rows}
         sx={{
-          // borderRadius: "rem",
-          minHeight: "100px",
-          width: "100%",
+          fontFamily: "Montserrat",
           "& .MuiOutlinedInput-root": {
             borderRadius: "15px",
-            "& fieldset": {
-              borderColor: "#a38e5d",
-            },
             borderColor: "#a38e5d",
+            padding: "12px", // Ensures text is inside the border
+            minHeight: "100px", // Default height
+            ...sx, // Custom styles
+            "& textarea": {
+              minHeight: "100px", // Ensures text input is correctly spaced
+              padding: "10px", // Adjust text padding inside textarea
+            },
+            "& fieldset": {
+              borderColor: "#0E0E0E1",
+            },
             "&:hover fieldset": {
-              borderColor: "#a38e5d",
+              borderColor: "#847F3B",
             },
             "&.Mui-focused fieldset": {
-              borderColor: "#a38e5d",
+              borderColor: "#847F3B",
             },
           },
-          ...sx,
         }}
       />
     </div>

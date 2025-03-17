@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid2, Typography, Box } from "@mui/material";
 import heroimg from "../../../../assets/images/section2img.png";
-import "./index.css";
+import './index.css'
 
 const Section2 = () => {
   return (
@@ -14,14 +14,21 @@ const Section2 = () => {
           className="section2-title"
           variant="h4"
           fontWeight="600"
-          sx={{ marginTop: "20px" }}
+          sx={{ marginTop: "20px" ,
+                 fontFamily: 'Montserrat',
+            // fontWeight: 600,
+            fontSize: {xs:"25px",md:"40px"},
+            textTransform:" uppercase",
+            // padding: "10px",
+            margin: "20px",
+            color: "#0E0E0E" }}
         >
           Comparison with Conventional T-Shirt
         </Typography>
         <p
           className="section2-text"
           style={{
-            fontWeight: 400,
+            fontWeight: "400",
             maxWidth: "800px",
             textAlign: "center",
             margin: "0 auto",
@@ -36,7 +43,7 @@ const Section2 = () => {
 
       {/* Section Subheading */}
       <Box sx={{ textAlign: "center", marginBottom: "20px" }}>
-        <Typography variant="h6" className="section-title" fontWeight="bold">
+        <Typography variant="h6" className="section-title" fontWeight="600" sx={{fontSize:"25px"}}>
           CHEMICALS USED
         </Typography>
         <p
@@ -73,7 +80,7 @@ const Section2 = () => {
     }}
   >
     <Box sx={{ maxWidth: "400px" }}>
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         GMOs
       </Typography>
       <p className="section-text">
@@ -81,7 +88,7 @@ const Section2 = () => {
         environment and safer working conditions for farmers."
       </p>
       <Box height={10} />
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         WATER CONSUMED
       </Typography>
       <p className="section-text">
@@ -128,7 +135,7 @@ const Section2 = () => {
     }}
   >
     <Box sx={{ maxWidth: "400px" }}>
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         CO2 EMISSIONS
       </Typography>
       <p className="section-text">
@@ -136,7 +143,7 @@ const Section2 = () => {
         conventional cotton, reducing the carbon footprint of our supply chain."
       </p>
       <Box height={10} />
-      <Typography variant="h6" className="section-title" fontWeight="bold">
+      <Typography variant="h6" className="section-title" fontWeight="600">
         BIODIVERSITY
       </Typography>
       <p className="section-text">
