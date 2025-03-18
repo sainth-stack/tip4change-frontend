@@ -14,6 +14,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
 import ImpactClaims from "./pages/brandPages/ImpactSection/ImpactClaims";
 import SupplyChain from "./pages/brandPages/SupplyChainSection/SupplyChain";
+import StatesCard from "./pages/landing-page/sections/section5/CardData";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,6 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [{ path: "", element: <LandingPage /> }],
   },
- 
 
   {
     path: "/",
@@ -41,6 +41,7 @@ const router = createBrowserRouter([
       { path: "/story", element: <StoryPage /> },
       { path: "/progress-tracking", element: <DoughnutChart /> },
       { path: "/payments", element: <PaymentForm /> },
+      { path: "/cards", element: <StatesCard /> },
       { path: "/payment-section", element: <PaymentTablePage /> },
     ],
   },

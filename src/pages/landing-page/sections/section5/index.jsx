@@ -6,6 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import mailImage from "../../../../assets/svg/MailIcon.svg";
 import section5 from "/src/assets/images/image5.png";
+
 const SocialImpactCard = () => {
   return (
     <div>
