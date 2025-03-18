@@ -10,6 +10,7 @@ import {
   useMediaQuery,
   Menu,
   MenuItem,
+  Container,
 } from "@mui/material";
 import logo from "../assets/images/logo.png";
 import CustomImage from "../components/CustomImage/CustomImage";
@@ -20,6 +21,13 @@ const CustomTopBar = ({ isOverlapping }) => {
   const location = useLocation();
    const navigate = useNavigate();
 
+  const handleClose = (path) => {
+    setAnchorEl(null);
+
+    console.log("path",path)
+    if (path) navigate(path); 
+  };
+
   //dropdwon  logic----------------
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -28,9 +36,7 @@ const CustomTopBar = ({ isOverlapping }) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+ 
   //dropdwon  logic----------------
 
 
@@ -54,83 +60,119 @@ const CustomTopBar = ({ isOverlapping }) => {
         justifyContent: "center",
       }}
     >
-      <Toolbar
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: { xs: "0 .3rem", sm: "0 .5rem" },
-        }}
-      >
-        {!isOverlapping && (
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <CustomImage
-              src={logo}
-              alt="Logo"
-              styles={{
-                height: "40px",
-                margin: "-.5rem 0 0 0",
-                boxShadow: "1px 0px 0px gray",
-                marginLeft: "1.5rem",
-              }}
-            />
-          </Box>
-        )}
+      <Container maxWidth="xl">
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            // padding: { },
+          }}
+        >
+          {!isOverlapping && (
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <CustomImage
+                src={logo}
+                alt="Logo"
+                styles={{
+                  height: "40px",
+                  margin: "-.5rem 0 0 0",
+                  boxShadow: "1px 0px 0px gray",
+                  marginLeft: "1.5rem",
+                }}
+              />
+            </Box>
+          )}
 
-        {isOverlapping && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "1rem",
-              marginLeft: "auto",
-              outline: "none",
-              marginTop: "0px",
-            }}
-          >
-            <IconButton
+          {isOverlapping && (
+            <Box
               sx={{
-                bgcolor: "#f5f5f5",
-                color: "#847f3b",
-                height: "40px",
-                borderRadius: "50%",
-                width: "40px",
+                display: "flex",
+                alignItems: "center",
+                gap: "1rem",
+                marginLeft: "auto",
+                outline: "none",
                 marginTop: "0px",
               }}
             >
-              <NotificationPopup />
-            </IconButton>
-            <Avatar
-              alt="Profile"
-              src={profile}
-              sx={{ boxShadow: 3, mt: "-12px", width: "45px", height: "45px" }}
-            />
-          </Box>
-        )}
-
-        {location.pathname === "/" && (
-          <>
-            <Box sx={{marginLeft:"3rem"}}>
+              <IconButton
+                sx={{
+                  bgcolor: "#f5f5f5",
+                  color: "#847f3b",
+                  height: "40px",
+                  borderRadius: "50%",
+                  width: "40px",
+                  marginTop: "0px",
+                }}
+              >
+                <NotificationPopup />
+              </IconButton>
               <Avatar
                 alt="Profile"
                 src={profile}
                 sx={{
                   boxShadow: 3,
+                  mt: "-12px",
                   width: "45px",
                   height: "45px",
-                  cursor: "pointer",
-                 
                 }}
-                onClick={handleClick}
               />
-              <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-                <MenuItem onClick={handleClose}>Brand</MenuItem>
-                <MenuItem onClick={handleClose}>User</MenuItem>
-              </Menu>
             </Box>
-          </>
-        )}
-      </Toolbar>
+          )}
+
+          {location.pathname === "/" && (
+            <>
+              <Box
+                // onMouseEnter={handleClick}
+                // onMouseLeave={() => handleClose(null)}
+                style={{ display: "inline-block" }}
+              >
+                <Avatar
+                  alt="Profile"
+                  src={profile}
+                  sx={{
+                    boxShadow: 1,
+                    width: "45px",
+                    height: "45px",
+                    cursor: "pointer",
+                  }}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleClick(event);
+                  }}
+                />
+
+                <Menu
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={() => handleClose(null)}
+                  sx={{ ml: 2 }}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "right",
+                  }}
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  disableScrollLock
+                  disableAutoFocusItem
+                >
+                  <MenuItem onClick={() => handleClose("/brand/impact-claim")}>
+                    Brand
+                  </MenuItem>
+                  <MenuItem onClick={() => handleClose("/story")}>
+                    User
+                  </MenuItem>
+                  <MenuItem onClick={() => handleClose("/retail")}>
+                    Retail
+                  </MenuItem>
+                </Menu>
+              </Box>
+            </>
+          )}
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };
