@@ -1,6 +1,6 @@
  import React from "react";
  import LandingPage from "./pages/landing-page";
- import PaymentForm from "./pages/paymentSection"
+ import PaymentForm from "./pages/User/paymentSection"
  const  App=() =>{  
    return ( 
 

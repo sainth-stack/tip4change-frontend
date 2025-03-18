@@ -9,8 +9,7 @@ import {
   Stack,
   useMediaQuery,
 } from "@mui/material";
-import CustomTypography from "../../components/TypoGraphy/CustomTypography";
-import NavigationHeader from "../../layout/NavigationHeader";
+import NavigationHeader from "../../../layout/NavigationHeader";
 const profileData = {
   name: "Jacob",
   email: "jacob2915@gmail.com",

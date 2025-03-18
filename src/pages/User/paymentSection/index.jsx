@@ -1,17 +1,16 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import { Button, Grid ,Typography,Box, Grid2} from "@mui/material";
-import {CheckboxComponent} from '../../components/inputComponents/checkbox'
-import {InputTextComponent} from '../../components/inputComponents/text'
-import {TextareaComponent} from '../../components/inputComponents/textarea'
-import PaymentCard from '../../components/paymentCardComponent/card'
-import img1 from '../../assets/svg/fc1icon.png'
-import img2 from '../../assets/svg/fc2icon.png'
-import img21 from '../../assets/svg/fc2icon2.png'
-import img3 from '../../assets/svg/fc3icon.png'
-import FormFieldGroup from "../../components/formsField/fromsField";
-import DonationSelection from "../../components/inputComponents/radio";
-import CustomButton from "../../components/Button/CustomButton";
+import {CheckboxComponent} from '../../../components/inputComponents/checkbox'
+import {InputTextComponent} from '../../../components/inputComponents/text'
+import {TextareaComponent} from '../../../components/inputComponents/textarea'
+import PaymentCard from '../../../components/paymentCardComponent/card'
+import img1 from '../../../assets/svg/fc1icon.png'
+import img2 from '../../../assets/svg/fc2icon.png'
+import img21 from '../../../assets/svg/fc2icon2.png'
+import img3 from '../../../assets/svg/fc3icon.png'
+import DonationSelection from "../../../components/inputComponents/radio";
+import CustomButton from "../../../components/Button/CustomButton";
 import { useLocation } from 'react-router-dom';
 import {formFields} from './data'
 

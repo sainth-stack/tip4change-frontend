@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Box, Grid } from "@mui/material";
 import { useLocation } from "react-router-dom";
-import NavigationHeader from "../../layout/NavigationHeader";
+import NavigationHeader from "../../../layout/NavigationHeader";
 import { StoryPageButtonData, StoryPageUiFileds } from "./data";
-import DragAndDropFileInput from "../../components/DragAndDropFileInput/DragAndDropFileInput";
-import CustomButton from "../../components/Button/CustomButton";
-import { InputTextComponent } from "../../components/inputComponents/text";
-import { TextareaComponent } from "../../components/inputComponents/textarea";
+import DragAndDropFileInput from "../../../components/DragAndDropFileInput/DragAndDropFileInput";
+import CustomButton from "../../../components/Button/CustomButton";
+import { InputTextComponent } from "../../../components/inputComponents/text";
+import { TextareaComponent } from "../../../components/inputComponents/textarea";
 
 const StoryPage = () => {
   const location = useLocation();
