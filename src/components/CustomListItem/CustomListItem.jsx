@@ -74,8 +74,7 @@ const CustomListItem = ({ name, icon, path, isMobile }) => {
               fontWeight: "500",
               transition: "color 0.3s ease",
               color: isActive ? "white" : "#0E0E0E",
-              whiteSpace: "nowrap",  // Prevent text wrapping
-              overflow: "hidden",
+              // whiteSpace: "nowrap",  // Prevent text wrapping
               textOverflow: "ellipsis",
             }}
           >

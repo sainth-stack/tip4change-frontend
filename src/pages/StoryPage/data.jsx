@@ -34,7 +34,7 @@ export const StoryPageUiFileds = [
   {
     id: "StoryDescription",
     type: "textarea",
-    rows:4,
+    rows:1,
     label: "Description",
     value: "",
          // Placeholder for onChange handler

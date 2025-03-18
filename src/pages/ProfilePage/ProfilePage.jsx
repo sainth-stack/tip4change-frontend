@@ -41,7 +41,7 @@ const ProfileView = () => {
   const isTablet = useMediaQuery("(min-width:768px) and (max-width:1024px)");
   const isLaptop = useMediaQuery("(min-width:1025px)");
   return (
-    <Box sx={{ width: "100%", mx: "auto", my: 4, pt: 2, pl: 7 }}>
+    <Box sx={{ width: "100%", mx: "auto", my: 4, pt: 2 }}>
       {/* Header Section */}
       <Box
         display="flex"
@@ -55,7 +55,7 @@ const ProfileView = () => {
         {/* Navigation Header */}
         <Box
           sx={{
-            ml: { xs: "-250px", sm: "-70px", md: "-20px", lg: "-30px" },
+            ml: { xs: "", sm: "", md: "", lg: "" },
             textAlign: { xs: "center", sm: "left" }, // Center align on mobile
             mb: { xs: 2, sm: 0 }, // Adds bottom margin on mobile for spacing
           }}
@@ -67,20 +67,20 @@ const ProfileView = () => {
         <Button
           variant="contained"
           sx={{
-            bgcolor: "#858040",
-            "&:hover": { bgcolor: "#6e6b3d" },
+            backgroundColor: "#858040",
+            "&:hover": { backgroundColor: "#6e6b3d" },
             fontFamily: "Montserrat",
             borderRadius: "20px",
             marginRight: { xs: "280px", sm: "50px", md: "80px" }, // Adjusts margin based on screen size
-            textTransform: "uppercase",
+            textTransform: "uppercase", // Corrected to camelCase
             width: { xs: "150px", sm: "auto" }, // Full width on mobile, auto on larger screens
           }}
         >
-          Edit profile
+          Edit Profile
         </Button>
       </Box>
 
-      <Grid container spacing={0} alignItems="flex-start">
+      <Grid container spacing={0} alignItems="flex-start" sx={{paddingLeft:"50px"}}>
         {/* Profile Image */}
         <Grid
           item
