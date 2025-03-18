@@ -58,7 +58,7 @@ const sidebarConfigs = {
         path: "/payment-section",
       },
       // { name: "Payments", icon: PaymentSvg, path: "/payments" },
-      { name: "Settings", icon: SettingsSvg, path: "/View-profile" },
+       { name: "Settings", icon: SettingsSvg, path: "/profile" },
        { name: "Logout", icon: LogoutSvg, path: "/logout" },
     ],
   },
@@ -163,7 +163,7 @@ const selectedSidebar = getSidebarConfig(basePath);
 
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
         <List sx={{ flexGrow: 1 }}>
-          {selectedSidebar.default.slice(0, -1).map((item, index) => (
+          {selectedSidebar.default.slice(0, -2).map((item, index) => (
             <CustomListItem
               key={index}
               name={item.name}
@@ -175,7 +175,7 @@ const selectedSidebar = getSidebarConfig(basePath);
         </List>
 
         <List>
-          {selectedSidebar.default.slice(-1).map((item, index) => (
+          {selectedSidebar.default.slice(-2).map((item, index) => (
             <CustomListItem
               key={index}
               name={item.name}

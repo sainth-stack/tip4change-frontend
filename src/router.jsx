@@ -47,10 +47,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/brand",
-    element: <NewISidebarLayout basePath={"/brand"} />,
+    element: "",
     children: [
-      { path: "impact-claim", element: <ImpactClaims /> },
-      { path: "supply-chain", element: <SupplyChain /> },
+      { index: true, element: <NotFound /> },
+      {
+        path: "",
+        element: <NewISidebarLayout basePath={"/brand"} />, 
+        children: [
+          { path: "impact-claim", element: <ImpactClaims /> },
+          { path: "supply-chain", element: <SupplyChain /> },
+        ],
+      },
     ],
   },
 ]);

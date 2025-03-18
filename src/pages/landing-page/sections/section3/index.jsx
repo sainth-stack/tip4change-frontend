@@ -9,7 +9,7 @@ const index = () => {
     <>
       <div className="Section3">
         <div className="bg-img2"></div>
-        <h1 className="chain">Supply Chain Transparency</h1>
+        <h1 className="chain">Supply supply Chain Transparency</h1>
 
         <Typography className="believe">
           We believe in transparency and accountability throughout our supply
