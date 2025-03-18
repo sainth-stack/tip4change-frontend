@@ -99,7 +99,7 @@ const ProjectPage = () => {
                 <TextareaComponent
                   id={field.id}
                   label={field.label}
-                  rows={field.rows || 4}
+                  rows={field.rows || 1}
                   value={formData[field.id] || ""}
                   onChange={(e) => handleChange(field.id, e.target.value)}
                   sx={{ width: "100%" }}

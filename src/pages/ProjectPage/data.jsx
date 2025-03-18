@@ -33,7 +33,7 @@ export const ProjectPageUiFileds = [
   {
     id: "paymentBudget",
     type: "text",
-    label: "Payment Budget",
+    label: "Project Budget",
     value: "",
          // Placeholder for onChange handler
     required: true,

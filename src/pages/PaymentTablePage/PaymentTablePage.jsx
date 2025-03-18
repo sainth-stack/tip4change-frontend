@@ -19,13 +19,14 @@ const PaymentTablePage = () => {
             data={data}
             sx={{
               // tableSx: { height: "35rem" },
-              headerSx: { backgroundColor: "#F5F6FA" },
+              headerSx: { backgroundColor: "#F5F6FA",fontFamily:'Montserrat',fontSize:'12px' },
               columnSx: {
                 textAlign: "center",
                 padding: "10px",
                 color: "#847F3B",
-                fontFamily: "Monda",
-                fontWeight:"500"
+                fontFamily: "Montserrat",
+                fontWeight:"500",
+                fontSize:'12px'
               },
               rowSx: {
                 fontWeight: "900"
