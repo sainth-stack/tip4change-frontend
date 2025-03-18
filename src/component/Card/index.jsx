@@ -15,6 +15,7 @@ const ProfileIconCard = () => {
         paddingLeft: { xs: "0px", sm: "-10px" }, // Adjust padding for different sizes
         margin: "15px auto", // Centering card
         border: "2px solid rgba(235, 234, 237, 1)",
+        ml: { xs: 0, md: 0 },
       }}
     >
       <Box
