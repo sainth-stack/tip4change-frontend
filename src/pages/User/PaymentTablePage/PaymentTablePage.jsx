@@ -1,8 +1,8 @@
 import React from 'react'
-import NavigationHeader from '../../layout/NavigationHeader'
+import NavigationHeader from '../../../layout/NavigationHeader'
 import { useLocation } from 'react-router-dom';
 import { Box } from '@mui/material';
-import CustomTable from '../../components/CustomTable/CustomTable';
+import CustomTable from '../../../components/CustomTable/CustomTable';
 import { columns,data } from './data';
 
 const PaymentTablePage = () => {

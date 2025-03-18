@@ -131,10 +131,16 @@ const CustomTopBar = ({ isOverlapping }) => {
                   alt="Profile"
                   src={profile}
                   sx={{
-                    boxShadow: 1,
+                    boxShadow: 2,
+
                     width: "45px",
                     height: "45px",
                     cursor: "pointer",
+                    ":hover": {
+                      boxShadow: 10, // Increases shadow on hover
+                      // Slightly enlarges on hover
+                      transition: "all 0.3s ease-in-out", // Smooth transition effect
+                    },
                   }}
                   onClick={(event) => {
                     event.stopPropagation();
@@ -149,7 +155,7 @@ const CustomTopBar = ({ isOverlapping }) => {
                   sx={{ ml: 2 }}
                   anchorOrigin={{
                     vertical: "bottom",
-                    horizontal: "right",
+                    horizontal: "center",
                   }}
                   transformOrigin={{
                     vertical: "top",

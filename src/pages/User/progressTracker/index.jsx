@@ -3,11 +3,10 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Button, Grid,Typography,Box,Breadcrumbs } from "@mui/material";
-import TaskList from "../../components/TaskList/taskItem"
-import CustomTypography from '../../components/TypoGraphy/CustomTypography';
+import TaskList from "../../../components/TaskList/taskItem"
 import { useLocation } from 'react-router-dom';
 import { chartData,options } from "./data";
-import NavigationHeader from '../../layout/NavigationHeader'
+import NavigationHeader from '../../../layout/NavigationHeader'
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
