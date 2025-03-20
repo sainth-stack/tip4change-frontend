@@ -1,11 +1,8 @@
 import { Box, Breadcrumbs, responsiveFontSizes } from "@mui/material";
 import React from "react";
 import CustomTypography from "../components/TypoGraphy/CustomTypography";
-import { StoryPageButtonData } from "../pages/StoryPage/data";
 import CustomButton from "./../components/Button/CustomButton";
 import { NavigationHeaderButtonData } from "./data";
-import { Padding } from "@mui/icons-material";
-import { color } from "chart.js/helpers";
 
 const NavigationHeader = ({ path, PageText }) => {
   return (

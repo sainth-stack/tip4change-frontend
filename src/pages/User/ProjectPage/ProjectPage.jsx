@@ -3,15 +3,13 @@ import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { Grid } from '@mui/material';
 import React from 'react';
-import CustomTypography from '../../components/TypoGraphy/CustomTypography';
-import CustomInput from '../../components/CustomInput/CustomInput';
-import DragAndDropFileInput from '../../components/DragAndDropFileInput/DragAndDropFileInput';
-import CustomButton from '../../components/Button/CustomButton';
+import DragAndDropFileInput from '../../../components/DragAndDropFileInput/DragAndDropFileInput';
+import CustomButton from '../../../components/Button/CustomButton';
 import { ProjectPageUiFileds, ProjectPageButtonData } from './data';
-import NavigationHeader from '../../layout/NavigationHeader';
-import { TextareaComponent } from '../../components/inputComponents/textarea';
-import { InputTextComponent } from '../../components/inputComponents/text';
 import { StoryPageButtonData } from '../StoryPage/data';
+import NavigationHeader from '../../../layout/NavigationHeader';
+import { InputTextComponent } from '../../../components/inputComponents/text';
+import { TextareaComponent } from '../../../components/inputComponents/textarea';
 
 
 
