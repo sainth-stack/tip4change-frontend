@@ -19,6 +19,7 @@ import StatesCard3 from "./pages/landing-page/sections/section5/CardData3";
 import StatesCard4 from "./pages/landing-page/sections/section5/CardData4";
 import StatesCard5 from "./pages/landing-page/sections/section5/CardData5";
 import StatesCard2 from "./pages/landing-page/sections/section5/CardData2";
+import SustainabilityCard from "./component/Card/News";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
       { path: "/card4", element: <StatesCard4 /> },
       { path: "/card5", element: <StatesCard5 /> },
       { path: "/payment-section", element: <PaymentTablePage /> },
+      { path: "/news", element: <SustainabilityCard /> },
     ],
   },
   {

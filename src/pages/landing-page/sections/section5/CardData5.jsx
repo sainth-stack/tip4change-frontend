@@ -15,7 +15,14 @@ const statsData = [
     ),
     description: (
       <span>
-        <strong style={{ color: "red", marginRight: "8px" }}>2,500</strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginRight: "8px",
+          }}
+        >
+          2,500
+        </strong>
         Received
       </span>
     ),
@@ -36,7 +43,14 @@ const statsData = [
     icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "2px" }}>85% </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "2px",
+          }}
+        >
+          85%{" "}
+        </strong>
         Response
       </span>
     ),
@@ -51,12 +65,19 @@ const statsData = [
     ),
   },
   {
-    title: "Average Responsive Time",
+    title: "Average Response Time",
     percentage: "24 Hrs",
     icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "0px" }}>2Hrs </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "0px",
+          }}
+        >
+          2Hrs{" "}
+        </strong>
         Average response time
       </span>
     ),
@@ -77,8 +98,15 @@ const statsData = [
     icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "-2px" }}>100% </strong>
-        Positive,Neutral,Negative Feedback
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "0px",
+          }}
+        >
+          100%{" "}
+        </strong>
+        Positive,Neutral, Negative Feedback
       </span>
     ),
 

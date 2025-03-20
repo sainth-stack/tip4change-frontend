@@ -69,7 +69,8 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
               width: "60px",
               height: "60px",
               display: "flex",
-              opacity: "80%",
+              opacity: "90%",
+              mt: "-17px",
               alignItems: "",
               justifyContent: "",
             }}
@@ -87,7 +88,7 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
             fontStyle: "Montserrat",
             fontSize: "15px",
             lineHeight: "1.5",
-            marginTop: "25px",
+            marginTop: "30px",
             lineHeight: "100%",
             width: "220px",
             display: "flex",

@@ -4,7 +4,7 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp"; // Example icons
 
 const statsData = [
   {
-    title: "Total Cotton Based PRoduct ",
+    title: "Total Cotton  Based Product ",
     percentage: "1.2M",
     icon: (
       <img
@@ -15,7 +15,14 @@ const statsData = [
     ),
     description: (
       <span>
-        <strong style={{ color: "red", marginRight: "8px" }}>1.2M</strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginRight: "8px",
+          }}
+        >
+          1.2M
+        </strong>
         Units Sold
       </span>
     ),
@@ -36,8 +43,15 @@ const statsData = [
     icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "2px" }}>78% </strong>
-        Of Consumer Prefer Organic Cotton
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "2px",
+          }}
+        >
+          4.6 /{" "}
+        </strong>
+        5 Stars
       </span>
     ),
     highlight: (
@@ -51,13 +65,21 @@ const statsData = [
     ),
   },
   {
-    title: "Consumer Return Rate",
-    percentage: 5.2,
+    title: "Sustainability Preferances Score",
+    percentage: 78,
     icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "0px" }}> 5.2% </strong>
-        (Industry Avg:6%)
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "0px",
+          }}
+        >
+          {" "}
+          78%{" "}
+        </strong>
+        Of Consumer Prefer Organic Cotton
       </span>
     ),
 
@@ -72,13 +94,20 @@ const statsData = [
     ),
   },
   {
-    title: "Carbon Footprintn of Cotton Sourcing",
-    percentage: 91,
+    title: "Consumer Return Rate ",
+    percentage: 5.2,
     icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "-2px" }}>18% </strong>
-        Vs. Last Year
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "-2px",
+          }}
+        >
+          5.2%{" "}
+        </strong>
+        (Industry Avg: 6 %)
       </span>
     ),
 

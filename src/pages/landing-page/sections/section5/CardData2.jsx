@@ -15,7 +15,12 @@ const statsData = [
     ),
     description: (
       <span>
-        <strong style={{ color: "lightGreeen", marginRight: "8px" }}>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginRight: "8px",
+          }}
+        >
           80%
         </strong>
         Average Supply
@@ -38,7 +43,15 @@ const statsData = [
     icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "2px" }}>500 </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "2px",
+          }}
+        >
+          {" "}
+          500{" "}
+        </strong>
         Metric tons Co2
       </span>
     ),
@@ -58,7 +71,14 @@ const statsData = [
     icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "0px" }}>100,000 kg </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "0px",
+          }}
+        >
+          100,000 kg{" "}
+        </strong>
         Of Cotton
       </span>
     ),
@@ -79,7 +99,15 @@ const statsData = [
     icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "-2px" }}>3 </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "-2px",
+          }}
+        >
+          {" "}
+          3{" "}
+        </strong>
         Suppliers Need Review
       </span>
     ),

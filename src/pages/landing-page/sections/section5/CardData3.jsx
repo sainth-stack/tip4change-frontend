@@ -15,7 +15,14 @@ const statsData = [
     ),
     description: (
       <span>
-        <strong style={{ color: "red", marginRight: "8px" }}>2,500</strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginRight: "8px",
+          }}
+        >
+          2,500
+        </strong>
         Tons
       </span>
     ),
@@ -36,7 +43,14 @@ const statsData = [
     icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "2px" }}>65% </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "2px",
+          }}
+        >
+          65%{" "}
+        </strong>
         Vs. Conventional Cotton
       </span>
     ),
@@ -56,7 +70,15 @@ const statsData = [
     icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "0px" }}> 30% </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "0px",
+          }}
+        >
+          {" "}
+          30%{" "}
+        </strong>
         Of Total Materail
       </span>
     ),
@@ -72,12 +94,19 @@ const statsData = [
     ),
   },
   {
-    title: "Carbon Footprintn of Cotton Sourcing",
+    title: "Carbon Footprint of Cotton Sourcing",
     percentage: 91,
     icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "-2px" }}>18% </strong>
+        <strong
+          style={{
+            color: "var(--green, rgba(132, 127, 59, 1))",
+            marginLeft: "-2px",
+          }}
+        >
+          18%{" "}
+        </strong>
         Vs. Last Year
       </span>
     ),
