@@ -4,8 +4,8 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp"; // Example icons
 
 const statsData = [
   {
-    title: "Carbon Footprint",
-    percentage: 89,
+    title: "Total Cotton Based PRoduct ",
+    percentage: "1.2M",
     icon: (
       <img
         src="src/assets/images/card1.png"
@@ -15,14 +15,14 @@ const statsData = [
     ),
     description: (
       <span>
-        <strong style={{ color: "red", marginRight: "8px" }}>20%</strong>
-        CO₂ Reduction vs. Last year
+        <strong style={{ color: "red", marginRight: "8px" }}>1.2M</strong>
+        Units Sold
       </span>
     ),
     highlight: (
       <span>
         <img
-          src="src/assets/images/cardIcon2.png"
+          src="src/assets/images/cardIcon.png"
           alt="icon"
           style={{ width: "20px", height: "12px", marginLeft: "0px" }}
         />
@@ -31,13 +31,13 @@ const statsData = [
   },
 
   {
-    title: "Water Usage",
-    percentage: 65,
+    title: "Average Consumer Rating ",
+    percentage: "4.6 Stars",
     icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "2px" }}>50,000L </strong>
-        Saved per 1000kg Cotton
+        <strong style={{ marginLeft: "2px" }}>78% </strong>
+        Of Consumer Prefer Organic Cotton
       </span>
     ),
     highlight: (
@@ -51,13 +51,13 @@ const statsData = [
     ),
   },
   {
-    title: "Fair Trade",
-    percentage: 73,
+    title: "Consumer Return Rate",
+    percentage: 5.2,
     icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "0px" }}>80% </strong>
-        Of Cotton Fair Trade Certified
+        <strong style={{ marginLeft: "0px" }}> 5.2% </strong>
+        (Industry Avg:6%)
       </span>
     ),
 
@@ -72,13 +72,13 @@ const statsData = [
     ),
   },
   {
-    title: "Recycled Cotton",
-    percentage: 96,
+    title: "Carbon Footprintn of Cotton Sourcing",
+    percentage: 91,
     icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
     description: (
       <span>
-        <strong style={{ marginLeft: "-2px" }}>30% </strong>
-        Cotton from Recycled Sources
+        <strong style={{ marginLeft: "-2px" }}>18% </strong>
+        Vs. Last Year
       </span>
     ),
 
@@ -94,7 +94,7 @@ const statsData = [
   },
 ];
 
-const StatesCard = () => {
+const StatesCard4 = () => {
   return (
     <Grid container spacing={2} sx={{ padding: "0px" }}>
       {statsData.map((item, index) => (
@@ -106,4 +106,4 @@ const StatesCard = () => {
   );
 };
 
-export default StatesCard;
+export default StatesCard4;

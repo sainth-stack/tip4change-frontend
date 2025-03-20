@@ -90,12 +90,14 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
             marginTop: "25px",
             lineHeight: "100%",
             width: "220px",
+            display: "flex",
+            gap: "10px",
           }}
         >
           <strong style={{ color: "var(--green, rgba(132, 127, 59, 1))" }}>
             {highlight}
           </strong>
-          {description}
+          <div> {description}</div>
         </Typography>
       </dvi>
     </Box>

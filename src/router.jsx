@@ -15,6 +15,10 @@ import PaymentTablePage from "./pages/PaymentTablePage/PaymentTablePage";
 import ImpactClaims from "./pages/brandPages/ImpactSection/ImpactClaims";
 import SupplyChain from "./pages/brandPages/SupplyChainSection/SupplyChain";
 import StatesCard from "./pages/landing-page/sections/section5/CardData";
+import StatesCard3 from "./pages/landing-page/sections/section5/CardData3";
+import StatesCard4 from "./pages/landing-page/sections/section5/CardData4";
+import StatesCard5 from "./pages/landing-page/sections/section5/CardData5";
+import StatesCard2 from "./pages/landing-page/sections/section5/CardData2";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +45,11 @@ const router = createBrowserRouter([
       { path: "/story", element: <StoryPage /> },
       { path: "/progress-tracking", element: <DoughnutChart /> },
       { path: "/payments", element: <PaymentForm /> },
-      { path: "/cards", element: <StatesCard /> },
+      { path: "/card1", element: <StatesCard /> },
+      { path: "/card2", element: <StatesCard2 /> },
+      { path: "/card3", element: <StatesCard3 /> },
+      { path: "/card4", element: <StatesCard4 /> },
+      { path: "/card5", element: <StatesCard5 /> },
       { path: "/payment-section", element: <PaymentTablePage /> },
     ],
   },
@@ -52,7 +60,7 @@ const router = createBrowserRouter([
       { index: true, element: <NotFound /> },
       {
         path: "",
-        element: <NewISidebarLayout basePath={"/brand"} />, 
+        element: <NewISidebarLayout basePath={"/brand"} />,
         children: [
           { path: "impact-claim", element: <ImpactClaims /> },
           { path: "supply-chain", element: <SupplyChain /> },
