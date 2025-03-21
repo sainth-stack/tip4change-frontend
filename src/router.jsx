@@ -14,6 +14,9 @@ import ProfilePage from "./pages/User/ProfilePage/ProfilePage";
 import PaymentTablePage from "./pages/User/PaymentTablePage/PaymentTablePage";
 import ImpactClaims from "./pages/brandPages/ImpactSection/ImpactClaims";
 import SupplyChain from "./pages/brandPages/SupplyChainSection/SupplyChain";
+import AnaliticalInsights from "./pages/brandPages/analytics-insights/AnalyticInsights";
+import SocialPassport from "./pages/brandPages/social-passport/SocailPassport";
+import SupplierInformation from './pages/retailPages/SupplierInformation/Index';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [{ path: "/payments", element: <PaymentForm /> }],
   },
+  //default routes----------------------------------------------------------------
   {
     path: "/",
     element: <NewISidebarLayout basePath={"/"} />,
@@ -43,6 +47,9 @@ const router = createBrowserRouter([
       { path: "/payment-section", element: <PaymentTablePage /> },
     ],
   },
+  //default routes----------------------------------------------------------------
+
+  //***Brand routes----------------------------------------------------------------
   {
     path: "/brand",
     element: "",
@@ -50,14 +57,40 @@ const router = createBrowserRouter([
       { index: true, element: <NotFound /> },
       {
         path: "",
-        element: <NewISidebarLayout basePath={"/brand"} />, 
+        element: <NewISidebarLayout basePath={"/brand"} />,
         children: [
           { path: "impact-claim", element: <ImpactClaims /> },
           { path: "supply-chain", element: <SupplyChain /> },
+          { path: "analytics-insights", element: <AnaliticalInsights /> },
+          { path: "social-passport", element: <SocialPassport /> },
         ],
       },
     ],
   },
+  //***Brand routes----------------------------------------------------------------
+
+  //^^^^Retail routes----------------------------------------------------------------
+
+  {
+    path: "/retail",
+    element: "",
+    children: [
+      { index: true, element: <NotFound /> },
+      {
+        path: "",
+        element: <NewISidebarLayout basePath={"/retail"} />,
+        children: [
+          { path: "supplier-info", element: <SupplierInformation /> },
+          { path: "product-info", element: <SupplierInformation /> },
+
+
+          
+        ],
+      },
+    ],
+  },
+
+  //^^^^Retail routes----------------------------------------------------------------
 ]);
 
 export default router;

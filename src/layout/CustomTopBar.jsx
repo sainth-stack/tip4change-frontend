@@ -170,7 +170,7 @@ const CustomTopBar = ({ isOverlapping }) => {
                   <MenuItem onClick={() => handleClose("/story")}>
                     User
                   </MenuItem>
-                  <MenuItem onClick={() => handleClose("/retail")}>
+                  <MenuItem onClick={() => handleClose("/retail/product-info")}>
                     Retail
                   </MenuItem>
                 </Menu>

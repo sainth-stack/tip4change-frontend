@@ -131,7 +131,6 @@ const SocialImpactCard = () => {
           width: { xs: "80%", md: "450px" }, // Responsive width
           borderRadius: "30px",
           mb: { xs: 2, md: 2.5 }, // Keep consistent spacing
-          mt: 2,
           px: { xs: 3, md: 5 },
           py: { xs: 1, md: 1.2 },
           fontSize: { xs: "14px", md: "16px" },
