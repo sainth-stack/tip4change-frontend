@@ -1,17 +1,19 @@
 import { Grid } from "@mui/material";
 import StatCard from "../../../../component/Card/StateCard";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp"; // Example icons
+
+import card1 from "/src/assets/images/card1.png";
+import card2 from "/src/assets/images/card2.png";
+import card3 from "/src/assets/images/card3.png";
+import card4 from "/src/assets/images/card4.png";
+import cardIcon from "/src/assets/images/cardIcon.png";
 
 const statsData = [
   {
     title: "Total Cotton Sourced",
-    percentage: 2500,
+    value: 2500, // Example value in millions
+    type: "none", // Define type (percentage, stars, millions)
     icon: (
-      <img
-        src="src/assets/images/card1.png"
-        alt="icon"
-        style={{ width: "60px", height: "60px" }} // Fixed style syntax
-      />
+      <img src={card1} alt="icon" style={{ width: "60px", height: "60px" }} />
     ),
     description: (
       <span>
@@ -21,26 +23,27 @@ const statsData = [
             marginRight: "8px",
           }}
         >
-          2,500
+          2,500{" "}
         </strong>
         Tons
       </span>
     ),
     highlight: (
-      <span>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px", marginLeft: "0px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
 
   {
     title: "Organic Cotton Percentage",
-    percentage: 62,
-    icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
+    value: 62, // Example percentage
+    type: "percentage",
+    icon: (
+      <img src={card2} alt="icon" style={{ width: "60px", height: "60px" }} />
+    ),
     description: (
       <span>
         <strong
@@ -55,19 +58,20 @@ const statsData = [
       </span>
     ),
     highlight: (
-      <span style={{}}>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
   {
     title: "Recycled Cotton Usage",
-    percentage: 73,
-    icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
+    value: 73, // Example stars
+    type: "percentage",
+    icon: (
+      <img src={card3} alt="icon" style={{ width: "60px", height: "60px" }} />
+    ),
     description: (
       <span>
         <strong
@@ -76,27 +80,26 @@ const statsData = [
             marginLeft: "0px",
           }}
         >
-          {" "}
           30%{" "}
         </strong>
-        Of Total Materail
+        Of Total Material
       </span>
     ),
-
     highlight: (
-      <span style={{}}>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
   {
     title: "Carbon Footprint of Cotton Sourcing",
-    percentage: 91,
-    icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
+    value: 91,
+    type: "percentage",
+    icon: (
+      <img src={card4} alt="icon" style={{ width: "60px", height: "60px" }} />
+    ),
     description: (
       <span>
         <strong
@@ -110,15 +113,12 @@ const statsData = [
         Vs. Last Year
       </span>
     ),
-
     highlight: (
-      <span style={{}}>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
 ];

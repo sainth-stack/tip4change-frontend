@@ -1,6 +1,28 @@
 import { Box, Typography } from "@mui/material";
 
-const StatCard = ({ title, percentage, icon, description, highlight }) => {
+const StatCard = ({
+  title,
+  value,
+  type,
+  percentage,
+  icon,
+  description,
+  highlight,
+}) => {
+  let displayValue;
+
+  if (type === "percentage") {
+    displayValue = `${value}%`;
+  } else if (type === "stars") {
+    displayValue = `${value} Stars`;
+  } else if (type === "millions") {
+    displayValue = `${value}M`;
+  } else if (type === "none") {
+    displayValue = `${value}`; // Empty string when type is "none"
+  } else {
+    displayValue = value;
+  }
+
   return (
     <Box
       sx={{
@@ -19,7 +41,7 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
         flexDirection: "column",
       }}
     >
-      <dvi
+      <div
         style={{
           width: "230px",
           height: "110px",
@@ -49,16 +71,17 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
             >
               {title}
             </Typography>
+
             <Typography
               variant="h5"
               fontWeight="700"
-              marginTop="15px"
+              marginTop="16px"
               fontStyle="Montserrat"
               size="20px"
               letterSpacing="1px"
               lineHeight="100%"
             >
-              {percentage}%
+              {displayValue}
             </Typography>
           </Box>
 
@@ -89,8 +112,8 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
             fontSize: "15px",
             lineHeight: "1.5",
             marginTop: "30px",
-            lineHeight: "100%",
-            width: "220px",
+            lineHeight: "115%",
+            width: "235px",
             display: "flex",
             gap: "10px",
           }}
@@ -100,7 +123,7 @@ const StatCard = ({ title, percentage, icon, description, highlight }) => {
           </strong>
           <div> {description}</div>
         </Typography>
-      </dvi>
+      </div>
     </Box>
   );
 };

@@ -1,17 +1,19 @@
 import { Grid } from "@mui/material";
 import StatCard from "../../../../component/Card/StateCard";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp"; // Example icons
+
+import card1 from "/src/assets/images/card1.png";
+import card2 from "/src/assets/images/card2.png";
+import card3 from "/src/assets/images/card3.png";
+import card4 from "/src/assets/images/card4.png";
+import cardIcon from "/src/assets/images/cardIcon.png";
 
 const statsData = [
   {
     title: "Average Supply Chain Efficiency",
-    percentage: 79,
+    value: 79,
+    type: "percentage",
     icon: (
-      <img
-        src="src/assets/images/card1.png"
-        alt="icon"
-        style={{ width: "60px", height: "60px" }} // Fixed style syntax
-      />
+      <img src={card1} alt="icon" style={{ width: "60px", height: "60px" }} />
     ),
     description: (
       <span>
@@ -21,26 +23,26 @@ const statsData = [
             marginRight: "8px",
           }}
         >
-          80%
+          80{" "}
         </strong>
         Average Supply
       </span>
     ),
     highlight: (
-      <span>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px", marginLeft: "0px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
-
   {
-    title: "Co2 Emissions from Transport",
-    percentage: 88,
-    icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
+    title: "CO₂ Emissions from Transport",
+    value: 88,
+    type: "percentage",
+    icon: (
+      <img src={card2} alt="icon" style={{ width: "60px", height: "60px" }} />
+    ),
     description: (
       <span>
         <strong
@@ -49,26 +51,26 @@ const statsData = [
             marginLeft: "2px",
           }}
         >
-          {" "}
           500{" "}
         </strong>
-        Metric tons Co2
+        Metric tons CO₂
       </span>
     ),
     highlight: (
-      <span style={{}}>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
   {
     title: "Total Cotton Volume Tracked",
-    percentage: 80,
-    icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
+    value: 80,
+    type: "percentage",
+    icon: (
+      <img src={card3} alt="icon" style={{ width: "60px", height: "60px" }} />
+    ),
     description: (
       <span>
         <strong
@@ -82,21 +84,21 @@ const statsData = [
         Of Cotton
       </span>
     ),
-
     highlight: (
-      <span style={{}}>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
   {
     title: "Pending Compliance Check",
-    percentage: 67,
-    icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
+    value: 67,
+    type: "percentage",
+    icon: (
+      <img src={card4} alt="icon" style={{ width: "60px", height: "60px" }} />
+    ),
     description: (
       <span>
         <strong
@@ -105,21 +107,17 @@ const statsData = [
             marginLeft: "-2px",
           }}
         >
-          {" "}
           3{" "}
         </strong>
         Suppliers Need Review
       </span>
     ),
-
     highlight: (
-      <span style={{}}>
-        <img
-          src="src/assets/images/cardIcon.png"
-          alt="icon"
-          style={{ width: "20px", height: "12px" }}
-        />
-      </span>
+      <img
+        src={cardIcon}
+        alt="icon"
+        style={{ width: "20px", height: "12px" }}
+      />
     ),
   },
 ];

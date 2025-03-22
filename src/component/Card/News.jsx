@@ -46,7 +46,13 @@ const SustainabilityCard = () => {
             padding: { xs: 2, md: 3 },
           }}
         >
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "-10px",
+            }}
+          >
             <Typography
               variant="subtitle2"
               sx={{
@@ -63,6 +69,7 @@ const SustainabilityCard = () => {
             <Box>
               <IconButton size="small">
                 <img
+                  sx={{ border: "1.5px solid rgba(14, 14, 14, 1)" }}
                   src="src/assets/images/news3.png" // Ensure the image path is correct
                   alt="Custom Icon"
                   style={{ width: 20, height: 20 }} // Adjust size as needed
@@ -70,6 +77,7 @@ const SustainabilityCard = () => {
               </IconButton>
               <IconButton size="small">
                 <img
+                  sx={{ border: "1.5px solid rgba(14, 14, 14, 1)" }}
                   src="src/assets/images/news4.png" // Ensure the image path is correct
                   alt="Custom Icon"
                   style={{ width: 20, height: 20 }} // Adjust size as needed
@@ -78,6 +86,7 @@ const SustainabilityCard = () => {
 
               <IconButton size="small">
                 <img
+                  sx={{ border: "1.5px solid rgba(14, 14, 14, 1)" }}
                   src="src/assets/images/news2.png" // Ensure the image path is correct
                   alt="Custom Icon"
                   style={{ width: 20, height: 25, marginTop: "-3px" }} // Adjust size as needed
@@ -85,7 +94,12 @@ const SustainabilityCard = () => {
               </IconButton>
             </Box>
           </div>
-          <Typography variant="h6" fontWeight="600" fontSize="25px">
+          <Typography
+            variant="h6"
+            fontWeight="600"
+            fontSize="25px"
+            marginTop="10px"
+          >
             Rising Consumer Demand for Sustainability
           </Typography>
 

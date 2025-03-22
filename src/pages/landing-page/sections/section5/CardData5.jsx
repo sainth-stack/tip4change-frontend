@@ -4,8 +4,9 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp"; // Example icons
 
 const statsData = [
   {
-    title: "Total Comments & FeedbaCk",
-    percentage: "2500",
+    title: "Total Comments & Feedback",
+    value: 2500,
+    type: "",
     icon: (
       <img
         src="src/assets/images/card1.png"
@@ -21,7 +22,7 @@ const statsData = [
             marginRight: "8px",
           }}
         >
-          2,500
+          2,500{" "}
         </strong>
         Received
       </span>
@@ -38,8 +39,9 @@ const statsData = [
   },
 
   {
-    title: "Response Rate ",
-    percentage: 85,
+    title: "Response Rate",
+    value: 85,
+    type: "percentage",
     icon: <img src="src/assets/images/card2.png" sx={{ color: "" }} />,
     description: (
       <span>
@@ -55,7 +57,7 @@ const statsData = [
       </span>
     ),
     highlight: (
-      <span style={{}}>
+      <span>
         <img
           src="src/assets/images/cardIcon.png"
           alt="icon"
@@ -66,7 +68,8 @@ const statsData = [
   },
   {
     title: "Average Response Time",
-    percentage: "24 Hrs",
+    value: "24 Hrs",
+    type: "none",
     icon: <img src="src/assets/images/card3.png" sx={{ color: "#D8A013" }} />,
     description: (
       <span>
@@ -83,7 +86,7 @@ const statsData = [
     ),
 
     highlight: (
-      <span style={{}}>
+      <span>
         <img
           src="src/assets/images/cardIcon.png"
           alt="icon"
@@ -94,7 +97,8 @@ const statsData = [
   },
   {
     title: "Sentiment Breakdown",
-    percentage: 90,
+    value: 90,
+    type: "percentage",
     icon: <img src="src/assets/images/card4.png" sx={{ color: "#E1306C" }} />,
     description: (
       <span>
@@ -106,12 +110,12 @@ const statsData = [
         >
           100%{" "}
         </strong>
-        Positive,Neutral, Negative Feedback
+        Positive, Neutral, Negative Feedback
       </span>
     ),
 
     highlight: (
-      <span style={{}}>
+      <span>
         <img
           src="src/assets/images/cardIcon.png"
           alt="icon"
