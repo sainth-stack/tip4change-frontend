@@ -23,6 +23,8 @@ import LogoutSvg from "../assets/svg/logoutSvg.svg";
 import ClaimSvg from "../assets/svg/claim.svg";
 import ChainSvg from "../assets/svg/Chain.svg";
 import SocialSvg from "../assets/svg/Social.svg";
+import ConsumerEngagementSvg from "../assets/svg/ConsumerIcon.svg";
+
 import AnalyticsSvg from "../assets/svg/analytics-up.svg";
 import ConsumerSvg from "../assets/svg/Consumer.svg";
 import NewsSvg from "../assets/svg/news.svg";
@@ -42,6 +44,8 @@ import UserGropupSvg from "../assets/svg/user-group.svg";
 //------sidebar settings--------------------------------
 
 const sidebarConfigs = {
+  //default routes--------------------------------
+
   "/": {
     default: [
       // { name: "Dashboard", icon: dashboardSvg, path: "/dashboard" },
@@ -58,11 +62,14 @@ const sidebarConfigs = {
         path: "/payment-section",
       },
       // { name: "Payments", icon: PaymentSvg, path: "/payments" },
-       { name: "Settings", icon: SettingsSvg, path: "/profile" },
-       { name: "Logout", icon: LogoutSvg, path: "/logout" },
+      { name: "Settings", icon: SettingsSvg, path: "/profile" },
+      { name: "Logout", icon: LogoutSvg, path: "/logout" },
     ],
   },
 
+  //default routes--------------------------------
+
+  //***Brand routes ***--------------------------------
   "/brand": {
     default: [
       { name: "Impact Claims", icon: ClaimSvg, path: "/brand/impact-claim" },
@@ -110,6 +117,60 @@ const sidebarConfigs = {
       },
     ],
   },
+  //***Brand routes ***--------------------------------
+
+  //^^^ retail routes------------------------------------
+
+  "/retail": {
+    default: [
+      {
+        name: "Product Information",
+        icon: ClaimSvg,
+        path: "/retail/product-info",
+      },
+      {
+        name: "Supply information ",
+        icon: ChainSvg,
+        path: "/retail/supplier-info",
+      },
+      {
+        name: "Consumer Engagement ",
+        icon: ConsumerEngagementSvg,
+        path: "/retail/consumer-engagement",
+      },
+      {
+        name: "Analytics & Insights",
+        icon: AnalyticsSvg,
+        path: "/retail/analytics-insights",
+      },
+      // { name: "Payments", icon: PaymentSvg, path: "/payments" },
+
+      {
+        name: "News & Updates",
+        icon: NewsSvg,
+        path: "/retail/news-updates",
+      },
+      {
+        name: "Resources Library",
+        icon: ProjectSvg,
+        path: "/retail/resources-library",
+      },
+
+      {
+        name: "Community Forum",
+        icon: UserGropupSvg,
+        path: "/retail/community-forum",
+      },
+      { name: "Settings", icon: SettingsSvg, path: "/profile" },
+
+      {
+        name: "Logout",
+        icon: LogoutSvg,
+        path: "/retail/logout",
+      },
+    ],
+  },
+  //^^^ retail routes------------------------------------
 };
 
 //------sidebar settings--------------------------------
@@ -133,7 +194,6 @@ const selectedSidebar = getSidebarConfig(basePath);
         width: sidebarWidth,
         height: "100%",
         boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
-
         flexShrink: 0,
         bgcolor: "background.paper",
         transition: "width 0.3s ease",

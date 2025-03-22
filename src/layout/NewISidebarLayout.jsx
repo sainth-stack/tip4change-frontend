@@ -4,20 +4,23 @@ import { Box, Container, Grid2, useMediaQuery } from "@mui/material";
 import CustomTopBar from "./CustomTopBar";
 import Sidebar from "./Sidebar";
 
-const NewISidebarLayout = ({ basePath }) => {
-  
+const NewISidebarLayout = ({basePath}) => {
   const isMobile = useMediaQuery("(max-width:600px)");
-  const sidebarWidth = isMobile ? "4rem" : "12rem";
+  const sidebarWidth = isMobile ? "4rem" : "10rem"; // Adjust sidebar width
 
   return (
     <Box display="flex" height="100vh">
+      {/* Sidebar */}
       <aside
         style={{
           flexShrink: 0,
+          width: sidebarWidth,
+          borderRight: "1px solid #ddd",
           height: "100%",
           position: "fixed",
           top: 0,
           left: 0,
+          backgroundColor: "background.paper",
         }}
       >
         <Sidebar basePath={basePath} />

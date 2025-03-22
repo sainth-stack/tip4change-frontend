@@ -24,7 +24,6 @@ const DoughnutChartsGrid = () => {
         p: { xs: 2, md: 4 }, // ✅ Added padding for spacing
         maxWidth:"1109px",
         width:"100%",
-        alignItems:"center",
         justifyContent:"center",
         margin :"0 auto",
         marginBottom:"40px"

@@ -18,7 +18,12 @@ export const SelectComponent = ({
       {label && (
         <Typography
           variant="body1"
-          sx={{ marginBottom: "0.2rem", fontWeight: 500 ,fontFamily:"Montserrat"}}
+          sx={{
+            marginBottom: "0.2rem",
+            fontWeight: 500,
+            fontFamily: "Montserrat",
+            color: "#847F3B",
+          }}
         >
           {label}
         </Typography>
@@ -27,7 +32,9 @@ export const SelectComponent = ({
         id={id}
         select
         value={value || ""} // Ensure value is an empty string initially
-        onChange={(event) => onChange({ target: { name: id, value: event.target.value } })} // Correct way for Formik
+        onChange={(event) =>
+          onChange({ target: { name: id, value: event.target.value } })
+        } // Correct way for Formik
         required={required}
         disabled={disabled}
         fullWidth={fullWidth}
