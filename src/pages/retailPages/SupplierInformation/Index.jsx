@@ -4,7 +4,7 @@ const SupplierInformation = () => {
   return (
       <>
           
-          This is brannd route  SupplierInformation page
+          This is brannd route  SupplierInformation page .
   </>
   )
 }
