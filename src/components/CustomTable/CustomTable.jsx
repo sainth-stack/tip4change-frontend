@@ -103,6 +103,8 @@ const CustomTable = ({
                       sx={{
                         display: "inline-block",
                         width: "130%",
+                        height:"34px",
+                        padding:'0.5rem'
                       }}
                     >
                       <span style={{ float: "left" }}>{col.label}</span>
@@ -129,6 +131,7 @@ const CustomTable = ({
                         padding: ".5rem",
                         borderRight: "1px solid #ddd",
                          fontSize: "12px",
+                         height:"38px",
 
                         textAlign: "left",
                         color: "#212121",

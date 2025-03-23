@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Checkbox,Grid } from "@mui/material";
 
 const TaskItem = ({ task, onChange }) => {
   return (
-        <Grid sx={{minWidth:"500px",maxWidth:"524px", marginLeft:{md:"-50px",lg:"-50px"}}}>
+        <Grid sx={{minWidth:"450px",maxWidth:"524px", marginLeft:{md:"-50px",lg:"-50px"}}}>
                 <Card
       variant="outlined"
       sx={{

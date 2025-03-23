@@ -1,20 +1,19 @@
-import React from 'react'
-import CardWidget from '../../../components/Card/CardWidget'
-import { Typography } from '@mui/material';
+import React from "react";
+import { Box, Grid2 } from "@mui/material";
+import Section2 from "./Section2";
+import Section3 from './section3/section3'
 
 const ImpactClaims = () => {
   return (
-    <CardWidget
-      sx={{
-        backgroundColor: "#FFFFFF",
-        
-      }}
-    >
-
-      <Typography variant="h6">This is a Card Widget</Typography>
-      <Typography variant="body2">Using MUI & `sx` prop</Typography>
-    </CardWidget>
-  );
+    <Grid2 direction="column" spacing={2}>
+      <Grid2 item>
+        <Box>
+          <Section2 />
+          <Section3 />
+        </Box>
+      </Grid2>
+    </Grid2>
+  )
 }
 
-export default ImpactClaims
+export default ImpactClaims;

@@ -145,5 +145,4 @@ const DoughnutChart = () => {
     </Grid>
   );
 };
-
 export default DoughnutChart;

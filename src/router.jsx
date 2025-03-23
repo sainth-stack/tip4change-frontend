@@ -21,6 +21,7 @@ import StatesCard5 from "./pages/landing-page/sections/section5/CardData5";
 import StatesCard2 from "./pages/landing-page/sections/section5/CardData2";
 import SustainabilityCard from "./component/Card/News";
 import ResourceLibrary from "./component/Card/Resource";
+import SupplierInformation from './pages/retailPages/SupplierInformation/Index';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [{ path: "/payments", element: <PaymentForm /> }],
   },
+  //default routes----------------------------------------------------------------
   {
     path: "/",
     element: <NewISidebarLayout basePath={"/"} />,
@@ -57,6 +59,9 @@ const router = createBrowserRouter([
       { path: "/resource", element: <ResourceLibrary /> },
     ],
   },
+  //default routes----------------------------------------------------------------
+
+  //***Brand routes----------------------------------------------------------------
   {
     path: "/brand",
     element: "",
@@ -68,10 +73,36 @@ const router = createBrowserRouter([
         children: [
           { path: "impact-claim", element: <ImpactClaims /> },
           { path: "supply-chain", element: <SupplyChain /> },
+          { path: "analytics-insights", element: <AnaliticalInsights /> },
+          { path: "social-passport", element: <SocialPassport /> },
         ],
       },
     ],
   },
+  //***Brand routes----------------------------------------------------------------
+
+  //^^^^Retail routes----------------------------------------------------------------
+
+  {
+    path: "/retail",
+    element: "",
+    children: [
+      { index: true, element: <NotFound /> },
+      {
+        path: "",
+        element: <NewISidebarLayout basePath={"/retail"} />,
+        children: [
+          { path: "supplier-info", element: <SupplierInformation /> },
+          { path: "product-info", element: <SupplierInformation /> },
+
+
+          
+        ],
+      },
+    ],
+  },
+
+  //^^^^Retail routes----------------------------------------------------------------
 ]);
 
 export default router;
