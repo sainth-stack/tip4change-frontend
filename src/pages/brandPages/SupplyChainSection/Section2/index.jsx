@@ -17,19 +17,30 @@ const Section2 = () => {
         flexWrap: "wrap",
         width: "100%",
         marginLeft: "1rem",
-       
       }}
     >
-      <CardWidget>
-        <WorldMapChart
-          width={900}
-          height={550}
-          title={"Supply Chain"}
-          data={MapsampleData}
-          colorScale={d3.scaleSequential(d3.interpolateOrRd)}
-          tooltipFormatter={(d) => `<b>${d.country}</b>: ${d.value}`}
-          onCountryClick={(d) => alert(`Clicked on ${d.country}: ${d.value}`)}
-        />
+      <CardWidget
+        sx={{
+          height: "100%", 
+          display: "flex",
+        }}
+      >
+        <Box
+          sx={{
+            flex: 1, 
+            width: "100%",
+          }}
+        >
+          <WorldMapChart
+            width={800}
+            height={450}
+            title="Supply Chain"
+            data={MapsampleData}
+            colorScale={d3.scaleSequential(d3.interpolateOrRd)}
+            tooltipFormatter={(d) => `<b>${d.country}</b>: ${d.value}`}
+            onCountryClick={(d) => alert(`Clicked on ${d.country}: ${d.value}`)}
+          />
+        </Box>
       </CardWidget>
     </Box>
   );

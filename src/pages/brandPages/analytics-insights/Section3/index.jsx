@@ -20,7 +20,16 @@ const Section3 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          width: "100%",
+          minWidth: "20rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "50vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>
@@ -30,7 +39,9 @@ const Section3 = () => {
             title="Consumer Preference for Organic vs. Regular Cotton"
             xGridDisplay={false}
             YGridDisplay={true}
+            legendShow={false}
             yAxisTitle={"Consumer Preference (%)"}
+            xAxisTitle={"Cotton Type"}
           />
         </CardWidget>
       </Box>
@@ -38,7 +49,16 @@ const Section3 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          width: "100%",
+          minWidth: "20rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "50vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>righcst table</CardWidget>

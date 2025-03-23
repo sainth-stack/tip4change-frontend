@@ -22,42 +22,43 @@ ChartJS.register(
   Legend
 );
 
+//area graph props ------------------------
 const AreaChart = ({
   dataSets = [],
   labels = [],
-  title = "Consumer Behavior Trends",
+  title = "",
+  subHeading = ""
 }) => {
+  //area graph props ------------------------
 
-      const chartRef = useRef(null);
+  const chartRef = useRef(null);
 
+  useEffect(() => {
+    if (chartRef.current) {
+      const chart = chartRef.current;
+      const ctx = chart.ctx;
 
-     useEffect(() => {
-       if (chartRef.current) {
-         const chart = chartRef.current;
-         const ctx = chart.ctx;
+      // Apply gradient fill dynamically
+      dataSets.forEach((dataset) => {
+        const gradient = ctx.createLinearGradient(0, 0, 0, chart.height);
+        gradient.addColorStop(0, "rgba(255, 255, 255, 0.8)"); // Start with white
+        gradient.addColorStop(1, "#847f3b"); // End with dark gold
 
-         // Apply gradient fill dynamically
-         dataSets.forEach((dataset) => {
-           const gradient = ctx.createLinearGradient(0, 0, 0, chart.height);
-           gradient.addColorStop(0, "rgba(255, 255, 255, 0.8)"); // Start with white
-           gradient.addColorStop(1, "#847f3b"); // End with dark gold
+        dataset.backgroundColor = gradient;
+      });
+    }
+  }, [dataSets]);
 
-           dataset.backgroundColor = gradient;
-         });
-       }
-     }, [dataSets]);
-
-     const chartData = {
-       labels,
-       datasets: dataSets.map((dataset) => ({
-         ...dataset,
-         borderWidth: 2,
-         pointRadius: 0, // Hide points
-         fill: true,
-         tension: 0.5, // Enable area fill
-       })),
-     };
-  
+  const chartData = {
+    labels,
+    datasets: dataSets.map((dataset) => ({
+      ...dataset,
+      borderWidth: 2,
+      pointRadius: 0, // Hide points
+      fill: true,
+      tension: 0.5, // Enable area fill
+    })),
+  };
 
   const options = {
     responsive: true,
@@ -66,9 +67,13 @@ const AreaChart = ({
       legend: {
         display: false, // Hide legend for cleaner look
       },
-      tooltip: { enabled: true },
-        datalabels: {
-          display: false,
+      tooltip: {
+        enabled: true,
+        mode: "nearest",
+        intersect: false,
+      },
+      datalabels: {
+        display: false,
         color: "#000",
         font: { size: 12 },
         anchor: "end",
@@ -90,16 +95,28 @@ const AreaChart = ({
           color: "rgba(0, 0, 0, 0.2)",
           borderDash: [5, 20], // Dashed effect
         },
-       
       },
     },
   };
 
   return (
     <>
-      <CustomTypography sx={{ fontWeight: "600", fontSize: "1rem" }}>
+      <CustomTypography sx={{ fontWeight: "600", fontSize: "1rem",marginBottom:1 }}>
         {title}
       </CustomTypography>
+      <small
+        style={{
+          fontSize: "10px",
+          letterSpacing: "0px",
+          margin: "0",
+          fontWeight:"400",
+          padding: "0",
+          lineHeight: "1",
+          display: "block",
+        }}
+      >
+        {subHeading}
+      </small>
 
       <Box style={{ minHeight: "12rem", maxHeight: "12rem" }}>
         <Line data={chartData} options={options} />

@@ -22,7 +22,10 @@ const MultiBarChart = ({
   datasets = [],
   labels = [],
   title = "Multi-Bar Chart",
-  yAxisTitle ="NO title",
+  yAxisTitle="",
+  legendShow,
+  xAxisTitle = ""
+  
 
   //   //props section------------------------------------------------
 }) => {
@@ -43,12 +46,17 @@ const MultiBarChart = ({
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { display: true },
+      legend: { display: legendShow ? true : false },
       tooltip: { enabled: true },
       datalabels: false,
     },
     scales: {
       x: {
+        title: {
+          display: true,
+          text: xAxisTitle,
+          color: "#000",
+        },
         grid: { display: xGridDisplay },
         display: true,
         barPercentage: 0.5,

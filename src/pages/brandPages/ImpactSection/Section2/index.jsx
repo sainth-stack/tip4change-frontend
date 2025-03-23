@@ -11,6 +11,7 @@ import {
   sampleBarLabels,
 } from "./data";
 
+
 const Section1 = () => {
   return (
     <Box
@@ -25,14 +26,25 @@ const Section1 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          width: "100%",
+          minWidth: "20rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "50vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>
           <MultiLineChart
             dataSets={LineChartDataSets}
+            usePointStyle={false}
             labels={LineChartLabels}
             title="CO₂ Emission Trends "
+            UnitType={"Kg"}
           />
         </CardWidget>
       </Box>
@@ -40,7 +52,16 @@ const Section1 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          width: "100%",
+          minWidth: "20rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "50vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>
@@ -48,6 +69,7 @@ const Section1 = () => {
             data={sampleBarData}
             labels={sampleBarLabels}
             title="Water Usage saved"
+            legendDisplayed={false}
           />
         </CardWidget>
       </Box>

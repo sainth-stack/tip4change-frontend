@@ -19,13 +19,13 @@ import NotificationPopup from "./Notification";
 import { useLocation, useNavigate } from "react-router-dom";
 const CustomTopBar = ({ isOverlapping }) => {
   const location = useLocation();
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleClose = (path) => {
     setAnchorEl(null);
 
-    console.log("path",path)
-    if (path) navigate(path); 
+    console.log("path", path);
+    if (path) navigate(path);
   };
 
   //dropdwon  logic----------------
@@ -36,9 +36,7 @@ const CustomTopBar = ({ isOverlapping }) => {
     setAnchorEl(event.currentTarget);
   };
 
- 
   //dropdwon  logic----------------
-
 
   const isMobile = useMediaQuery("(max-width:600px)"); // Mobile
 
@@ -89,7 +87,6 @@ const CustomTopBar = ({ isOverlapping }) => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: "1rem",
                 marginLeft: "auto",
                 outline: "none",
                 marginTop: "0px",
@@ -99,84 +96,75 @@ const CustomTopBar = ({ isOverlapping }) => {
                 sx={{
                   bgcolor: "#f5f5f5",
                   color: "#847f3b",
-                  height: "40px",
                   borderRadius: "50%",
-                  width: "40px",
+                  width: "45px",
+                  height: "45px",
+
                   marginTop: "0px",
+                  ":hover": {
+                    boxShadow: 2,
+                    transition: "all 0.3s ease-in-out",
+                  },
                 }}
               >
                 <NotificationPopup />
               </IconButton>
+            </Box>
+          )}
+
+          <>
+            <Box
+              // onMouseEnter={handleClick}
+              // onMouseLeave={() => handleClose(null)}
+              style={{ display: "inline-block" }}
+            >
               <Avatar
                 alt="Profile"
                 src={profile}
                 sx={{
-                  boxShadow: 3,
-                  mt: "-12px",
+                  boxShadow: 2,
+                  marginLeft: ".5rem",
                   width: "45px",
                   height: "45px",
+                  cursor: "pointer",
+                  ":hover": {
+                    boxShadow: 2, // Increases shadow on hover
+                    // Slightly enlarges on hover
+                    transition: "all 0.3s ease-in-out", // Smooth transition effect
+                  },
+                }}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleClick(event);
                 }}
               />
-            </Box>
-          )}
 
-          {location.pathname === "/" && (
-            <>
-              <Box
-                // onMouseEnter={handleClick}
-                // onMouseLeave={() => handleClose(null)}
-                style={{ display: "inline-block" }}
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={() => handleClose(null)}
+                sx={{ ml: 2 }}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                disableScrollLock
+                disableAutoFocusItem
               >
-                <Avatar
-                  alt="Profile"
-                  src={profile}
-                  sx={{
-                    boxShadow: 2,
-
-                    width: "45px",
-                    height: "45px",
-                    cursor: "pointer",
-                    ":hover": {
-                      boxShadow: 10, // Increases shadow on hover
-                      // Slightly enlarges on hover
-                      transition: "all 0.3s ease-in-out", // Smooth transition effect
-                    },
-                  }}
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    handleClick(event);
-                  }}
-                />
-
-                <Menu
-                  anchorEl={anchorEl}
-                  open={Boolean(anchorEl)}
-                  onClose={() => handleClose(null)}
-                  sx={{ ml: 2 }}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "center",
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  disableScrollLock
-                  disableAutoFocusItem
-                >
-                  <MenuItem onClick={() => handleClose("/brand/impact-claim")}>
-                    Brand
-                  </MenuItem>
-                  <MenuItem onClick={() => handleClose("/story")}>
-                    User
-                  </MenuItem>
-                  <MenuItem onClick={() => handleClose("/retail/product-info")}>
-                    Retail
-                  </MenuItem>
-                </Menu>
-              </Box>
-            </>
-          )}
+                <MenuItem onClick={() => handleClose("/brand/impact-claim")}>
+                  Brand
+                </MenuItem>
+                <MenuItem onClick={() => handleClose("/story")}>User</MenuItem>
+                <MenuItem onClick={() => handleClose("/retail/product-info")}>
+                  Retail
+                </MenuItem>
+              </Menu>
+            </Box>
+          </>
         </Toolbar>
       </Container>
     </AppBar>

@@ -13,7 +13,7 @@ import CustomTypography from "../../TypoGraphy/CustomTypography";
 
 // Register ChartJS components
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
-
+//bar grap props------------------------------------------------
 const BarChart = ({
   data = [],
   labels = [],
@@ -21,6 +21,8 @@ const BarChart = ({
   backgroundColors = ["#847f3b", "#847f3b", "#847f3b"],
   borderColor = "#fff",
   borderWidth = 1,
+  legendDisplayed,
+  //bar grap props------------------------------------------------
 }) => {
   const chartData = {
     labels,
@@ -42,7 +44,7 @@ const BarChart = ({
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { display: true },
+      legend: { display: legendDisplayed?true:false },
       tooltip: { enabled: true },
       datalabels: {
         color: "#000",
@@ -55,7 +57,7 @@ const BarChart = ({
     },
     scales: {
       x: {
-        display: false,
+        display: true,
         barPercentage: 0.1,
         categoryPercentage: 0.1,
       },

@@ -9,7 +9,7 @@ import ProjectPage from "./pages/User/ProjectPage/ProjectPage";
 import StoryPage from "./pages/User/StoryPage/StoryPage";
 import PaymentForm from "./pages/User/paymentSection";
 import DoughnutChart from "./pages/User/progressTracker/index";
-import NotFound from "./components/Page-404/NotFoundPage";
+import ComingSoon from "./components/Page-404/ComingSoon";
 import ProfilePage from "./pages/User/ProfilePage/ProfilePage";
 import PaymentTablePage from "./pages/User/PaymentTablePage/PaymentTablePage";
 import ImpactClaims from "./pages/brandPages/ImpactSection/ImpactClaims";
@@ -28,7 +28,7 @@ import SocialPassport from "./pages/brandPages/social-passport/SocailPassport";
 const router = createBrowserRouter([
   {
     path: "*",
-    element: <NotFound />,
+    element: <ComingSoon />,
   },
   {
     path: "/",
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
     path: "/brand",
     element: "",
     children: [
-      { index: true, element: <NotFound /> },
+      { index: true, element:  <ComingSoon /> },
       {
         path: "",
         element: <NewISidebarLayout basePath={"/brand"} />,
@@ -89,16 +89,13 @@ const router = createBrowserRouter([
     path: "/retail",
     element: "",
     children: [
-      { index: true, element: <NotFound /> },
+      { index: true, element:  <ComingSoon /> },
       {
         path: "",
         element: <NewISidebarLayout basePath={"/retail"} />,
         children: [
           { path: "supplier-info", element: <SupplierInformation /> },
           { path: "product-info", element: <SupplierInformation /> },
-
-
-          
         ],
       },
     ],

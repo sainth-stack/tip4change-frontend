@@ -23,7 +23,7 @@ const CustomListItem = ({ name, icon, path, isMobile }) => {
             bgcolor: isActive ? "#6f692e" : "#a69f4e",
             boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
           },
-          maxWidth: isSmallScreen ? "7rem" : isMediumScreen ? "9rem" : "11rem",
+          maxWidth: isSmallScreen ? "7rem" : isMediumScreen ? "7rem" : "12rem",
           display: "flex",
           justifyContent: isMobile ? "center" : "flex-start",
           padding: isMobile ? "0.3rem" : ".2rem",
@@ -78,7 +78,8 @@ const CustomListItem = ({ name, icon, path, isMobile }) => {
                 ? "0.6rem"
                 : isMediumScreen
                 ? "0.75rem"
-                : "17px",
+                  : "17px",
+              width: "100%",
               transition: "color 0.3s ease",
               color: isActive ? "#F4F4F4" : "#0E0E0E",
               whiteSpace: "wrap", // Prevent text wrapping

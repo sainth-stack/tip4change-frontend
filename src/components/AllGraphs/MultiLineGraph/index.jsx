@@ -32,9 +32,11 @@ const MultiLineChart = ({
   tension,
   xGridShow,
   yGridShow,
+  UnitType,
 
   //props section --------------------------------
 }) => {
+  // console.log("usePointStyle",usePointStyle)
   const chartData = {
     labels,
     datasets: dataSets.map((dataset) => ({
@@ -56,7 +58,7 @@ const MultiLineChart = ({
         position: "top",
         align: "end",
         labels: {
-          usePointStyle: usePointStyle || true, // Makes legend items rounded
+          usePointStyle: usePointStyle ? true : false, // Makes legend items rounded
           boxWidth: LegendBoxWidth || 10,
           boxHeight: LegendBoxHeight || 10,
           color: "#1C1C1E",
@@ -77,8 +79,8 @@ const MultiLineChart = ({
         grid: { display: xGridShow || false }, // Hide grid lines on X-axis
       },
       y: {
-        ticks: { color: "#666", callback: (val) => `${val}kg` }, // Add "kg" unit
-        beginAtZero: true,
+        ticks: { color: "#666", callback: (val) => `${val}${UnitType||""}` }, // Add "kg" unit
+        beginAtZero: false,
         grid: {
           display: yGridShow || false,
           color: "rgba(0, 0, 0, 0.15)", // Lighter grid lines

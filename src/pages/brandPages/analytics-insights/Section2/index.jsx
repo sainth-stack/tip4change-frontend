@@ -21,7 +21,16 @@ const Section2 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          width: "100%",
+          minWidth: "20rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "50vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>
@@ -36,14 +45,24 @@ const Section2 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          width: "100%",
+          minWidth: "20rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "50vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>
           <AreaChart
             labels={AreaChartlabels}
             dataSets={AreaChartdataSets}
-            title="Organic Cotton Trends"
+            title="Consumer Behavior Trends"
+            subHeading="Organic cotton sales increased by 40% from 2022 to 2025, while non-organic cotton demand declined by 15%."
           />
         </CardWidget>
       </Box>

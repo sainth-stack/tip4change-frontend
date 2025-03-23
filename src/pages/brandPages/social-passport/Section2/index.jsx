@@ -19,16 +19,34 @@ const Section2 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "70vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
+        <CardWidget>
+
+
         here table
+        </CardWidget>
       </Box>
 
       <Box
         sx={{
           flex: 1,
-          maxWidth: "25rem",
+          maxWidth: {
+            xs: "100vw",
+            sm: "80vw",
+            md: "70vw",
+            lg: "30vw",
+            xl: "50vw",
+            "2xl": "40vw",
+          },
         }}
       >
         <CardWidget>

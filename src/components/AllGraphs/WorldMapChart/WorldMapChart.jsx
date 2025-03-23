@@ -6,12 +6,12 @@ import CustomTypography from "../../TypoGraphy/CustomTypography";
 const WorldMapChart = ({
   title,
   width = 800,
-  height = 500,
+  height = 450,
   data = [],
   colorScale = d3.scaleSequential(d3.interpolateBlues),
   valueAccessor = (d) => d.value,
   countryAccessor = (d) => d.country,
-  minValue = 0,
+  minValue = 20,
   maxValue = 100,
   tooltipFormatter = (d) => `${d.country}: ${d.value}`,
   onCountryClick = () => {},
@@ -40,10 +40,11 @@ const WorldMapChart = ({
 
     const projection = d3
       .geoMercator()
-      .scale(width / 2.5 / Math.PI)
+      .scale(width / 3 / Math.PI)
       .translate([width / 2, height / 1.5]);
 
     const path = d3.geoPath().projection(projection);
+    const countryColorMap = new Map(data.map((d) => [d.country, d.color]));
 
     const dataMap = new Map(data.map((d) => [countryAccessor(d), valueAccessor(d)]));
     colorScale.domain([minValue, maxValue]);
@@ -57,11 +58,11 @@ const WorldMapChart = ({
       .attr("class", "country")
       .attr("d", path)
       .attr("fill", (d) => {
-        const value = dataMap.get(d.properties.name);
-        return value !== undefined ? colorScale(value) : "#ddd";
+        const customColor = countryColorMap.get(d.properties.name);
+        return customColor || "#ddd"; 
       })
       .attr("stroke", "#fff")
-      .attr("stroke-width", 0.5)
+      .attr("stroke-width", 0.1)
       .on("click", (event, d) => {
         const value = dataMap.get(d.properties.name);
         onCountryClick({ country: d.properties.name, value });
@@ -100,7 +101,7 @@ const WorldMapChart = ({
       .attr("class", "world-map-tooltip")
       .style("position", "absolute")
       .style("background", "#fff")
-      .style("padding", "5px")
+      .style("padding", "1px")
       .style("border", "1px solid #ccc")
       .style("border-radius", "3px")
       .style("pointer-events", "none")
@@ -166,18 +167,24 @@ const WorldMapChart = ({
      {!geoData && <CircularProgress />}
      <Box
        sx={{
-         width: "100%",
-         maxHeight: "8rem",
+         width: {
+           xs: "90vw", 
+           sm: "50vw", 
+           md: "30vw", 
+           lg: "60vw", 
+           xl: "80vw", 
+         },
+         maxHeight: "auto",
          display: "flex",
          justifyContent: "center",
        }}
      >
        <svg
          ref={svgRef}
-        //  style={{
-        //    objectFit: "contain",
-        //    width:"100%",
-        //  }}
+         //  style={{
+         //    objectFit: "contain",
+         //    width:"100%",
+         //  }}
        ></svg>
      </Box>
    </Box>

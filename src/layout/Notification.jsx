@@ -74,7 +74,6 @@ const NotificationPopup = () => {
       sx={{
         display: "flex",
         gap: "1rem",
-        // marginTop: 2,
       }}
     >
       {/* Notification Icon (Triggers Popover) */}
@@ -118,8 +117,8 @@ const NotificationPopup = () => {
         <Box
           sx={{
             p: 2,
-            width: 490,
-            height: "420px",
+            width: "25rem",
+            height: "15rem",
 
             backgroundColor: "#fff",
             display: "flex",
@@ -137,9 +136,9 @@ const NotificationPopup = () => {
             <Typography
               variant="h6"
               fontWeight="bold"
-              sx={{ fontFamily: "Montserrat, sans-serif" }}
+              sx={{ fontFamily: "Montserrat, sans-serif",fontSize:"18px" }}
             >
-              Notification{" "}
+              Notification
               <span style={{ color: "#87f3b" }}>
                 ({notifs.filter((n) => n.unread).length})
               </span>
@@ -162,7 +161,7 @@ const NotificationPopup = () => {
           {/* Notifications List */}
           <List
             sx={{
-              maxHeight: "410px",
+              maxHeight: "25rem",
               overflowY: "auto",
             }}
           >
@@ -171,25 +170,27 @@ const NotificationPopup = () => {
                 key={notif.id}
                 sx={{
                   borderBottom: ".1rem solid #eee",
-                  padding: ".3rem",
+                  padding: ".2rem",
+                  maxHeight:"4rem",
 
                   fontFamily: "Montserrat, sans-serif",
                 }}
               >
                 <ListItemAvatar>
-                  <Avatar sx={{ bgcolor: "#dbd9c5", color: "#a38e5d" }}>
+                  <Avatar sx={{ bgcolor: "#dbd9c5", color: "#a38e5d",width:"30px",height:"30px" }}>
                     <Person2OutlinedIcon />
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
                   primary={
                     <Typography
-                      fontWeight="500"
-                      size="14px"
                       letterSpacing="0.15px"
                       sx={{
                         fontFamily: "Montserrat, sans-serif",
                         maxWidth: "calc(100% - .5rem)",
+                        fontSize: "14px",
+                      fontWeight:"500"
+                        
                       }}
                     >
                       {notif.text}
@@ -199,7 +200,9 @@ const NotificationPopup = () => {
                     <Typography
                       color="textSecondary"
                       variant="body2"
-                      sx={{ fontFamily: "Montserrat, sans-serif" }}
+                      sx={{
+                        fontFamily: "Montserrat, sans-serif",
+                        fontSize: "12px",}}
                     >
                       {notif.date}
                     </Typography>

@@ -1,12 +1,12 @@
 export const pieChartData = [
   {
     label: "CO₂ Emissions",
-    data: [30, 20, 15, 25, 10], // Values for each sector
-    backgroundColor: ["#847F3B", "#BEA881", "#e6e5d8", "#957951", "#BEA881"], // Custom colors
+    data: [10,60,20,10], // Values for each sector
+    backgroundColor: ["#e6e5d8","#847F3B", "#BEA881",  "#957951", ], // Custom colors
   },
 ];
 
-export const labels = ["Transport", "Industry", "Agriculture", "Energy", "Others"]; // Labels for sectors
+export const labels = ["T-Shirt", "Denim", "BedSheet", "Others", ]; // Labels for sectors
 
 
 export const AreaChartlabels = ["2020", "2021", "2022", "2023", "2024", "2025"];
