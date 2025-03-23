@@ -22,6 +22,8 @@ import StatesCard2 from "./pages/landing-page/sections/section5/CardData2";
 import SustainabilityCard from "./component/Card/News";
 import ResourceLibrary from "./component/Card/Resource";
 import SupplierInformation from './pages/retailPages/SupplierInformation/Index';
+import AnaliticalInsights from "./pages/brandPages/analytics-insights/AnalyticInsights";
+import SocialPassport from "./pages/brandPages/social-passport/SocailPassport";
 
 const router = createBrowserRouter([
   {
