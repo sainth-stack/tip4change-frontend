@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Grid2 } from "@mui/material";
 import Section2 from "./Section2";
+import Section3 from './section3/section3'
 
 const ImpactClaims = () => {
   return (
@@ -8,10 +9,11 @@ const ImpactClaims = () => {
       <Grid2 item>
         <Box>
           <Section2 />
+          <Section3 />
         </Box>
       </Grid2>
     </Grid2>
-  );
-};
+  )
+}
 
 export default ImpactClaims;
