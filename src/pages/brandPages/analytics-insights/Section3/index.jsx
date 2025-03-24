@@ -1,10 +1,9 @@
 import React from "react";
-import { Box } from '@mui/material';
+import { Box } from "@mui/material";
 import CardWidget from "../../../../components/Card/CardWidget";
 import MultiBarChart from "../../../../components/AllGraphs/MultiBarGraph";
 import { barChartLabels, barChartDatasets } from "./data";
-
-
+import Table1 from "../table/table";
 
 const Section3 = () => {
   return (
@@ -13,26 +12,25 @@ const Section3 = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexWrap: "wrap",
+        flexWrap: "nowrap", // ✅ Prevents unwanted wrapping
         width: "100%",
+        gap: "50px", // ✅ Space between cards
+        maxWidth: "1108px", // ✅ Total width of both cards combined
+        height: "490px", // ✅ Set height constraint
+        margin:"0 auto"
       }}
     >
-      <Box
-        sx={{
-          flex: 1,
-          width: "100%",
-          minWidth: "20rem",
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "50vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
-        }}
-      >
-        <CardWidget>
+      {/* Bar Chart Card (Half Width) */}
+      <Box sx={{ width: "551px", height: "490px" }}>
+        <CardWidget
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            overflow: "hidden",
+          }}
+        >
           <MultiBarChart
             labels={barChartLabels}
             datasets={barChartDatasets}
@@ -46,22 +44,19 @@ const Section3 = () => {
         </CardWidget>
       </Box>
 
-      <Box
-        sx={{
-          flex: 1,
-          width: "100%",
-          minWidth: "20rem",
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "50vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
-        }}
-      >
-        <CardWidget>righcst table</CardWidget>
+      {/* Table Card (Half Width) */}
+      <Box sx={{ width: "551px", height: "490px" }}>
+        <CardWidget
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            overflow: "hidden", // ✅ Ensures the table does not overflow
+          }}
+        >
+          <Table1 />
+        </CardWidget>
       </Box>
     </Box>
   );

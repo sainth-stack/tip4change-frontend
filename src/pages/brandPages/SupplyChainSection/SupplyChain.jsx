@@ -8,7 +8,7 @@ const SupplyChain = () => {
     <Grid2 direction="column" spacing={2}>
       <Grid2 item>
         <Box>
-          <Section2 />
+         <Section2 />
           <Section3 />
         </Box>
       </Grid2>
