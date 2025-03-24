@@ -1,19 +1,27 @@
 import React from "react";
-import CardWidget from './../../../../components/Card/CardWidget';
-import { Box } from '@mui/material';
+import { Grid,Box } from "@mui/material";
+import CardWidget from "../../../../components/Card/CardWidget";
 import PieChart from "../../../../components/AllGraphs/PieGraph";
 import { pieChartData, labels } from "./data";
-
+import Table from "./table";
 
 const Section2 = () => {
   return (
-    <Box
+    <Grid
+      container
+      direction="row"
+      alignItems="stretch"
+      spacing={6} // ✅ Ensures space between grid items
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexWrap: "wrap",
+        maxWidth: "1107px",
         width: "100%",
+        height: "327px",
+        flexWrap: "nowrap",
+        margin:"0 auto",
+        gap:"50px"
+
+        
+        
       }}
     >
       <Box
@@ -23,17 +31,25 @@ const Section2 = () => {
             xs: "100vw",
             sm: "80vw",
             md: "70vw",
-            lg: "70vw",
+            lg: "80vw",
             xl: "50vw",
             "2xl": "40vw",
           },
         }}
       >
-        <CardWidget>
+<CardWidget
+  sx={{
+    width: "100%",
+    height: "100%",
+    overflow: "auto", // ✅ Allows scrolling if content overflows
+    display: "flex",
+    flexDirection: "column",
+    
+  }}
+>
+  <Table />
+</CardWidget>
 
-
-        here table
-        </CardWidget>
       </Box>
 
       <Box
@@ -60,8 +76,9 @@ const Section2 = () => {
             LegendBoxHeight={20}
           />
         </CardWidget>
-      </Box>
-    </Box>
+        </Box>
+      </Grid>
+  
   );
 };
 

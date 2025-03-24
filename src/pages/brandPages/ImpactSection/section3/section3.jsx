@@ -22,12 +22,15 @@ const Section3 = () => {
         boxShadow: "6px 6px 54px 0px #0000000D",
         borderRadius: "12px",
         backgroundColor: "#fff",
-        p: { xs: 2, md: 4 },
-        maxWidth: "1109px",
+        // p: { xs: 2, md: 4 },
+        // maxWidth: "1109px",
+        marginLeft:{lg:"15px"},
+        // marginRight:{lg:"50px"},
         width: "100%",
         justifyContent: "center",
         margin: "0 auto",
-        marginBottom: "40px",
+        marginBottom: "20px",
+        // height:{lg:"320px",md:"320px",sm:"320px" }
       }}
     >
       {/* Title and Legend Section */}

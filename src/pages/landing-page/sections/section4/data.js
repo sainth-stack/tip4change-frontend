@@ -52,3 +52,4 @@ export const GoalRiseContainer = styled("div")({
   alignItems: "center",
 });
 
+

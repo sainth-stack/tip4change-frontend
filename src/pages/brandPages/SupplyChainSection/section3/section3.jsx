@@ -10,9 +10,9 @@ const Section3 = () => {
   
 return (
   <>
-    <Box>
+    <Box height='490px'>
       {/* <NavigationHeader path={pathnames} PageText="Payment Section" /> */}
-      <Box mt={2} sx={{}}>
+      <Box mt={2} sx={{marginLeft:{lg:"50px",md:"50px"}}}>
         <CustomTable
           columns={columns}
           data={data}
