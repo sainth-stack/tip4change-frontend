@@ -9,10 +9,19 @@ import {
   CardMedia,
 } from "@mui/material";
 
-const SustainabilityGuide = () => {
+
+
+import resource1 from "../../assets/images/resource1.png"
+import resource2 from "../../assets/images/resource2.png";
+import resource3 from "../../assets/images/resource3.png";
+import resource4 from "../../assets/images/resource4.png";
+
+
+
+const ResourceLibrary = () => {
   return (
     <div>
-      <Box sx={{ display: "flex", alignItems: "center", gap: "30px" }}>
+      <Box sx={{ display: "flex", alignItems: "center", gap: "30px" }} ml={3}>
         <Typography variant="h6" sx={{ textDecoration: "underline" }}>
           Resource Library
         </Typography>
@@ -21,7 +30,7 @@ const SustainabilityGuide = () => {
         {/* <Divider orientation="vertical" flexItem /> */}
         <Typography variant="h6">Video</Typography>
       </Box>
-      <Grid container spacing={2.5} justifyContent="start">
+      <Grid container spacing={2.5} justifyContent="start" ml={1}>
         {/* First row */}
         <Grid item xs={12} sm={6} md={3}>
           <CardContent>
@@ -50,7 +59,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource1.png"
+              image={resource1}
               alt="Sustainability icons and a light bulb"
             />
           </Card>
@@ -62,7 +71,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource2.png"
+              image={resource2}
               alt="Hands holding a plant"
             />
           </Card>
@@ -117,7 +126,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource3.png"
+              image={resource3}
               alt="Clothing tag with recycling symbol"
             />
           </Card>
@@ -129,7 +138,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource4.png"
+              image={resource4}
               alt="ESG icons on a laptop screen"
             />
           </Card>
@@ -185,7 +194,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource1.png"
+              image={resource1}
               alt="Sustainable fashion workshop"
             />
           </Card>
@@ -197,7 +206,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource2.png"
+              image={resource2}
               alt="Eco-friendly clothing materials"
             />
           </Card>
@@ -252,7 +261,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource3.png"
+              image={resource3}
               alt="Fair trade market"
             />
           </Card>
@@ -264,7 +273,7 @@ const SustainabilityGuide = () => {
               component="img"
               height="249px"
               width="255px"
-              image="src/assets/images/resource4.png"
+              image={resource4}
               alt="Green supply chain infographic"
             />
           </Card>
@@ -295,4 +304,4 @@ const SustainabilityGuide = () => {
   );
 };
 
-export default SustainabilityGuide;
+export default ResourceLibrary;
