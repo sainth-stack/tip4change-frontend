@@ -32,9 +32,7 @@ const StatCard = ({
         background: "rgba(255, 255, 255, 1)", // Ensured consistency
         // border: "1px solid white",
         padding: "16px",
-        minWidth: "200px",
-        width: "100%",
-        maxWidth: "262px",
+        maxWidth: "15rem",
         height: "160px",
         display: "flex",
 

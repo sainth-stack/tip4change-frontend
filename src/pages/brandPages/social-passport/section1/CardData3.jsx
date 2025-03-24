@@ -6,14 +6,12 @@ import card2 from "/src/assets/images/card2.png";
 import card3 from "/src/assets/images/card3.png";
 import card4 from "/src/assets/images/card4.png";
 import cardIcon from "/src/assets/images/cardIcon.png";
-import cardIcon2 from "/src/assets/images/cardIcon2.png";
 
 const statsData = [
   {
-    title: "Carbon Footprint",
-    value: 89,
-    type: "percentage",
-    color: "green",
+    title: "Total Cotton Sourced",
+    value: 2500, // Example value in millions
+    type: "none", // Define type (percentage, stars, millions)
     icon: (
       <img src={card1} alt="icon" style={{ width: "60px", height: "60px" }} />
     ),
@@ -25,22 +23,23 @@ const statsData = [
             marginRight: "8px",
           }}
         >
-          20%{" "}
+          2,500{" "}
         </strong>
-        CO₂ Reduction vs. Last Year
+        Tons
       </span>
     ),
     highlight: (
       <img
-        src={cardIcon2}
+        src={cardIcon}
         alt="icon"
         style={{ width: "20px", height: "12px" }}
       />
     ),
   },
+
   {
-    title: "Water Usage",
-    value: 65,
+    title: "Organic Cotton Percentage",
+    value: 62, // Example percentage
     type: "percentage",
     icon: (
       <img src={card2} alt="icon" style={{ width: "60px", height: "60px" }} />
@@ -53,9 +52,9 @@ const statsData = [
             marginLeft: "2px",
           }}
         >
-          50,000L{" "}
+          65%{" "}
         </strong>
-        Saved per 1000kg Cotton
+        Vs. Conventional Cotton
       </span>
     ),
     highlight: (
@@ -67,8 +66,8 @@ const statsData = [
     ),
   },
   {
-    title: "Fair Trade",
-    value: 73,
+    title: "Recycled Cotton Usage",
+    value: 73, // Example stars
     type: "percentage",
     icon: (
       <img src={card3} alt="icon" style={{ width: "60px", height: "60px" }} />
@@ -81,9 +80,9 @@ const statsData = [
             marginLeft: "0px",
           }}
         >
-          80%{" "}
+          30%{" "}
         </strong>
-        Of Cotton Fair Trade Certified
+        Of Total Material
       </span>
     ),
     highlight: (
@@ -95,8 +94,8 @@ const statsData = [
     ),
   },
   {
-    title: "Recycled Cotton",
-    value: 96,
+    title: "Carbon Footprint of Cotton Sourcing",
+    value: 91,
     type: "percentage",
     icon: (
       <img src={card4} alt="icon" style={{ width: "60px", height: "60px" }} />
@@ -109,9 +108,9 @@ const statsData = [
             marginLeft: "-2px",
           }}
         >
-          30%{" "}
+          18%{" "}
         </strong>
-        Cotton from Recycled Sources
+        Vs. Last Year
       </span>
     ),
     highlight: (
@@ -124,11 +123,11 @@ const statsData = [
   },
 ];
 
-const StatesCard = () => {
+const SocialCards = () => {
   return (
-    <Grid container spacing={2} sx={{ padding: "0px" ,gap:"2" }}>
+    <Grid container spacing={2} sx={{ padding: "0px" }}>
       {statsData.map((item, index) => (
-        <Grid item xs={12} sm={6}  md={3} key={index} sx={{gap:"2"}}>
+        <Grid item xs={12} sm={6} md={3} key={index}>
           <StatCard {...item} />
         </Grid>
       ))}
@@ -136,4 +135,4 @@ const StatesCard = () => {
   );
 };
 
-export default StatesCard;
+export default SocialCards;

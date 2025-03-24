@@ -124,7 +124,7 @@ const statsData = [
   },
 ];
 
-const StatesCard = () => {
+const ImpactCards = () => {
   return (
     <Grid container spacing={2} sx={{ padding: "0px" ,gap:"2" }}>
       {statsData.map((item, index) => (
@@ -136,4 +136,4 @@ const StatesCard = () => {
   );
 };
 
-export default StatesCard;
+export default ImpactCards;

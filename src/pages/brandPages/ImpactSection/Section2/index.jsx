@@ -12,7 +12,7 @@ import {
 } from "./data";
 
 
-const Section1 = () => {
+const Section2 = () => {
   return (
     <Box
       sx={{
@@ -76,4 +76,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Section2;

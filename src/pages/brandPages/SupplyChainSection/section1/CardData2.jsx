@@ -6,14 +6,12 @@ import card2 from "/src/assets/images/card2.png";
 import card3 from "/src/assets/images/card3.png";
 import card4 from "/src/assets/images/card4.png";
 import cardIcon from "/src/assets/images/cardIcon.png";
-import cardIcon2 from "/src/assets/images/cardIcon2.png";
 
 const statsData = [
   {
-    title: "Carbon Footprint",
-    value: 89,
+    title: "Average Supply Chain Efficiency",
+    value: 79,
     type: "percentage",
-    color: "green",
     icon: (
       <img src={card1} alt="icon" style={{ width: "60px", height: "60px" }} />
     ),
@@ -25,22 +23,22 @@ const statsData = [
             marginRight: "8px",
           }}
         >
-          20%{" "}
+          80{" "}
         </strong>
-        CO₂ Reduction vs. Last Year
+        Average Supply
       </span>
     ),
     highlight: (
       <img
-        src={cardIcon2}
+        src={cardIcon}
         alt="icon"
         style={{ width: "20px", height: "12px" }}
       />
     ),
   },
   {
-    title: "Water Usage",
-    value: 65,
+    title: "CO₂ Emissions from Transport",
+    value: 88,
     type: "percentage",
     icon: (
       <img src={card2} alt="icon" style={{ width: "60px", height: "60px" }} />
@@ -53,9 +51,9 @@ const statsData = [
             marginLeft: "2px",
           }}
         >
-          50,000L{" "}
+          500{" "}
         </strong>
-        Saved per 1000kg Cotton
+        Metric tons CO₂
       </span>
     ),
     highlight: (
@@ -67,8 +65,8 @@ const statsData = [
     ),
   },
   {
-    title: "Fair Trade",
-    value: 73,
+    title: "Total Cotton Volume Tracked",
+    value: 80,
     type: "percentage",
     icon: (
       <img src={card3} alt="icon" style={{ width: "60px", height: "60px" }} />
@@ -81,9 +79,9 @@ const statsData = [
             marginLeft: "0px",
           }}
         >
-          80%{" "}
+          100,000 kg{" "}
         </strong>
-        Of Cotton Fair Trade Certified
+        Of Cotton
       </span>
     ),
     highlight: (
@@ -95,8 +93,8 @@ const statsData = [
     ),
   },
   {
-    title: "Recycled Cotton",
-    value: 96,
+    title: "Pending Compliance Check",
+    value: 67,
     type: "percentage",
     icon: (
       <img src={card4} alt="icon" style={{ width: "60px", height: "60px" }} />
@@ -109,9 +107,9 @@ const statsData = [
             marginLeft: "-2px",
           }}
         >
-          30%{" "}
+          3{" "}
         </strong>
-        Cotton from Recycled Sources
+        Suppliers Need Review
       </span>
     ),
     highlight: (
@@ -124,11 +122,11 @@ const statsData = [
   },
 ];
 
-const StatesCard = () => {
+const SupplyCards = () => {
   return (
-    <Grid container spacing={2} sx={{ padding: "0px" ,gap:"2" }}>
+    <Grid container spacing={2} sx={{ padding: "0px" }}>
       {statsData.map((item, index) => (
-        <Grid item xs={12} sm={6}  md={3} key={index} sx={{gap:"2"}}>
+        <Grid item xs={12} sm={6} md={3} key={index}>
           <StatCard {...item} />
         </Grid>
       ))}
@@ -136,4 +134,4 @@ const StatesCard = () => {
   );
 };
 
-export default StatesCard;
+export default SupplyCards;
