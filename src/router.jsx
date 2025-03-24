@@ -24,6 +24,9 @@ import ResourceLibrary from "./component/Card/Resource";
 import SupplierInformation from './pages/retailPages/SupplierInformation/Index';
 import AnaliticalInsights from "./pages/brandPages/analytics-insights/AnalyticInsights";
 import SocialPassport from "./pages/brandPages/social-passport/SocailPassport";
+import ConsumerEngagemnt from "./pages/brandPages/consumer-engagement/ConsumerEngagemnt";
+import NewsUpdates from "./pages/brandPages/new&updates/NewsUpdates";
+import CommunityForum from "./pages/brandPages/communityForum/CommunityForum";
 
 const router = createBrowserRouter([
   {
@@ -68,7 +71,7 @@ const router = createBrowserRouter([
     path: "/brand",
     element: "",
     children: [
-      { index: true, element:  <ComingSoon /> },
+      { index: true, element: <ComingSoon /> },
       {
         path: "",
         element: <NewISidebarLayout basePath={"/brand"} />,
@@ -77,6 +80,10 @@ const router = createBrowserRouter([
           { path: "supply-chain", element: <SupplyChain /> },
           { path: "analytics-insights", element: <AnaliticalInsights /> },
           { path: "social-passport", element: <SocialPassport /> },
+          { path: "consumer-engagement", element: <ConsumerEngagemnt /> },
+          { path: "news-updates", element: <NewsUpdates /> },
+          { path: "resources-library", element: <ResourceLibrary /> },
+          { path: "community-forum", element: <CommunityForum /> },
         ],
       },
     ],
@@ -89,7 +96,7 @@ const router = createBrowserRouter([
     path: "/retail",
     element: "",
     children: [
-      { index: true, element:  <ComingSoon /> },
+      { index: true, element: <ComingSoon /> },
       {
         path: "",
         element: <NewISidebarLayout basePath={"/retail"} />,

@@ -33,7 +33,6 @@ const NewISidebarLayout = ({basePath}) => {
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
-          // overflowY: "",
         }}
       >
         {/* Top Bar */}

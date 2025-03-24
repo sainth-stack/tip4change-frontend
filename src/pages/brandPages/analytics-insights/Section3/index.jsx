@@ -28,7 +28,7 @@ const Section3 = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            overflow: "hidden",
+           
           }}
         >
           <MultiBarChart
@@ -52,7 +52,6 @@ const Section3 = () => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            overflow: "hidden", // ✅ Ensures the table does not overflow
           }}
         >
           <Table1 />

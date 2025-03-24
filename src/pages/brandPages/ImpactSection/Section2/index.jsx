@@ -20,7 +20,6 @@ const Section1 = () => {
         justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
-        width: "100%",
       }}
     >
       <Box
