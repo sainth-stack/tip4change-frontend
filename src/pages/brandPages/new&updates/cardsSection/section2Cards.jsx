@@ -70,10 +70,13 @@ const ArticleCard = ({ image, title, description }) => {
 
 const ArticleList = () => {
   return (
-    <Box display="flex" justifyContent="center" gap={2} flexWrap="wrap" mb={3}>
+    <Box>
+      <Typography sx={{fontWeight:"600",fontSize:"20px",fontFamily:"Montserrat",color:"#847F3B",marginLeft:{lg:"300px"}}}>Latest News</Typography>
+      <Box display="flex" justifyContent="center" gap={2} flexWrap="wrap" mb={3}>
       {articles.map((article, index) => (
         <ArticleCard key={index} {...article} />
       ))}
+    </Box>
     </Box>
   );
 };
