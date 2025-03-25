@@ -3,7 +3,7 @@ import CardWidget from "./../../../../components/Card/CardWidget";
 import { Box } from "@mui/material";
 import PieChart from "../../../../components/AllGraphs/PieGraph";
 import { pieChartData, labels } from "./data";
-import {Table33} from './Table'
+import { Table33 } from "./table/Table";
 const Section2 = () => {
   return (
     <Box

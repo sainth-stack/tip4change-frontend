@@ -1,7 +1,7 @@
 import React from "react";
-import { columns, data } from "./tabledata";
+import { columns, data } from "../tabledata";
 import { Box, Grid2 } from "@mui/material";
-import CustomTable from "../../../../components/CustomTable/CustomTable";
+import CustomTable from "../../../../../components/CustomTable/CustomTable";
 
 export const Table33 = () => {
   //     const location = useLocation();
