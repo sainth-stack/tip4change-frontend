@@ -27,6 +27,13 @@ import SocialPassport from "./pages/brandPages/social-passport/SocailPassport";
 import ConsumerEngagemnt from "./pages/brandPages/consumer-engagement/ConsumerEngagemnt";
 import NewsUpdates from "./pages/brandPages/new&updates/NewsUpdates";
 import CommunityForum from "./pages/brandPages/communityForum/CommunityForum";
+import ProductInformation from './pages/retailPages/ProductInformation/Index';
+import CommunityEngagement from "./pages/retailPages/ConsumerEngagement/Index";
+import AnalyticsInsights from './pages/retailPages/AnalyticsInsights/Index';
+import NewsAndUpdates from './pages/retailPages/newsAndUpdates/Index';
+import RetailResourceLibrary from './pages/retailPages/ResourceLibrary/Index';
+import RetailCommunityForum from "./pages/retailPages/CommunityForum/Index";
+
 
 const router = createBrowserRouter([
   {
@@ -102,7 +109,12 @@ const router = createBrowserRouter([
         element: <NewISidebarLayout basePath={"/retail"} />,
         children: [
           { path: "supplier-info", element: <SupplierInformation /> },
-          { path: "product-info", element: <SupplierInformation /> },
+          { path: "product-info", element: <ProductInformation /> },
+          { path: "consumer-engagement", element: <CommunityEngagement /> },
+          { path: "analytics-insights", element: <AnalyticsInsights /> },
+          { path: "news-updates", element: <NewsAndUpdates /> },
+          { path: "resources-library", element: <RetailResourceLibrary /> },
+          { path: "community-forum", element: <RetailCommunityForum /> },
         ],
       },
     ],

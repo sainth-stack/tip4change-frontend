@@ -129,14 +129,14 @@ const WorldMapChart = ({
 
  return (
    <Box sx={{ display: "flex", flexDirection: "column" }}>
-     {/* Legend at the Top */}
      <Box
-       sx={{ display: "flex", justifyContent: "space-evenly", gap: 1, mb: 2 }}
+       sx={{ display: "flex", gap: 1, mb: 2 }}
      >
        <CustomTypography
          sx={{
            fontWeight: "600",
            fontSize: "1rem",
+           textAlign:"left"
          }}
        >
          {title}
