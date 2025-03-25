@@ -24,32 +24,33 @@ export const chartConfigs = {
     },
   
     sentiment: {
-      chartData: {
-        labels: ["Positive", "Negative", "Neutral"],
-        datasets: [
-          {
-            data: [60, 15, 25],
-            backgroundColor: ["#847F3B", "#E86F51", "#F4C542"],
-            hoverBackgroundColor: ["#6A6330", "#C45A42", "#D1A837"],
-            borderWidth: 0,
-          },
-        ],
-      },
-      options: {
-        cutout: "75%",
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: false },
-          datalabels: {
-            color: "#FFF",
-            font: { weight: "bold" },
-            formatter: (value) => `${value}%`,
-          },
+    chartData: {
+      labels: ["Positive", "Negative", "Neutral"], // Legend labels
+      datasets: [
+        {
+          data: [60, 15, 25], // Values
+          backgroundColor: ["#847F3B", "#E86F51", "#F4C542"],
+          hoverBackgroundColor: ["#6A6330", "#C45A42", "#D1A837"],
+          borderWidth: 0,
         },
-        responsive: true,
-        maintainAspectRatio: false,
-      },
+      ],
     },
+    options: {
+      cutout: "75%",
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false },
+        datalabels: {
+          color: "#FFF",
+          font: { weight: "bold" },
+          formatter: (value) => `${value}%`, // Shows only percentage
+        },
+      },
+      responsive: true,
+      maintainAspectRatio: false,
+    },
+  },
+
   
     completed: {
       chartData: {

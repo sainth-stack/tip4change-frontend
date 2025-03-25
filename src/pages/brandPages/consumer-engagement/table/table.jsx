@@ -10,7 +10,7 @@ const Table2 = () => {
   
 return (
   <>
-    <Box>
+    <Box sx={{marginLeft:{lg:"20px"}}}>
       {/* <NavigationHeader path={pathnames} PageText="Payment Section" /> */}
       <Box mt={2} sx={{}}>
         <CustomTable
