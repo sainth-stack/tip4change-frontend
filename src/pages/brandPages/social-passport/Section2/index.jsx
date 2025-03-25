@@ -3,9 +3,7 @@ import CardWidget from "./../../../../components/Card/CardWidget";
 import { Box } from "@mui/material";
 import PieChart from "../../../../components/AllGraphs/PieGraph";
 import { pieChartData, labels } from "./data";
-
-import Table from "./Table"
-
+import {Table33} from './Table'
 const Section2 = () => {
   return (
     <Box
@@ -24,7 +22,7 @@ const Section2 = () => {
           maxWidth:"60%"
         }}
       >
-          <Table />
+          <Table33 />
       </Box>
 
       <Box

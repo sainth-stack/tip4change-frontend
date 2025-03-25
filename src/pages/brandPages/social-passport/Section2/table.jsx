@@ -3,7 +3,7 @@ import { columns, data } from "./tabledata";
 import { Box, Grid2 } from "@mui/material";
 import CustomTable from "../../../../components/CustomTable/CustomTable";
 
-const Table = () => {
+export const Table33 = () => {
   //     const location = useLocation();
   //   const pathnames = location.pathname.split('/').filter((x) => x);
 
@@ -38,4 +38,3 @@ const Table = () => {
   );
 };
 
-export default Table;
