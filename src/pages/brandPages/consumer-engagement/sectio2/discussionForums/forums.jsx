@@ -4,7 +4,7 @@ const DiscussionCard = () => {
   return (
     <Card
       sx={{
-        width: 540,
+        width: "100%",
         height: 295,
         borderRadius: 2,
         backgroundColor: "#FFFFFF",

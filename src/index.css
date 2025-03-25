@@ -76,3 +76,10 @@ button:focus-visible {
 * {
   font-family: 'Montserrat', sans-serif !important;
 }
+
+
+.main-container2 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 24px; 
+}

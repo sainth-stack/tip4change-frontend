@@ -1,6 +1,6 @@
 import React from "react";
 import { columns, data } from "./tabledata";
-import { Box } from "@mui/material";
+import { Box, Grid2 } from "@mui/material";
 import CustomTable from "../../../../components/CustomTable/CustomTable";
 
 const Table = () => {
@@ -9,10 +9,11 @@ const Table = () => {
 
   return (
     <>
-        {/* <NavigationHeader path={pathnames} PageText="Payment Section" /> */}
-          <CustomTable
+    <Grid2 sx={{background:'white'}}>
+    <CustomTable
             columns={columns}
             data={data}
+            pagination={false}
         sx={{
               headerSx: {
                 backgroundColor: "#F5F6FA",
@@ -32,6 +33,7 @@ const Table = () => {
               },
             }}
           />
+    </Grid2>
     </>
   );
 };

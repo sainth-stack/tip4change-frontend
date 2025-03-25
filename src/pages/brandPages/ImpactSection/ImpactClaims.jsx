@@ -11,7 +11,7 @@ const ImpactClaims = () => {
   return (
     <Grid2 direction="column" spacing={2}>
       <Grid2 item>
-        <Box>
+        <Box sx={{display:'flex',flexDirection:'column',gap:'24px'}}>
           <Section1 />
           <Section2 />
           <Section3 />

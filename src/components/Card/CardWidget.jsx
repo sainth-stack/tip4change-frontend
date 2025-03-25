@@ -12,7 +12,7 @@ const CardWidget = ({ children, sx = {} }) => {
 
 
         padding: "16px",
-        margin: "10px",
+        // margin: "10px",
         ...sx, // Allow custom styles via props
       }}
     >

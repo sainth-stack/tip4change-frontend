@@ -2,23 +2,32 @@ import React from "react";
 import { Box } from "@mui/material";
 import CustomTable from "../../../../components/CustomTable/CustomTable";
 import { columns, data } from "./tableData";
+import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
 
 const Table1 = () => {
   return (
     <Box
       sx={{
-        width: "100%",
         height: "100%",
         display: "flex",
         flexDirection: "column",
       }}
     >
+            <CustomTypography
+        sx={{
+          fontWeight: "600",
+          fontSize: "1rem",
+        }}
+      >
+        {"Product Performance Analytics   "}
+      </CustomTypography>
       <CustomTable
         columns={columns}
         data={data}
+        pagination={false}
         sx={{
           tableSx: { 
-            width: "100%", 
+            marginTop:'10px',
             height: "100%", 
             tableLayout: "fixed", // ✅ Prevents column expansion
             overflow: "hidden",

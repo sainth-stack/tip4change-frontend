@@ -126,7 +126,7 @@ const statsData = [
 
 const ImpactCards = () => {
   return (
-    <Grid container spacing={2} sx={{ padding: "0px" ,gap:"2" }}>
+    <Grid className="main-container2" spacing={2} sx={{ padding: "0px" ,gap:"2" }}>
       {statsData.map((item, index) => (
         <Grid item xs={12} sm={6}  md={3} key={index} sx={{gap:"2"}}>
           <StatCard {...item} />

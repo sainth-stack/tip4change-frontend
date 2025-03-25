@@ -91,7 +91,7 @@ const PieChart = ({
         {title}
       </CustomTypography>
 
-      <Box style={{ minHeight: "12rem", maxHeight: "12rem" }}>
+      <Box style={{ minHeight: "15rem", maxHeight: "17rem" }} mt={2}>
         <Pie data={chartData} options={options} />
       </Box>
     </>

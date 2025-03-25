@@ -15,38 +15,22 @@ const Section2 = () => {
         alignItems: "center",
         flexWrap: "wrap",
         width: "100%",
+        gap:'24px'
       }}
     >
       <Box
         sx={{
           flex: 1,
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "40vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
+          maxWidth:"60%"
         }}
       >
-        <CardWidget>
-<Table />
-
-        </CardWidget>
+          <Table />
       </Box>
 
       <Box
         sx={{
           flex: 1,
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "30vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
+          maxWidth:"40%"
         }}
       >
         <CardWidget>

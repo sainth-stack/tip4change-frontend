@@ -12,15 +12,15 @@ const ConsumerEngagemnt = () => {
     
       <Grid2 direction="column" spacing={2}>
         <Grid2 item>
-          <Box>
+          <Grid2 sx={{display:'flex',flexDirection:'column',gap:'24px'}}>
             <Section1 />
-            <div style={{display:"flex",gap:"30px",justifyContent:"center",alignItems:"center",marginTop:"30px"}}>
+            <div style={{display:"flex",gap:"24px",justifyContent:"center",alignItems:"center"}}>
             <DoughnutChartComponent1 />
             <DiscussionCard />
             </div>
             <Table2 />
            
-          </Box>
+          </Grid2>
         </Grid2>
       </Grid2>
     

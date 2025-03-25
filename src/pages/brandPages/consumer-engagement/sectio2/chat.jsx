@@ -1,6 +1,7 @@
 import { Card, CardContent, Box, Typography } from "@mui/material";
 import { CommonDoughnutChart } from "../../../../components/chatjsDoughnutChart/commonCharts";
 import { chartConfigs } from "../../../../components/chatjsDoughnutChart/data";
+import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
 
 export const DoughnutChartComponent1 = () => {
   const chartConfig = chartConfigs?.sentiment; // Use the correct chart config
@@ -12,19 +13,27 @@ export const DoughnutChartComponent1 = () => {
   return (
     <Card
       sx={{
-        width: 546,
+        width: "100%",
         height: 295,
         borderRadius: 2,
         backgroundColor: "#FFFFFF",
         boxShadow: "6px 6px 54px 0px #0000000D",
         display: "flex",
-        alignItems: "center",
+flexDirection:'column',
+        alignItems: "start",
         justifyContent: "center",
         padding: 3,
       }}
     >
+       <CustomTypography
+        sx={{
+          fontWeight: "600",
+          fontSize: "1rem",
+        }}
+      >
+        {"Consumer Sentiment Analysis"}
+      </CustomTypography>
       <CardContent sx={{ display: "flex", gap: 4, flexWrap: "wrap", alignItems: "center" }}>
-        {/* Chart Component */}
         <Box sx={{ position: "relative", width: 230, height: 220 }}>
           <CommonDoughnutChart {...chartConfig} />
           {/* Centered Text Inside Chart */}

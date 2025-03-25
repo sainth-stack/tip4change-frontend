@@ -84,7 +84,7 @@ const MultiBarChart = ({
       >
         {title}
       </CustomTypography>
-      <Box style={{ minHeight: "12rem", maxHeight: "12rem" }}>
+      <Box style={{ minHeight: "25rem", maxHeight: "25rem" }} mt={2}>
         <Bar data={chartData} options={options} />
       </Box>
     </>

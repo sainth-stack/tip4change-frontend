@@ -12,10 +12,11 @@ return (
   <>
     <Box height='490px'>
       {/* <NavigationHeader path={pathnames} PageText="Payment Section" /> */}
-      <Box mt={2} sx={{marginLeft:{lg:"50px",md:"50px"}}}>
+      <Box pb={5}>
         <CustomTable
           columns={columns}
           data={data}
+          pagination={false}
           sx={{
             // tableSx: { height: "35rem" },
             headerSx: { backgroundColor: "#F5F6FA",fontFamily:'Montserrat',fontSize:'12px' },

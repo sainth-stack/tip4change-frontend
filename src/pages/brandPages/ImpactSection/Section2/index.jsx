@@ -20,11 +20,13 @@ const Section2 = () => {
         justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
+        gap:'24px'
       }}
     >
       <Box
         sx={{
           flex: 1,
+          margin:0,
           width: "100%",
           minWidth: "20rem",
           maxWidth: {
@@ -51,6 +53,7 @@ const Section2 = () => {
       <Box
         sx={{
           flex: 1,
+          margin:0,
           width: "100%",
           minWidth: "20rem",
           maxWidth: {

@@ -10,12 +10,13 @@ const Table2 = () => {
   
 return (
   <>
-    <Box sx={{marginLeft:{lg:"20px"}}}>
+    <Box>
       {/* <NavigationHeader path={pathnames} PageText="Payment Section" /> */}
-      <Box mt={2} sx={{}}>
+      <Box  sx={{}}>
         <CustomTable
           columns={columns}
           data={data}
+          pagination={false}
           sx={{
             // tableSx: { height: "35rem" },
             headerSx: { backgroundColor: "#F5F6FA",fontFamily:'Montserrat',fontSize:'12px' },

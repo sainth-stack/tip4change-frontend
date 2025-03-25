@@ -12,19 +12,14 @@ const Section3 = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexWrap: "nowrap", // ✅ Prevents unwanted wrapping
-        width: "100%",
-        gap: "50px", // ✅ Space between cards
-        maxWidth: "1108px", // ✅ Total width of both cards combined
-        height: "490px", // ✅ Set height constraint
-        margin:"0 auto"
+        flexWrap: "nowrap", 
+        gap: "24px",
       }}
     >
       {/* Bar Chart Card (Half Width) */}
-      <Box sx={{ width: "551px", height: "490px" }}>
+      <Box sx={{ width: "100%", height: "440px" }}>
         <CardWidget
           sx={{
-            width: "100%",
             height: "100%",
             display: "flex",
             flexDirection: "column",
@@ -45,10 +40,9 @@ const Section3 = () => {
       </Box>
 
       {/* Table Card (Half Width) */}
-      <Box sx={{ width: "551px", height: "490px" }}>
+      <Box sx={{ width: "100%", height: "440px" }}>
         <CardWidget
           sx={{
-            width: "100%",
             height: "100%",
             display: "flex",
             flexDirection: "column",

@@ -118,7 +118,7 @@ const AreaChart = ({
         {subHeading}
       </small>
 
-      <Box style={{ minHeight: "12rem", maxHeight: "12rem" }}>
+      <Box style={{ minHeight: "14rem", maxHeight: "14rem" }}>
         <Line data={chartData} options={options} />
       </Box>
     </>
