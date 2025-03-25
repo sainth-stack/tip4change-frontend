@@ -6,7 +6,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ShareIcon from "@mui/icons-material/Share";
-import img1 from '../../../assets/svg/Jacobprofile.svg';
+import img1 from '../../../assets/svg/jacobprofile.svg';
 import { posts } from './data';
 import './style.css';
 
