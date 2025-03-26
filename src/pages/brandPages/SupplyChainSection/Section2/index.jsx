@@ -2,10 +2,9 @@ import React from "react";
 import * as d3 from "d3";
 
 import { Box } from "@mui/material";
-import WorldMapChart from './../../../../components/AllGraphs/WorldMapChart/WorldMapChart';
+import WorldMapChart from "./../../../../components/AllGraphs/WorldMapChart/WorldMapChart";
 import { MapsampleData } from "./data";
 import CardWidget from "../../../../components/Card/CardWidget";
-
 
 const Section2 = () => {
   return (
@@ -21,13 +20,13 @@ const Section2 = () => {
     >
       <CardWidget
         sx={{
-          height: "100%", 
+          height: "100%",
           display: "flex",
         }}
       >
         <Box
           sx={{
-            flex: 1, 
+            flex: 1,
             width: "100%",
           }}
         >
