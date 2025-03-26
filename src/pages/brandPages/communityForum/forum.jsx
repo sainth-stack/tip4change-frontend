@@ -15,11 +15,11 @@ const PostCard = () => {
     <Grid 
       container
       spacing={2}
-      sx={{ maxWidth: 800, width: "100%", margin: "0 auto", flexDirection: "column", alignItems: "center" }}
+      sx={{ width: "100%", flexDirection: "column", alignItems: "center" ,width:"100%"}}
     >
       {/* Main Post Card */}
       <Grid item xs={12}>
-        <Card sx={{ borderRadius: 3, boxShadow: 2, p: 2, width: "100%" }}>
+        <Card sx={{ borderRadius: 3, boxShadow: 2, p: 3, width: "100%" }}>
           <CardContent>
             <Box display="flex" alignItems="center" justifyContent="space-between">
               <Box display="flex" alignItems="center">
