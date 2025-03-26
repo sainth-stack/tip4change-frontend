@@ -70,8 +70,8 @@ const ArticleCard = ({ image, title, description }) => {
 
 const ArticleList = () => {
   return (
-    <Box sx={{ width: "100%" }}>
-      <Typography sx={{ fontWeight: "600", fontSize: "20px", fontFamily: "Montserrat", color: "#847F3B", marginLeft: { lg: "40px" ,marginBottom:"5px"} }}>Latest News</Typography>
+    <Box sx={{ width: "100%" }} mt={4}>
+      <Typography sx={{ fontWeight: "600", fontSize: "20px", fontFamily: "Montserrat", color: "#847F3B",textAlign:"left"  }} ml={2}>Latest News</Typography>
       <Box 
         display="flex" 
         gap={2} 
@@ -79,7 +79,6 @@ const ArticleList = () => {
         mb={3} 
         sx={{ 
           justifyContent: "center",
-          marginLeft: { lg: "30px" }
         }}
       >
         {articles.map((article, index) => (

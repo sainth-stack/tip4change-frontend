@@ -11,17 +11,14 @@ import {
 
 const SustainabilityCard = () => {
   return (
-    <Container sx={{ display: "", justifyContent: "center", mt: 0 }}>
       <Card
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" }, // Stack on small screens, row on larger screens
           width: "100%",
-          maxWidth: "1250px",
-          boxShadow: 2,
+          boxShadow: 1,
           gap: "20px",
           margin: "14px",
-          overflow: "hidden",
         }}
       >
         {/* Left Side: Image */}
@@ -152,7 +149,6 @@ const SustainabilityCard = () => {
           </Box>
         </CardContent>
       </Card>
-    </Container>
   );
 };
 

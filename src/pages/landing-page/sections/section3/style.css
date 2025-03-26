@@ -134,7 +134,7 @@
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns for desktop */
   gap: 30px; /* Adds spacing between items */
   justify-content: center;
-  max-width: 1200px;
+   max-width: 1200px; 
   width: 100%; /* Removed unnecessary quotes */
   /* margin-left: 60px; */
   margin-top: 55px;
