@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from '@mui/material';
+import { Box } from "@mui/material";
 import CardWidget from "../../../../components/Card/CardWidget";
 import MultiLineChart from "../../../../components/AllGraphs/MultiLineGraph";
 import { LineChartDataSets, LineChartLabels } from "./data";
@@ -7,7 +7,6 @@ import WorldMapChart from "../../../../components/AllGraphs/WorldMapChart/WorldM
 import { MapsampleData } from "../../SupplyChainSection/Section2/data";
 
 import * as d3 from "d3";
-
 
 const Section3 = () => {
   return (

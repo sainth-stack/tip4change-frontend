@@ -17,17 +17,17 @@ const SustainabilityCard = () => {
           display: "flex",
           flexDirection: { xs: "column", md: "row" }, // Stack on small screens, row on larger screens
           width: "100%",
-          maxWidth: 1085,
+          maxWidth: "1250px",
           boxShadow: 2,
-          gap: "10px",
-
+          gap: "20px",
+          margin: "14px",
           overflow: "hidden",
         }}
       >
         {/* Left Side: Image */}
         <CardMedia
           component="img"
-          image="src/assets/images/news.png"
+          image="/src/assets/images/news.png"
           alt="Shopping Sustainability"
           sx={{
             width: { xs: "100%", md: "45%" },
@@ -70,7 +70,7 @@ const SustainabilityCard = () => {
               <IconButton size="small">
                 <img
                   sx={{ border: "1.5px solid rgba(14, 14, 14, 1)" }}
-                  src="src/assets/images/news3.png" // Ensure the image path is correct
+                  src="/src/assets/images/news3.png" // Ensure the image path is correct
                   alt="Custom Icon"
                   style={{ width: 20, height: 20 }} // Adjust size as needed
                 />
@@ -78,7 +78,7 @@ const SustainabilityCard = () => {
               <IconButton size="small">
                 <img
                   sx={{ border: "1.5px solid rgba(14, 14, 14, 1)" }}
-                  src="src/assets/images/news4.png" // Ensure the image path is correct
+                  src="/src/assets/images/news4.png" // Ensure the image path is correct
                   alt="Custom Icon"
                   style={{ width: 20, height: 20 }} // Adjust size as needed
                 />
@@ -87,7 +87,7 @@ const SustainabilityCard = () => {
               <IconButton size="small">
                 <img
                   sx={{ border: "1.5px solid rgba(14, 14, 14, 1)" }}
-                  src="src/assets/images/news2.png" // Ensure the image path is correct
+                  src="/src/assets/images/news2.png" // Ensure the image path is correct
                   alt="Custom Icon"
                   style={{ width: 20, height: 25, marginTop: "-3px" }} // Adjust size as needed
                 />
