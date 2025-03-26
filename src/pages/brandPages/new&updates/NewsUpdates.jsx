@@ -10,6 +10,6 @@ const NewsUpdates = () => {
       <ArticleList />
     </>
   );
-}
+};
 
-export default NewsUpdates
+export default NewsUpdates;
