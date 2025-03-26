@@ -19,7 +19,7 @@ export const DoughnutChartComponent1 = () => {
         backgroundColor: "#FFFFFF",
         boxShadow: "6px 6px 54px 0px #0000000D",
         display: "flex",
-flexDirection:'column',
+        flexDirection:'column',
         alignItems: "start",
         justifyContent: "center",
         padding: 3,
