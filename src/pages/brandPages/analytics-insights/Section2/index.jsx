@@ -16,6 +16,7 @@ const Section2 = () => {
         alignItems: "center",
         flexWrap: "wrap",
         width: "100%",
+        gap:'24px'
       }}
     >
       <Box
@@ -23,14 +24,6 @@ const Section2 = () => {
           flex: 1,
           width: "100%",
           minWidth: "20rem",
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "50vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
         }}
       >
         <CardWidget>

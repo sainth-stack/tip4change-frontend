@@ -75,7 +75,7 @@ const BarChart = ({
       >
         {title}
       </CustomTypography>
-      <Box style={{ minHeight: "12rem", maxHeight: "12rem" }}>
+      <Box style={{ minHeight: "16rem", maxHeight: "18rem" }}>
         <Bar data={chartData} options={options} />
       </Box>
     </>

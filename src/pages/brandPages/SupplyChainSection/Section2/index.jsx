@@ -15,7 +15,6 @@ const Section2 = () => {
         alignItems: "center",
         flexWrap: "wrap",
         width: "100%",
-        marginLeft: "1rem",
       }}
     >
       <CardWidget

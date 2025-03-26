@@ -38,6 +38,7 @@ const CustomTable = ({
   data,
   sx = {},
   rowsPerPageOptions = [9, 10, 25],
+  pagination=true
 }) => {
   const { tableSx, headerSx, columnSx, rowSx } = sx;
   const [page, setPage] = useState(0);
@@ -196,7 +197,7 @@ const CustomTable = ({
         </Table>
       </TableContainer>
 
-      <Box
+   { pagination&&  <Box
         sx={{
           display: "flex",
           justifyContent: "flex-end",
@@ -239,7 +240,7 @@ const CustomTable = ({
         >
           <KeyboardDoubleArrowRightIcon />
         </IconButton>
-      </Box>
+      </Box>}
     </>
   );
 };

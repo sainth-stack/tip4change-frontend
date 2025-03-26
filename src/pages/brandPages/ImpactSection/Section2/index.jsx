@@ -12,7 +12,7 @@ import {
 } from "./data";
 
 
-const Section1 = () => {
+const Section2 = () => {
   return (
     <Box
       sx={{
@@ -20,12 +20,13 @@ const Section1 = () => {
         justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
-        width: "100%",
+        gap:'24px'
       }}
     >
       <Box
         sx={{
           flex: 1,
+          margin:0,
           width: "100%",
           minWidth: "20rem",
           maxWidth: {
@@ -52,6 +53,7 @@ const Section1 = () => {
       <Box
         sx={{
           flex: 1,
+          margin:0,
           width: "100%",
           minWidth: "20rem",
           maxWidth: {
@@ -77,4 +79,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Section2;

@@ -14,36 +14,25 @@ const Section3 = () => {
   return (
     <Box
       sx={{
-        width: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        pt: { xs: "30px", sm: "40px", md: "50px" },
         boxShadow: "6px 6px 54px 0px #0000000D",
-        borderRadius: "12px",
+        borderRadius: "30px",
         backgroundColor: "#fff",
-        // p: { xs: 2, md: 4 },
-        // maxWidth: "1109px",
-        marginLeft:{lg:"15px"},
-        // marginRight:{lg:"50px"},
-        width: "100%",
         justifyContent: "center",
-        margin: "0 auto",
-        marginBottom: "20px",
-        // height:{lg:"320px",md:"320px",sm:"320px" }
+        padding:'16px'
       }}
     >
       {/* Title and Legend Section */}
       <Box
         sx={{
-          maxWidth: "1108px",
+          maxWidth: "100%",
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
-          mb: 3,
-          px: 2,
         }}
       >
         <Typography fontWeight="700" sx={{ fontFamily: "Montserrat", fontSize: "20px", lineHeight: "24px", color: "#1F1F25" }}>
@@ -63,7 +52,7 @@ const Section3 = () => {
       <Box
         sx={{
           width: "100%",
-          maxWidth: "1108px",
+          maxWidth: "100%",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",

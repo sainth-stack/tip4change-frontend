@@ -32,9 +32,7 @@ const StatCard = ({
         background: "rgba(255, 255, 255, 1)", // Ensured consistency
         // border: "1px solid white",
         padding: "16px",
-        minWidth: "200px",
-        width: "100%",
-        maxWidth: "262px",
+        maxWidth: "100%",
         height: "160px",
         display: "flex",
 
@@ -43,7 +41,7 @@ const StatCard = ({
     >
       <div
         style={{
-          width: "230px",
+          width: "94%",
           height: "110px",
           marginTop: "20px",
           marginLeft: "16px",

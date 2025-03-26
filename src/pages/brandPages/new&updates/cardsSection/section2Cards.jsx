@@ -9,10 +9,10 @@ const ArticleCard = ({ image, title, description }) => {
   return (
     <Card
       sx={{
-        maxWidth: 337,
+        flexBasis: { xs: "100%", sm: "calc(100% / 2 - 16px)", md: "calc(100% / 3 - 16px)" },
         borderRadius: "20px",
         boxShadow: 3,
-        height: "490px",
+        height: "530px",
         display: "flex",
         flexDirection: "column",
       }}
@@ -70,10 +70,22 @@ const ArticleCard = ({ image, title, description }) => {
 
 const ArticleList = () => {
   return (
-    <Box display="flex" justifyContent="center" gap={2} flexWrap="wrap" mb={3}>
-      {articles.map((article, index) => (
-        <ArticleCard key={index} {...article} />
-      ))}
+    <Box sx={{ width: "100%" }}>
+      <Typography sx={{ fontWeight: "600", fontSize: "20px", fontFamily: "Montserrat", color: "#847F3B", marginLeft: { lg: "40px" ,marginBottom:"5px"} }}>Latest News</Typography>
+      <Box 
+        display="flex" 
+        gap={2} 
+        flexWrap="wrap" 
+        mb={3} 
+        sx={{ 
+          justifyContent: "center",
+          marginLeft: { lg: "30px" }
+        }}
+      >
+        {articles.map((article, index) => (
+          <ArticleCard key={index} {...article}  />
+        ))}
+      </Box>
     </Box>
   );
 };

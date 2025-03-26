@@ -111,7 +111,7 @@ const MultiLineChart = ({
         {title}
       </CustomTypography>
 
-      <Box style={{ minHeight: "12rem", maxHeight: "12rem" }}>
+      <Box style={{ minHeight: "16rem", maxHeight: "18rem" }}>
         <Line data={chartData} options={options} />
       </Box>
     </>

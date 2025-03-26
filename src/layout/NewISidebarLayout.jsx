@@ -33,7 +33,6 @@ const NewISidebarLayout = ({basePath}) => {
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
-          // overflowY: "",
         }}
       >
         {/* Top Bar */}
@@ -46,9 +45,9 @@ const NewISidebarLayout = ({basePath}) => {
             ml: {
               xs: 4,
               sm: ".1rem",
-              md: "1.5rem",
-              lg: "3rem",
-              xl: "2rem",
+              md: "2rem",
+              lg: "4rem",
+              xl: "4rem",
             },
             maxWidth: {
               xs: "calc(100% - 1em)",

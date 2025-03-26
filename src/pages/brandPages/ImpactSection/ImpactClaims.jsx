@@ -3,11 +3,16 @@ import { Box, Grid2 } from "@mui/material";
 import Section2 from "./Section2";
 import Section3 from './section3/section3'
 
+
+import StatesCard from "../../landing-page/sections/section5/CardData";
+import Section1 from "./section1";
+
 const ImpactClaims = () => {
   return (
     <Grid2 direction="column" spacing={2}>
       <Grid2 item>
-        <Box>
+        <Box sx={{display:'flex',flexDirection:'column',gap:'24px'}}>
+          <Section1 />
           <Section2 />
           <Section3 />
         </Box>

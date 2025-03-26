@@ -17,21 +17,13 @@ const Section3 = () => {
         alignItems: "center",
         flexWrap: "wrap",
         width: "100%",
+        gap:'24px'
       }}
     >
       <Box
         sx={{
           flex: 1,
-          width: "100%",
-          minWidth: "20rem",
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "50vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
+          width: "60%",
         }}
       >
         <CardWidget>
@@ -50,20 +42,13 @@ const Section3 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: {
-            xs: "100vw",
-            sm: "80vw",
-            md: "70vw",
-            lg: "30vw",
-            xl: "50vw",
-            "2xl": "40vw",
-          },
+width:'40%'
         }}
       >
         <CardWidget>
           <WorldMapChart
-            width={300}
-            height={150}
+            width={200}
+            height={230}
             title={"Supplier Distribution & Risk Zones"}
             data={MapsampleData}
             colorScale={d3.scaleSequential(d3.interpolateOrRd)}

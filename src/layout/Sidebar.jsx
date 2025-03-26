@@ -110,6 +110,8 @@ const sidebarConfigs = {
         icon: UserGropupSvg,
         path: "/brand/community-forum",
       },
+      { name: "Settings", icon: SettingsSvg, path: "/profile" },
+
       {
         name: "Logout",
         icon: LogoutSvg,

@@ -19,7 +19,6 @@ const WorldMapChart = ({
   const svgRef = useRef(null);
   const [geoData, setGeoData] = useState(null);
 
-  // Load GeoJSON data
   useEffect(() => {
     d3.json(
       "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
@@ -37,7 +36,6 @@ const WorldMapChart = ({
       .attr("height", height);
 
     svg.selectAll("*").remove(); // Clear previous drawings
-
     const projection = d3
       .geoMercator()
       .scale(width / 3 / Math.PI)
@@ -49,7 +47,6 @@ const WorldMapChart = ({
     const dataMap = new Map(data.map((d) => [countryAccessor(d), valueAccessor(d)]));
     colorScale.domain([minValue, maxValue]);
 
-    // Draw countries
     svg
       .selectAll(".country")
       .data(geoData.features)
@@ -132,14 +129,14 @@ const WorldMapChart = ({
 
  return (
    <Box sx={{ display: "flex", flexDirection: "column" }}>
-     {/* Legend at the Top */}
      <Box
-       sx={{ display: "flex", justifyContent: "space-evenly", gap: 1, mb: 2 }}
+       sx={{ display: "flex", gap: 1, mb: 2 }}
      >
        <CustomTypography
          sx={{
            fontWeight: "600",
            fontSize: "1rem",
+           textAlign:"left"
          }}
        >
          {title}
