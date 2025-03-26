@@ -19,7 +19,7 @@ const SustainabilityCard = () => {
           width: "100%",
           maxWidth: "1250px",
           boxShadow: 2,
-          gap: "0px",
+          gap: "20px",
 
           overflow: "hidden",
         }}
