@@ -33,6 +33,7 @@ const Section2 = () => {
         sx={{
           height: "100%",
           display: "flex",
+          width:'100%'
         }}
       >
         <Box
@@ -50,7 +51,7 @@ const Section2 = () => {
             tooltipFormatter={(d) => `<b>${d.country}</b>: ${d.value}`}
             onCountryClick={(d) => alert(`Clicked on ${d.country}: ${d.value}`)}
           /> */}
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box sx={{ display: "flex", justifyContent: "space-between",width:'100%' }}>
             <CustomTypography
               sx={{
                 fontWeight: "600",

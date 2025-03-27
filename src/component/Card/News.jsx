@@ -7,28 +7,29 @@ import {
   IconButton,
   CardMedia,
   Container,
+  Grid2,
 } from "@mui/material";
 
 const SustainabilityCard = () => {
   return (
-    <>
-      <Typography>
+<Grid2 sx={{padding:'20px'}}>
+<Typography>
         <header
-          style={{ fontSize: "23px", fontWeight: "500", marginLeft: "44px" }}
+          style={{ fontSize: "23px", fontWeight: "500",marginBottom:'20px' }}
         >
           News And Updates
         </header>
       </Typography>
-      <Container sx={{ display: "", justifyContent: "center" }}>
+      <Container sx={{ padding:"0px",width:'100%',margin:'0px'}}>
         <Card
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // Stack on small screens, row on larger screens
             width: "100%",
-            maxWidth: "1250px",
+            maxWidth: "100%",
             boxShadow: 0,
             gap: "20px",
-            margin: "14px",
+            padding:'0px'
           }}
         >
           {/* Left Side: Image */}
@@ -40,10 +41,10 @@ const SustainabilityCard = () => {
               width: { xs: "100%", md: "45%" },
               height: { xs: 200, md: "auto" },
               objectFit: "cover",
+              padding:'0px'
             }}
           />
 
-          {/* Right Side: Content */}
           <CardContent
             sx={{
               flex: 1,
@@ -167,7 +168,7 @@ const SustainabilityCard = () => {
           </CardContent>
         </Card>
       </Container>
-    </>
+</Grid2>
   );
 };
 

@@ -11,14 +11,24 @@ export const CommonDoughnutChart = ({ chartData, options, width = "208px", heigh
     <Box
       sx={{
         position: "relative",
-        width: { xs: "208px", sm: width },
-        height: { xs: "208px", sm: height },
+        width: { xs: "240px", sm: width },
+        height: { xs: "240px", sm: height },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Doughnut data={chartData} options={options} />
+<Doughnut
+  data={chartData}
+  options={{
+    ...options,
+    responsive: true,
+    maintainAspectRatio: false,  // Lets you control width/height freely
+    cutout: "68%",              // Adjusts ring thickness (smaller = thicker)
+  }}
+  // Set explicit width/height via wrapper (or use CSS)
+  style={{ width: "800px", height: "500px" }}  // Bigger dimensions
+/>
       <Box sx={{ position: "absolute", textAlign: "center" }}>
         <Typography variant="body2" fontWeight="500" color="textSecondary">
           {chartData.labels[0]}

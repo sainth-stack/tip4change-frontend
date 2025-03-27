@@ -66,7 +66,7 @@ const Section3 = () => {
             <CustomTypography
               sx={{
                 fontWeight: "600",
-                fontSize: "1.5rem",
+                fontSize: "1rem",
                 textAlign: "left",
                 marginRight: "2rem",
               }}
@@ -113,7 +113,7 @@ const Section3 = () => {
             alt="map image"
             styles={{
               width: "100%",
-              maxHeight: "30vh",
+              maxHeight: "20vh",
 
               objectFit: "contain",
               borderRadius: "50%",

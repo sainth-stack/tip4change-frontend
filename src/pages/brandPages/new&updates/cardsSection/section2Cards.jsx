@@ -73,8 +73,9 @@ const ArticleList = () => {
     <Box sx={{ width: "100%" }} mt={4}>
       <Typography sx={{ fontWeight: "600", fontSize: "20px", fontFamily: "Montserrat", color: "#847F3B",textAlign:"left"  }} ml={2}>Latest News</Typography>
       <Box 
-        display="flex" 
-        gap={2} 
+        display="grid" 
+        gridTemplateColumns={"auto auto auto"} 
+        gap={"35px"}
         flexWrap="wrap" 
         mb={3} 
         sx={{ 
