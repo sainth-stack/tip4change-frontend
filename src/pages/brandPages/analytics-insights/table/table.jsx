@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, TableCell } from "@mui/material";
 import CustomTable from "../../../../components/CustomTable/CustomTable";
 import { columns, data } from "./tableData";
 import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
@@ -13,22 +13,23 @@ const Table1 = () => {
         flexDirection: "column",
       }}
     >
-            <CustomTypography
+      <CustomTypography
         sx={{
           fontWeight: "600",
           fontSize: "1rem",
         }}
       >
-        {"Product Performance Analytics   "}
+        {"Product Performance Analytics"}
       </CustomTypography>
       <CustomTable
         columns={columns}
         data={data}
         pagination={false}
+        showEditIcon={false}
         sx={{
-          tableSx: { 
-            marginTop:'10px',
-            height: "100%", 
+          tableSx: {
+            marginTop: "10px",
+            height: "100%",
             tableLayout: "fixed", // ✅ Prevents column expansion
             overflow: "hidden",
           },
@@ -43,14 +44,14 @@ const Table1 = () => {
             color: "#847F3B",
             fontFamily: "Montserrat",
             fontWeight: "500",
-            fontSize: "11px", // ✅ Adjusted font size for fit
+            fontSize: "11px",
             padding: "4px",
             overflow: "hidden",
             whiteSpace: "nowrap",
           },
           rowSx: {
             fontWeight: "900",
-            height: "40px", // ✅ Adjust row height to fit properly
+            height: "40px",
           },
         }}
       />

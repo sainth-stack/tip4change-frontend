@@ -13,7 +13,7 @@ import DonationSelection from "../../../components/inputComponents/radio";
 import CustomButton from "../../../components/Button/CustomButton";
 import { useLocation } from 'react-router-dom';
 import {formFields} from './data'
-import FormFieldGroup from "../../../components/formsField/fromsField";
+import FormFieldGroup from '../../../components/formsField/fromsField'
 
 const PaymentForm = () => {
     const location = useLocation();

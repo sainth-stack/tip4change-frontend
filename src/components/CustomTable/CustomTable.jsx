@@ -38,7 +38,8 @@ const CustomTable = ({
   data,
   sx = {},
   rowsPerPageOptions = [9, 10, 25],
-  pagination=true
+  pagination =true,
+  showEditIcon = false, // Ensure this prop is destructured
 }) => {
   const { tableSx, headerSx, columnSx, rowSx } = sx;
   const [page, setPage] = useState(0);
@@ -171,20 +172,23 @@ const CustomTable = ({
                           <span>{row[col.id]}</span>
                         </Box>
                       ) : col.id === "action" ? (
-                        <Box sx={{ display: "flex", justifyContent: "center" }}>
-                          <IconButton
-                            sx={{
-                              fontSize: ".2rem",
-                              color: "#847f3b",
-                              textAlign: "center",
-                            }}
-                          >
-                            <DriveFileRenameOutlineOutlinedIcon
+                        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1 }}>
+                          <span>{row[col.id]}</span>
+                          {showEditIcon && ( // Show the pencil icon only if `showEditIcon` is true
+                            <IconButton
                               sx={{
-                                fontSize: "1rem",
+                                fontSize: ".2rem",
+                                color: "#847f3b",
+                                textAlign: "center",
                               }}
-                            />
-                          </IconButton>
+                            >
+                              <DriveFileRenameOutlineOutlinedIcon
+                                sx={{
+                                  fontSize: "1rem",
+                                }}
+                              />
+                            </IconButton>
+                          )}
                         </Box>
                       ) : (
                         row[col.id]

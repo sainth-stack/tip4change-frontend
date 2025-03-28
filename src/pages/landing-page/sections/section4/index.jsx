@@ -25,18 +25,18 @@ const Section4 = () => {
         <Typography 
           variant="body1"
           sx={{
-            maxWidth: "520px",
+            maxWidth: "580px",
             margin: "0 auto",
             fontSize: { xs: "14px", sm: "16px" },
             paddingLeft: "10px",
             paddingRight: "10px",
-            textAlign: "start",
+            textAlign: "center",
             fontFamily: "Montserrat"
           }}
         >
-          We've partnered with local organizations to support projects that align 
-          with our values. Choose a project that resonates with you and add ₹X to 
-          your bill to make a difference.
+          <p> We've partnered with local organizations to support projects that align
+          with our values. Choose a project that resonates with you and<br />
+          add ₹X to your bill to make a difference.</p>
         </Typography>
       </Box>
 
@@ -94,13 +94,14 @@ const Section4 = () => {
                   {/* Progress Bar */}
                   <Box sx={{ marginTop: "20px" }}>
                     <Box sx={{
-                      width: "251px",
+                      width: "100%",
                       height: "4.63px",
                       backgroundColor: "#E0E0E0",
                       borderRadius: "10.52px",
+                      margin:"0 auto"
                     }}>
                       <Box sx={{
-                        width: "169.91px",
+                        width: "67.70%",
                         height: "100%",
                         backgroundColor: "#8b7e3f",
                         borderRadius: "4.83px"
