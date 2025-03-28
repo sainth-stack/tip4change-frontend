@@ -17,6 +17,7 @@ const PaymentTablePage = () => {
           <CustomTable
             columns={columns}
             data={data}
+            showEditIcon={true}
             sx={{
               // tableSx: { height: "35rem" },
               headerSx: { backgroundColor: "#F5F6FA",fontFamily:'Montserrat',fontSize:'12px' },

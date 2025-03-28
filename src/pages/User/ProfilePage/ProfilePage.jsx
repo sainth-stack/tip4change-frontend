@@ -293,8 +293,8 @@ const ProfileView = () => {
                       <Avatar
                         variant="square"
                         sx={{
-                          bgcolor: "#5D5A36",
-                          color: "#EAE8D3",
+                          bgcolor: "#D5D3B3",
+                          color: "#212121",
                           width: { xs: 35, sm: 35 },
                           height: { xs: 35, sm: 35 },
                           borderRadius: "10px",
