@@ -14,7 +14,7 @@ export const DoughnutChartComponent1 = () => {
     <Card
       sx={{
         width: "100%",
-        height: 295,
+        height: 250,
         borderRadius: 2,
         backgroundColor: "#FFFFFF",
         boxShadow: "6px 6px 54px 0px #0000000D",
@@ -33,10 +33,9 @@ export const DoughnutChartComponent1 = () => {
       >
         {"Consumer Sentiment Analysis"}
       </CustomTypography>
-      <CardContent sx={{ display: "flex", gap: 4, flexWrap: "wrap", alignItems: "center" }}>
-        <Box sx={{ position: "relative", width: 230, height: 220 }}>
+      <CardContent sx={{ display: "flex", gap: "150px", flexWrap: "wrap", alignItems: "center",marginTop:'10px' }}>
+        <Box sx={{ position: "relative", width: 200, height: 190 }}>
           <CommonDoughnutChart {...chartConfig} />
-          {/* Centered Text Inside Chart */}
           <Box
             sx={{
               position: "absolute",

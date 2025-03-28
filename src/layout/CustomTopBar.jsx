@@ -158,9 +158,11 @@ const CustomTopBar = ({ isOverlapping }) => {
                 <MenuItem onClick={() => handleClose("/brand/impact-claim")}>
                   Brand
                 </MenuItem>
-                <MenuItem onClick={() => handleClose("/story")}>User</MenuItem>
-                <MenuItem onClick={() => handleClose("/retail/product-info")}>
-                  Retail
+                <MenuItem onClick={() => handleClose("/story")}>
+                  Cluster
+                </MenuItem>
+                <MenuItem onClick={() => handleClose("/")}>
+                  Consumer
                 </MenuItem>
               </Menu>
             </Box>

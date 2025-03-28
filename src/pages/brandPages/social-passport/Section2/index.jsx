@@ -19,7 +19,8 @@ const Section2 = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth:"60%"
+          maxWidth:"60%",
+          background:'white'
         }}
       >
           <Table33 />
