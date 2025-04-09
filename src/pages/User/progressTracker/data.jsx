@@ -3,7 +3,7 @@ export const chartData = {
     datasets: [
       {
         data: [54, 46],
-        backgroundColor: ["#7A713B", "#E0DEC9"],
+        backgroundColor: ["#847F3B", "#E0DEC9"],
         hoverBackgroundColor: ["#6A6330", "#D1CDB8"],
         borderWidth: 0,
       },

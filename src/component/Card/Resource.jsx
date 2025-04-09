@@ -10,9 +10,13 @@ import {
 } from "@mui/material";
 
 import resource1 from "../../assets/images/resource1.png";
-import resource2 from "../../assets/images/resource2.png";
+import resource2 from "../../assets/images/resoucre2.png";
 import resource3 from "../../assets/images/resource3.png";
 import resource4 from "../../assets/images/resource4.png";
+import resource5 from "../../assets/images/resource5.png";
+import resource6 from "../../assets/images/resource6.png";
+import resource7 from "../../assets/images/resource7.png";
+import resource8 from "../../assets/images/resource8.png";
 
 const resourceData = [
   {
@@ -46,28 +50,28 @@ const resourceData = [
   // Repeat for second row (or you can duplicate the array)
   {
     id: 5,
-    image: resource1,
+    image: resource5,
     alt: "Sustainable fashion workshop",
     description: "This guide helps businesses navigate fair trade certifications, responsible sourcing policies, and sustainable supply chains to align with global environmental standards.",
     textFirst: true
   },
   {
     id: 6,
-    image: resource2,
+    image: resource6,
     alt: "Eco-friendly clothing materials",
     description: "As the global marketplace evolves, businesses are under increasing pressure to adopt ethical practices that ensure fair wages, transparent supply chains, and corporate social responsibility (CSR).",
     textFirst: false
   },
   {
     id: 7,
-    image: resource3,
+    image: resource7,
     alt: "Fair trade market",
     description: "In a bold move toward sustainability, Fashion Brand X has transitioned to using 100% recycled materials in its latest collections.",
     textFirst: true
   },
   {
     id: 8,
-    image: resource4,
+    image: resource8,
     alt: "Green supply chain infographic",
     description: "As sustainability becomes a priority for brands and retailers, live and recorded webinars are helping industry professionals stay ahead of the curve.",
     textFirst: false

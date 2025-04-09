@@ -1,9 +1,9 @@
 import { Card } from "@mui/material";
 import { styled } from "@mui/system";
-import img1 from '../../../../assets/images/s4img1.png'
-import img2 from '../../../../assets/images/s4img2.png'
-import img3 from '../../../../assets/images/s4img3.png'
-import img4 from '../../../../assets/images/s4img4.png'
+import img1 from '../../../../assets/images/Lcardimg1.png'
+import img2 from '../../../../assets/images/Lcardimg2.png'
+import img3 from '../../../../assets/images/Lcardimg3.png'
+import img4 from '../../../../assets/images/Lcardimg4.png'
 
 
 

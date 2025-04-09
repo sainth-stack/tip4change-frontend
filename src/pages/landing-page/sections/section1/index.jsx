@@ -6,7 +6,7 @@ import Layout from "../../../../layout";
 import CustomTypography from "../../../../components/TypoGraphy/CustomTypography";
 import CustomIconCard from "./../../../../components/Card/CustomIconCard";
 import pathImage from "../../../../assets/images/pathImage.png";
-import LadyImageRight from "../../../../assets/images/LadyImageRight.png";
+import LadyImageRight from "../../../../assets/images/ladyimg.png";
 import CustomButton from "../../../../components/Button/CustomButton";
 import CustomImage from "../../../../components/CustomImage/CustomImage";
 import { section1StaticData } from "./data/Section1Data";

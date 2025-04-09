@@ -86,7 +86,7 @@ const DoughnutChart = () => {
 >
   <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "20px", alignItems: "center" }}>
     <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-      <div style={{ width: "15px", height: "15px", backgroundColor: "#7A713B" }}></div>
+      <div style={{ width: "15px", height: "15px", backgroundColor: "#847F3B" }}></div>
       <span style={{ fontSize: "14px", color: "#333" }}>Completed</span>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: "5px", paddingLeft: "12px" }}>
@@ -115,13 +115,13 @@ const DoughnutChart = () => {
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" ,marginTop:"30px",height:"60px" }}>
-          <Typography sx={{fontWeight:600,fontFamily:"Montserrat",marginLeft:{md:"30px"},fontSize:"20px",lineHeight:"150%"}}>Task list</Typography>
+          <Typography sx={{fontWeight:600,fontFamily:"Montserrat",marginLeft:{md:"30px"},fontSize:"20px",lineHeight:"150%",marginLeft:{sm:"-80px",lg:"140px",}}}>Task list</Typography>
          <Box sx={{marginRight:{md:"55px"}}}>
          <Button
             sx={{
               height: "50px",
               width: "146px",
-              backgroundColor: "#847f3b",
+              backgroundColor: "#847F3B",
               color: "#fff",
               borderRadius: "20px",
               textTransform: "capitalize",
@@ -130,6 +130,7 @@ const DoughnutChart = () => {
               align:"center",
               fontFamily:"Montserrat",
               lineHeight:"18px",
+              marginRight:{sm:"-85px",lg:"140px",},
               
               "&:hover": { backgroundColor: "#5f6340" },
             }}

@@ -35,7 +35,7 @@ const Section3 = () => {
           flexWrap: "wrap",
         }}
       >
-        <Typography fontWeight="700" sx={{ fontFamily: "Montserrat", fontSize: "20px", lineHeight: "24px", color: "#1F1F25" }}>
+        <Typography  sx={{ fontFamily: "Montserrat", fontSize: "20px", lineHeight: "24px", color: "#1F1F25",fontWeight:"700" }}>
           Fair Trade % Distribution – Year-wise
         </Typography>
 
