@@ -1,7 +1,7 @@
 import React from "react";
-import img1 from "../../../../assets/images/bpucard1.png";
-import img2 from "../../../../assets/images/bpucard2.png";
-import img3 from "../../../../assets/images/bpucard3.png";
+import img1 from "../../../../assets/images/newscards2img1.png";
+import img2 from "../../../../assets/images/newscards2img2.png";
+import img3 from "../../../../assets/images/newscards2img3.png";
 
 export const articles = [
   {

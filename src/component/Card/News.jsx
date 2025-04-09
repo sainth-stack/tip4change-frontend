@@ -35,7 +35,7 @@ const SustainabilityCard = () => {
           {/* Left Side: Image */}
           <CardMedia
             component="img"
-            image="/src/assets/images/news.png"
+            image="/src/assets/images/newscards1img.png"
             alt="Shopping Sustainability"
             sx={{
               width: { xs: "100%", md: "45%" },

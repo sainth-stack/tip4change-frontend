@@ -32,6 +32,7 @@ const profileData = {
     "Surya Prakash",
   ],
   profileImage: "src/assets/images/profileImage.png",
+  img:"src/assets/images/profileimggirl.png"
 };
 
 const pathnames = location.pathname.split("/").filter((x) => x);
@@ -96,7 +97,7 @@ const ProfileView = () => {
           }}
         >
           <Avatar
-            src={profileData.profileImage}
+            src={profileData.img}
             alt={profileData.name}
             variant="square"
             sx={{
