@@ -82,7 +82,7 @@ const ResourceCard = ({ resource }) => {
   return (
     <>
       {resource.textFirst ? (
-        <Grid2 sx={{display:'flex',flexDirection:'column',gap:"24px"}}>
+        <Grid2 sx={{display:'flex',flexDirection:'column',gap:"32px"}}>
           <CardContent sx={{padding:'0px',margin:'0px',borderRadius:'16px'}} style={{ padding: '0px' }}>
             <Typography
               style={{
@@ -104,7 +104,7 @@ const ResourceCard = ({ resource }) => {
           <CardMedia
               component="img"
               width="100%"
-              height="249px"
+              height="260px"
               sx={{borderRadius:'16px',objectFit:"fill",}}
               borderRadius="20px"
               image={resource.image}
@@ -112,11 +112,11 @@ const ResourceCard = ({ resource }) => {
             />
         </Grid2>
       ) : (
-        <Grid2 sx={{display:'flex',flexDirection:'column',gap:"24px"}}>
+        <Grid2 sx={{display:'flex',flexDirection:'column',gap:"32px"}}>
             <CardMedia
               component="img"
               width="100%"
-              height="249px"
+              height="260px"
               sx={{borderRadius:'16px',objectFit:"fill",}}
               borderRadius="20px"
               image={resource.image}
@@ -156,7 +156,7 @@ const ResourceLibrary = () => {
         <Typography variant="h6">Video</Typography>
       </Box>
       
-      <Grid container spacing={2} justifyContent="start" mt={"16px"}>
+      <Grid container spacing={"32px"} justifyContent="start" mt={"16px"}>
         {resourceData.map((resource, index) => (
           <Grid 
             item 

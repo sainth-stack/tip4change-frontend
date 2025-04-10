@@ -9,7 +9,7 @@ const ArticleCard = ({ image, title, description }) => {
   return (
     <Card
       sx={{
-        flexBasis: { xs: "100%", sm: "calc(100% / 2 - 16px)", md: "calc(100% / 3 - 16px)" },
+        flexBasis: { xs: "100%", sm: "calc(100% / 2 - 24px)", md: "calc(100% / 3 - 24px)" },
         borderRadius: "20px",
         boxShadow: 3,
         height: "530px",
@@ -17,7 +17,7 @@ const ArticleCard = ({ image, title, description }) => {
         flexDirection: "column",
       }}
     >
-      <CardMedia component="img" image={image} alt={title} sx={{objectFit:"fill",width:"100%",height:"169.54px"}} />
+      <CardMedia component="img" image={image} alt={title} sx={{objectFit:"fill",width:"100%",height:"200px"}} />
       <CardContent sx={{ flex: "1 1 auto", display: "flex", flexDirection: "column", justifyContent: "space-between", p: 0 }}>
         <Box sx={{ p: 2, flexGrow: 1 }}>
           <Typography sx={{ fontSize: "16px", fontWeight: "600", color: "#0E0E0E", mt: 0 }}>
@@ -77,6 +77,7 @@ const ArticleList = () => {
         gridTemplateColumns={"auto auto auto"} 
         gap={"35px"}
         flexWrap="wrap" 
+        mt={2}
         mb={3} 
         sx={{ 
           justifyContent: "center",

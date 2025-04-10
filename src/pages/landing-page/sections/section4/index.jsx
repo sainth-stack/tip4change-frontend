@@ -51,7 +51,7 @@ const Section4 = () => {
                 alt={card.title}
                 sx={{
                   width: "100%",
-                  height: "180px",
+                  height: "220px",
                   objectFit: "cover",
                   borderTopLeftRadius: "10px",
                   borderTopRightRadius: "10px",
