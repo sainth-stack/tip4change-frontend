@@ -103,9 +103,9 @@ const ResourceCard = ({ resource }) => {
           </CardContent>
           <CardMedia
               component="img"
-              height="249px"
               width="100%"
-              sx={{borderRadius:'16px'}}
+              height="249px"
+              sx={{borderRadius:'16px',objectFit:"fill",}}
               borderRadius="20px"
               image={resource.image}
               alt={resource.alt}
@@ -115,9 +115,9 @@ const ResourceCard = ({ resource }) => {
         <Grid2 sx={{display:'flex',flexDirection:'column',gap:"24px"}}>
             <CardMedia
               component="img"
-              height="249px"
               width="100%"
-              sx={{borderRadius:'16px'}}
+              height="249px"
+              sx={{borderRadius:'16px',objectFit:"fill",}}
               borderRadius="20px"
               image={resource.image}
               alt={resource.alt}
