@@ -17,7 +17,7 @@ const ArticleCard = ({ image, title, description }) => {
         flexDirection: "column",
       }}
     >
-      <CardMedia component="img" height="169.54px" image={image} alt={title} />
+      <CardMedia component="img" image={image} alt={title} sx={{objectFit:"fill",width:"100%",height:"169.54px"}} />
       <CardContent sx={{ flex: "1 1 auto", display: "flex", flexDirection: "column", justifyContent: "space-between", p: 0 }}>
         <Box sx={{ p: 2, flexGrow: 1 }}>
           <Typography sx={{ fontSize: "16px", fontWeight: "600", color: "#0E0E0E", mt: 0 }}>
